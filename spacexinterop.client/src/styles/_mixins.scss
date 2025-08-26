@@ -1,0 +1,19 @@
+@import './_variables.scss';
+
+@mixin respond-up($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin respond-down($size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin respond-between($min, $max) {
+    @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+        @content;
+    }
+}

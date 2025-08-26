@@ -1,0 +1,277 @@
+//#region CSS Variables
+@layer base {
+    :root {
+        --primary: #ffffff;
+        --secondary: #e4e4e4;
+        --alt: #28292D;
+        --accent: #f7f7f7;
+        --accent_alt: #cccccc;
+
+        --text_primary: #141416;
+        --text_secondary: #28292D;
+        --text_tertiary: #282828;
+        --text_accent: #d8d8d8;
+        --text_accent_alt: #74777c;
+        --menu_item_text: #28292D;
+
+        --text_warn: #ff6f63;
+        --text_confirm: #a5bf04;
+
+        --button_primary: #28292D;
+        --button_confirm: #bace3d80;
+        --button_warn: #ff6f6359;
+
+        --scroll_bg: #f7f7f7;
+        --scroll_thumb: linear-gradient(278deg, #e6e6e6 -10.44%, #d9d9d9 100%);
+        --scroll_thumb_highlighted: linear-gradient(278deg, #e6e6e6 -10.44%, #d9d9d9 100%);
+
+        --menu_bg: #ffffff;
+    }
+}
+
+.dark-theme-dark {
+    --primary: #141416;
+    --secondary: #28292D;
+    --alt: #d0d0d0;
+    --accent: #1e1e20;
+    --accent_alt: #2a2a2d;
+
+    --text_primary: #e7e7e7;
+    --text_secondary: #d0d0d0;
+    --text_tertiary: #989898;
+    --text_accent: #28292D;
+    --text_accent_alt: #606060;
+    --menu_item_text: #d0d0d0;
+
+    --text_warn: #f87a6f;
+    --text_confirm: #d7f41f;
+
+    --button_primary: #e7e7e7;
+    --button_confirm: #91a70070;
+    --button_warn: #a7352b54;
+
+    --scroll_bg: #1a1a1d;
+    --scroll_thumb: linear-gradient(278deg, #2a2a2d -10.44%, #3b3b3e 100%);
+    --scroll_thumb_highlighted: linear-gradient(278deg, #2a2a2d -10.44%, #3b3b3e 100%);
+
+    --menu_bg: #141416;
+}
+//#endregion
+
+//#region Fonts
+@font-face {
+    font-family: custom_black;
+    src: url('./assets/fonts/woff2/Montserrat-Black.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Black.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_black_italic;
+    src: url('./assets/fonts/woff2/Montserrat-BlackItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-BlackItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_bold;
+    src: url('./assets/fonts/woff2/Montserrat-Bold.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_bold_italic;
+    src: url('./assets/fonts/woff2/Montserrat-BoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-BoldItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_extrabold;
+    src: url('./assets/fonts/woff2/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-ExtraBold.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_extrabold_italic;
+    src: url('./assets/fonts/woff2/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-ExtraBoldItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_extralight;
+    src: url('./assets/fonts/woff2/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-ExtraLight.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_extralight_italic;
+    src: url('./assets/fonts/woff2/Montserrat-ExtraLightItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-ExtraLightItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_italic;
+    src: url('./assets/fonts/woff2/Montserrat-Italic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Italic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_light;
+    src: url('./assets/fonts/woff2/Montserrat-Light.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_light_italic;
+    src: url('./assets/fonts/woff2/Montserrat-LightItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-LightItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_medium;
+    src: url('./assets/fonts/woff2/Montserrat-Medium.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_medium_italic;
+    src: url('./assets/fonts/woff2/Montserrat-MediumItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-MediumItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_regular;
+    src: url('./assets/fonts/woff2/Montserrat-Regular.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_semibold;
+    src: url('./assets/fonts/woff2/Montserrat-SemiBold.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-SemiBold.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_semibold_italic;
+    src: url('./assets/fonts/woff2/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_thin;
+    src: url('./assets/fonts/woff2/Montserrat-Thin.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-Thin.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: custom_thin_italic;
+    src: url('./assets/fonts/woff2/Montserrat-ThinItalic.woff2') format('woff2'),
+        url('./assets/fonts/woff/Montserrat-ThinItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+//#endregion
+
+//#region General Styles
+html,
+body {
+    font-family: custom_medium;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--text_primary);
+    height: 100%;
+
+}
+
+body {
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    height: auto;
+}
+
+body nav {
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 5vh;
+}
+
+.content_container {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+// Scrollbar Customization Start
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll_bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll_thumb);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll_thumb_highlighted);
+}
+//#endregion
