@@ -1,0 +1,77 @@
+<section class="auth-page">
+    <mat-card class="auth-card">
+
+        <div class="auth-content-container">
+            <div>
+                <mat-card-title class="auth-title">
+                    Register
+                </mat-card-title>
+
+                <form [formGroup]="registerForm" class="auth-form">
+
+                    <mat-form-field appearance="fill" class="auth-input">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username" type="text" required />
+                        @if(registerForm.controls['username'].invalid && registerForm.controls['username'].touched) {
+                        <mat-error>Invalid username.</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="auth-input">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" type="email" required />
+                        @if(registerForm.controls['email'].invalid && registerForm.controls['email'].touched) {
+                        <mat-error>Invalid email.</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="auth-input">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" type="password" required />
+                        @if(registerForm.controls['password'].invalid && registerForm.controls['password'].touched) {
+                        <mat-error>Invalid password.</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="auth-input">
+                        <mat-label>Confirm password</mat-label>
+                        <input matInput formControlName="confirmPassword" type="password" required />
+                        @if(registerForm.controls['confirmPassword'].invalid &&
+                        registerForm.controls['confirmPassword'].touched) {
+                        <mat-error>Confirm password doesn't match.</mat-error>
+                        }
+                    </mat-form-field>
+
+                    @if(invalidRegisterMessages !== null) {
+                        <div class="auth-error-container" [ngClass]="{'auth-error-container-with-action-link': offerLogInInstead}">
+                            <div [ngClass]="{'auth-error-with-action-link-container': offerLogInInstead}">
+                                @for(message of invalidRegisterMessages; track message){
+                                    <div class="auth-error fade-in-anim" [ngClass]="{'auth-error-with-action-link': offerLogInInstead}">{{ message }}</div>
+                                }
+                            </div>
+    
+                            @if(offerLogInInstead) {
+                                <a mat-button routerLink="/login" class="auth-link-action">Log In</a>
+                            }
+                        </div>
+                    }
+                    
+                    <div class="auth-actions">
+                        <generic-button (click)="register()" [style]="'confirm'" [text]="'Submit'"
+                            [disabled]="registerForm.invalid">
+                        </generic-button>
+                    </div>
+
+                </form>
+            </div>
+
+            @if(!offerLogInInstead) {
+                <div class="auth-footer">
+                    <span>Already have an account?</span>
+                    <a mat-button routerLink="/login" class="auth-link-action">Log In</a>
+                </div>
+            }
+        </div>
+
+    </mat-card>
+</section>

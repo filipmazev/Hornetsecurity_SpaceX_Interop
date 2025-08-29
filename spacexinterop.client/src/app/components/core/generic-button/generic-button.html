@@ -1,0 +1,37 @@
+<button 
+    [id]="id"
+    [class]="classes"
+    [style]="styles"
+    class="generic-button"
+    [ngClass]="{
+        'text-button': text !== undefined,
+        'icon-button': matIcon !== undefined && text === undefined,
+        'disabled-input': disabled,
+        'default': style === 'default',
+        'confirm': style === 'confirm',
+        'warn': style === 'warn'
+    }"
+    (click)="onClickEvent()">
+    @if(text){ 
+        <p class="select-none text-accent"
+        [ngClass]="{
+            'disabled-input': disabled,
+            'text-accent': style === 'default',
+            'text-confirm': style === 'confirm',
+            'text-warn': style === 'warn',
+        }">
+            {{ text }}
+        </p>
+    } 
+    @if(matIcon){
+        <mat-icon class="select-none"
+        [ngClass]="{
+            'disabled-input': disabled,
+            'text-accent': style === 'default',
+            'text-confirm': style === 'confirm',
+            'text-warn': style === 'warn',
+        }">
+            {{ matIcon }}
+        </mat-icon>
+    }
+</button>

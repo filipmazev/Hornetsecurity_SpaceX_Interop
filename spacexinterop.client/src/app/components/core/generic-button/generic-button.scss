@@ -1,0 +1,67 @@
+@use '../../../../styles/mixins' as *;
+
+.generic-button {
+  font-family: custom_regular;
+  color: var(--accent); 
+  font-size: 1rem; 
+  transition: all 0.2s ease-in-out; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+  cursor: pointer;
+
+  &.icon-button {
+    border-radius: 9999px; 
+    padding: 0.35rem; 
+    height: 2.5rem; 
+    width: 2.5rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    font-size: 1rem; 
+  }
+
+  &.text-button {
+    border-radius: 1rem; 
+    padding: 0.35rem 2rem; 
+  }
+
+  &.disabled-input {
+    filter: grayscale(80%);
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.default {
+    background-color: var(--button_primary);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+
+  &.confirm {
+    background-color: var(--button_confirm);
+    color: var(--accent);
+  }
+
+  &.warn {
+    background-color: var(--button_warn);
+    color: var(--accent);
+  }
+
+  @include respond-up(sm) {
+    &:hover {
+      transform: scale(1.035); 
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); 
+    }
+
+    &:active {
+      transform: scale(0.985); 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+p {
+  margin: .35rem;
+}

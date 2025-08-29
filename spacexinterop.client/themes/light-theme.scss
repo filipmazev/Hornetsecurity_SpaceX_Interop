@@ -1,0 +1,71 @@
+@use "@angular/material" as mat;
+
+$custom-primary-light-palette: (
+  50: #ffffff,  
+  100: #f5f5f5, 
+  200: #ebebeb, 
+  300: #d6d6d6, 
+  400: #bfbfbf,
+  500: #999999,
+  600: #1e1e1e,
+  700: #131313,
+  800: #333333,
+  900: #0c0c0c, 
+  A100: #d0d0d0,
+  A200: #005285, 
+  A400: #0084c9, 
+  A700: #66b5e3, 
+  contrast: (
+    50: #000000,
+    100: #1a1a1a,
+    200: #333333,
+    300: #4d4d4d,
+    400: #666666,
+    500: #808080,
+    600: #999999,
+    700: #b3b3b3,
+    800: #cccccc,
+    900: #e6e6e6,
+  )
+);
+
+$custom-warn-light-palette: (
+  50: #fff5f5,
+  100: #ffe0e0,
+  200: #ffbdbd,
+  300: #ff9999,
+  400: #f87171,
+  500: #e63946,  
+  600: #cc2f36,
+  700: #b2282e,
+  800: #991f24,
+  900: #7f171b,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  )
+);
+
+$theme-primary-light: mat.m2-define-palette($custom-primary-light-palette);
+$theme-accent-light: mat.m2-define-palette($custom-primary-light-palette, A200, A100, A400);
+$theme-warn-light: mat.m2-define-palette($custom-warn-light-palette);
+
+$theme-light: mat.m2-define-light-theme((
+  color: (
+    primary: $theme-primary-light,
+    accent: $theme-accent-light,
+    warn: $theme-warn-light,
+  )
+));

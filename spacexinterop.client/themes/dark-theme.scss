@@ -1,0 +1,71 @@
+@use '@angular/material' as mat;
+
+$custom-primary-dark-palette: (
+  50: #d0d0d0,   
+  100: #c0c0c0,  
+  200: #b0b0b0,  
+  300: #a0a0a0,  
+  400: #909090,
+  500: #808080,
+  600: #707070,
+  700: #606060,
+  800: #505050,
+  900: #404040,
+  A100: #d0d0d0,
+  A200: #005285, 
+  A400: #0084c9, 
+  A700: #66b5e3, 
+  contrast: (
+      50: #ffffff,
+      100: #f5f5f5,
+      200: #ebebeb,
+      300: #e0e0e0,
+      400: #d6d6d6,
+      500: #cccccc,
+      600: #bfbfbf,
+      700: #b3b3b3,
+      800: #a6a6a6,
+      900: #999999,
+  )
+);
+
+$custom-warn-dark-palette: (
+  50: #fff5f5,
+  100: #ffc9c9,
+  200: #ff9999,
+  300: #ff6f6f,
+  400: #f84f4f,
+  500: #e63946, 
+  600: #cc2f36,
+  700: #b2282e,
+  800: #991f24,
+  900: #7f171b,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #000000,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+  )
+);
+
+$theme-primary-dark: mat.m2-define-palette($custom-primary-dark-palette);
+$theme-accent-dark: mat.m2-define-palette($custom-primary-dark-palette, A200, A100, A400);
+$theme-warn-dark: mat.m2-define-palette($custom-warn-dark-palette);
+
+$theme-dark: mat.m2-define-dark-theme((
+  color: (
+    primary: $theme-primary-dark,
+    accent: $theme-accent-dark,
+    warn: $theme-warn-dark,
+  )
+));
