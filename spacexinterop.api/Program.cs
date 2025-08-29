@@ -10,7 +10,7 @@ using spacexinterop.api._Common;
 using spacexinterop.api.Data;
 using Scalar.AspNetCore;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 #region Configure Builder
 
@@ -52,8 +52,8 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowedOrigins", policy =>
     {
-        var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
-        if (allowedOrigins != null && allowedOrigins.Any())
+        string[]? allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
+        if (allowedOrigins is not null && allowedOrigins.Any())
         {
             policy.WithOrigins(allowedOrigins)
                 .AllowAnyHeader()
@@ -108,14 +108,7 @@ builder.Services
         options.SlidingExpiration = true;                                               // Extend session on activity
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 
-        if (builder.Environment.IsDevelopment())
-        {
-            options.Cookie.SameSite = SameSiteMode.None;
-        }
-        else
-        {
-            options.Cookie.SameSite = SameSiteMode.Strict;
-        }
+        options.Cookie.SameSite = builder.Environment.IsDevelopment() ? SameSiteMode.None : SameSiteMode.Strict;
 
         options.Cookie.Path = "/";
     });
@@ -131,7 +124,7 @@ builder.Services.AddConfiguredRateLimiter(builder.Configuration);
 
 #endregion
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 #region Configure App
 

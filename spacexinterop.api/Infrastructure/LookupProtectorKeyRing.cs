@@ -13,7 +13,7 @@ public class LookupProtectorKeyRing(IOptions<EncryptionKeyConfig> encryptionKeyC
     public IEnumerable<string> GetAllKeyIds() => _encryptionKeyConfig.Keys.Keys;
 
     public string this[string keyId] =>
-        _encryptionKeyConfig.Keys.TryGetValue(keyId, out var value) 
+        _encryptionKeyConfig.Keys.TryGetValue(keyId, out string? value) 
             ? value 
             : throw new KeyNotFoundException($"Key with id '{keyId}' was not found.");
 }

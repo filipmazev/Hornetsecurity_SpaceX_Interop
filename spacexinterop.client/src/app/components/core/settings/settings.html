@@ -13,7 +13,6 @@
             <button (click)="$event.stopPropagation(); toggleThemeSettingState()"
                 class="settings-menu-item-section-title"
             >
-                <mat-icon class="settings-menu-item">{{MatIcons.Theme}}</mat-icon>
                 <span class="text-menu-item"> Theme Settings </span>
             </button>
 
@@ -87,7 +86,6 @@
             @if(settings.accessibility.items.length > 0) {
                 <button (click)="$event.stopPropagation(); toggleAccessibilitySettingState()"
                     class="settings-menu-item-section-title">
-                    <mat-icon class="settings-menu-item">{{MatIcons.AccessabilitySettings}}</mat-icon>
                     <span class="text-menu-item"> Accessibility </span>
                 </button>
 

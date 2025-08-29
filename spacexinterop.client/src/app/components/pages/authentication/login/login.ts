@@ -58,7 +58,8 @@ export class Login {
         this.router.navigate(['/']);
       } else {
         this.invalidLogin = true;
-        this.loginForm.reset();
+        this.loginForm.get('password')?.reset();
+        this.loginForm.get('email')?.reset();
       }
     });
   }

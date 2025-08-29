@@ -7,18 +7,8 @@ public interface IResultFactory
 {
     Result Success();
     Result Failure(Error error);
-    Result Failure(List<Error> error);
-    Result NotFound();
-    Result NotFound(Error error);
-    Result<TValue> NotFound<TValue>(TValue value, Error error);
+    Result Failure(Error error, ResultStatus status);
     Result FromStatus(ResultStatus status);
-    Result<TValue> FromStatus<TValue>(TValue value, ResultStatus status);
     Result<TValue> Success<TValue>(TValue value);
-    Result<TValue> Failure<TValue>(Error error, ResultStatus status = ResultStatus.Failure);
-    Result<TValue> Failure<TValue>(List<Error> errors, ResultStatus status = ResultStatus.Failure);
-    Result<TValue> Create<TValue>(TValue? value);
-    Result Exception(string message, Error? error = null);
     Result Exception(Exception exception, string message, Error? error = null);
-    Result<T> Exception<T>(string message, Error? error = null);
-    Result<T> Exception<T>(Exception exception, string message, Error? error = null);
 }

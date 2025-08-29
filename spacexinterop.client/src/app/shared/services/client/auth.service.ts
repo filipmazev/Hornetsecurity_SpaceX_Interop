@@ -5,7 +5,7 @@ import { RegisterRequest } from "../../classes/models/requests/RegisterRequest";
 import { Observable, Subject } from "rxjs";
 import { LoginRequest } from "../../classes/models/requests/LoginRequest.model";
 import { Result } from "../../classes/models/responses/Result.model";
-import { WhoAmIResponse } from "../../classes/models/responses/WhoAmIResponse.model";
+import { CheckSessionResponse } from "../../classes/models/responses/CheckSessionResponse.model";
 
 @Injectable({
     providedIn: 'root'
@@ -36,7 +36,7 @@ export class AuthService {
     public async login(data: LoginRequest): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
-                await this.httpService.post<Result>(this.baseUrl + 'login', data).then((result) => {
+                await this.httpService.post<Result>(this.baseUrl + 'Login', data).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {
@@ -54,7 +54,7 @@ export class AuthService {
     public async register(data: RegisterRequest): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
-                await this.httpService.post<Result>(this.baseUrl + 'register', data).then((result) => {
+                await this.httpService.post<Result>(this.baseUrl + 'Register', data).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {
@@ -72,7 +72,7 @@ export class AuthService {
     public logout(): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
-                await this.httpService.post<Result>(this.baseUrl + 'logout').then((result) => {
+                await this.httpService.post<Result>(this.baseUrl + 'Logout').then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(false);
                     } else {
@@ -87,10 +87,10 @@ export class AuthService {
         });
     }
 
-    public async whoAmI(): Promise<WhoAmIResponse | undefined | null> {
-        return new Promise<WhoAmIResponse | undefined | null>(async (resolve) => {
+    public async whoAmI(): Promise<CheckSessionResponse | undefined | null> {
+        return new Promise<CheckSessionResponse | undefined | null>(async (resolve) => {
             try {
-                await this.httpService.get<Result<WhoAmIResponse>>(this.baseUrl + 'whoami').then((result) => {
+                await this.httpService.get<Result<CheckSessionResponse>>(this.baseUrl + 'CheckSession').then((result) => {
                     if(result.isSuccess && result.value) {
                         this.isAuthenticatedSubject.next(true);
                     } else {

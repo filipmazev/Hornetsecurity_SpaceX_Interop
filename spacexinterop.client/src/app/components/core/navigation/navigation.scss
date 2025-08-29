@@ -1,4 +1,4 @@
-@import '../../../../styles/mixins';
+@use '../../../../styles/mixins' as *;
 
 .nav-container {
     display: flex;
@@ -10,7 +10,9 @@
 
     position: fixed;
 
-    background-color: var(--accent);
+    background: var(--bg_translucent_contrast);
+    backdrop-filter: blur(10px);
+
     padding: .35rem;
 
     z-index: 100;
@@ -59,12 +61,11 @@
     margin-left: 1.25rem;
 
     cursor: pointer;
+    z-index: 100;
 
     @include respond-up(md) {
         display: none;
     }
-
-    z-index: 100;
 }
 
 .hamburger-line {

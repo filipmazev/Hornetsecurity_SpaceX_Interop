@@ -459,3 +459,6 @@ SITF.Playwright/app.js.map
 SITF.Playwright/tsconfig.tsbuildinfo
 SpaceXInteropDb/SpaceXInteropDb.dbmdl
 /spacexinterop.api/obj/Debug
+/spacexinterop.api/.vs
+/spacexinterop.api/obj/Debug
+SpaceXInteropDb/SpaceXInteropDb.dbmdl

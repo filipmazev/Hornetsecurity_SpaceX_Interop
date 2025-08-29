@@ -1,4 +1,4 @@
-export class WhoAmIResponse {
+export class CheckSessionResponse {
     userName: string;
     email: string;
 

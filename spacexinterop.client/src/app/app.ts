@@ -3,19 +3,22 @@ import { Router, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/core/navigation/navigation';
 import { AuthService } from './shared/services/client/auth.service';
 import { Subject, takeUntil } from 'rxjs';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    NavigationComponent
-  ],
+    NavigationComponent,
+    NgClass
+],
   templateUrl: './app.html'
 })
 export class App implements OnInit, OnDestroy {
   protected readonly title = signal('spacexinterop.client');
 
   protected hasReceivedAuthStatus: boolean = false;
+  protected isAuthenticated: boolean = false;
 
   private unsubscribe$ = new Subject<void>();
 
@@ -38,6 +41,7 @@ export class App implements OnInit, OnDestroy {
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(result => {
         this.hasReceivedAuthStatus = true;
+        this.isAuthenticated = result;
         
         const currentUrl = this.router.url;
 

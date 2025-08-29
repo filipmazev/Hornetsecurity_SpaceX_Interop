@@ -14,7 +14,7 @@ export class ThemeSettings implements IThemeSettings {
     
     constructor(value?: IThemeSettings,) {
         this.darkMode = value?.darkMode ?? { 
-            state: false, 
+            state: true, 
             theming: Object.values(DarkModeTheme).map((theme, index) => ({
                 className: DARK_MODE_CLASS_NAME_PREFIX + theme.toLowerCase(),
                 theme,

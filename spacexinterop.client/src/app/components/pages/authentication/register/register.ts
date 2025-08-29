@@ -10,6 +10,8 @@ import { GenericButton } from '../../../core/generic-button/generic-button';
 import { MatCardModule } from '@angular/material/card';
 import { RegisterRequest } from '../../../../shared/classes/models/requests/RegisterRequest';
 import * as commonConst from '../../../../shared/constants/common.constants';
+import { ResultStatus } from '../../../../shared/enums/api/result-status.enum';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -20,12 +22,14 @@ import * as commonConst from '../../../../shared/constants/common.constants';
     MatInputModule,
     RouterLink,
     GenericButton,
+    NgClass
   ],
   templateUrl: './register.html',
   styleUrl: '../authentication.scss'
 })
 export class Register {
   protected invalidRegisterMessages: string[] | null = null;
+  protected offerLogInInstead: boolean = false;
 
   private unsubscribe$: Subject<void> = new Subject<void>();
   
@@ -64,6 +68,8 @@ export class Register {
       return;
     }
 
+    this.offerLogInInstead = false;
+
     const request: RegisterRequest = {
       username: this.registerForm.get('username')?.value,
       email: this.registerForm.get('email')?.value,
@@ -76,7 +82,8 @@ export class Register {
         this.invalidRegisterMessages = null;
         this.router.navigate(['/']);
       } else {
-        this.invalidRegisterMessages = result.error.message.split(/\r?\n/).filter(line => line.trim() !== commonConst.EMPTY_STRING) ?? [];
+        this.invalidRegisterMessages = result.error.messages;
+        this.offerLogInInstead = result.status === ResultStatus.EmailAlreadyExists;
       }
     });
   }

@@ -18,14 +18,18 @@ public static class Constants
     public const int MinPasswordLength = 8;
     public const int MaxPasswordLength = 50;
 
-    public const int MinNameLength = 4;
-    public const int MaxNameLength = 50;
-
     #region Regex
 
     public const string PasswordWithNumberAndSpecialCharRegex = @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?""{}|<>]).+$";
 
     #endregion
+
+    #endregion
+
+    #region Error Codes
+
+    public const string IdentityDuplicateEmailCode = "DuplicateEmail";
+    public const string IdentityDuplicateUserNameCode = "DuplicateUserName";
 
     #endregion
 }

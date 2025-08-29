@@ -15,12 +15,11 @@ export class AuthGuard {
         _next: ActivatedRouteSnapshot,
         _state: RouterStateSnapshot
     ): Promise<boolean> {
-        debugger;
         if(_state.url === "/login" || _state.url === "/register") {
-            return true;
+        return true;
         } else if (this.authService.isAuthenticated) {
             return true;
-        } 
+        }
 
         this.router.navigate(['/login']);
         return false;

@@ -12,7 +12,7 @@ public class LookupProtector(ILookupProtectorKeyRing keyRing) : ILookupProtector
     {
         if (data is null) return null;
 
-        var base64Key = keyRing[keyId];
+        string base64Key = keyRing[keyId];
         byte[] keyBytes = Convert.FromBase64String(base64Key);
 
         using SymmetricAlgorithm algorithm = Aes.Create();

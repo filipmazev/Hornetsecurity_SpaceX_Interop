@@ -1,11 +1,11 @@
 export class Error {
     baseCode: string;
-    message: string;
+    messages: string[];
 
     constructor(
-        baseCode: 
-        string, message: string) {
+        baseCode: string, 
+        messages: string[]) {
         this.baseCode = baseCode;
-        this.message = message;
+        this.messages = messages;
     }
 }

@@ -1,19 +1,20 @@
-@import './_variables.scss';
+@use "sass:map";
+@use "./variables" as vars;
 
 @mixin respond-up($size) {
-    @media (min-width: map-get($breakpoints, $size)) {
+    @media (min-width: map.get(vars.$breakpoints, $size)) {
         @content;
     }
 }
 
 @mixin respond-down($size) {
-    @media (max-width: map-get($breakpoints, $size)) {
+    @media (max-width: map.get(vars.$breakpoints, $size)) {
         @content;
     }
 }
 
 @mixin respond-between($min, $max) {
-    @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+    @media (min-width: map.get(vars.$breakpoints, $min)) and (max-width: map.get(vars.$breakpoints, $max)) {
         @content;
     }
 }

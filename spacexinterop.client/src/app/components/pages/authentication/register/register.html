@@ -43,9 +43,17 @@
                     </mat-form-field>
 
                     @if(invalidRegisterMessages !== null) {
-                        @for(message of invalidRegisterMessages; track message){
-                            <div class="auth-error fade-in-anim">{{ message }}</div>
-                        }
+                        <div class="auth-error-container" [ngClass]="{'auth-error-container-with-action-link': offerLogInInstead}">
+                            <div [ngClass]="{'auth-error-with-action-link-container': offerLogInInstead}">
+                                @for(message of invalidRegisterMessages; track message){
+                                    <div class="auth-error fade-in-anim" [ngClass]="{'auth-error-with-action-link': offerLogInInstead}">{{ message }}</div>
+                                }
+                            </div>
+    
+                            @if(offerLogInInstead) {
+                                <a mat-button routerLink="/login" class="auth-link-action">Log In</a>
+                            }
+                        </div>
                     }
                     
                     <div class="auth-actions">
@@ -57,10 +65,12 @@
                 </form>
             </div>
 
-            <div class="auth-footer">
-                <span>Already have an account?</span>
-                <a mat-button routerLink="/login" class="auth-link-action">Log In</a>
-            </div>
+            @if(!offerLogInInstead) {
+                <div class="auth-footer">
+                    <span>Already have an account?</span>
+                    <a mat-button routerLink="/login" class="auth-link-action">Log In</a>
+                </div>
+            }
         </div>
 
     </mat-card>

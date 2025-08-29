@@ -1,12 +1,13 @@
 ﻿using spacexinterop.api._Common.Utility.Factories.Interfaces;
 using spacexinterop.api._Common.Domain.Data.Errors.Base;
+using spacexinterop.api._Common.Domain.Data.Errors;
 using spacexinterop.api._Common.Domain.Data.Result;
 using spacexinterop.api._Common.Utility.Validators;
 using spacexinterop.api.Services.Interfaces;
 using spacexinterop.api.Data.Request;
 using Microsoft.AspNetCore.Identity;
 using spacexinterop.api.Data.Models;
-using System.Text;
+using spacexinterop.api._Common;
 
 namespace spacexinterop.api.Services;
 
@@ -20,21 +21,21 @@ public class AuthService(
 {
     public async Task<Result> Login(LoginRequest request)
     {
-        if(!validators.IsEmailValid(request.Email))
-            return resultFactory.FromStatus(ResultStatus.ValidationFailed);
+        if (!validators.IsEmailValid(request.Email))
+            return resultFactory.Failure(CommonError.Unauthorized);
 
         try
         {
             User? user = await userManager.FindByEmailAsync(request.Email);
 
-            if (user is null) 
-                return resultFactory.FromStatus(ResultStatus.Unauthorized);
+            if (user is null)
+                return resultFactory.Failure(CommonError.Unauthorized);
 
-            var result = await signInManager.PasswordSignInAsync(
+            SignInResult result = await signInManager.PasswordSignInAsync(
                 user, request.Password, request.RememberMe, lockoutOnFailure: true);
 
             return !result.Succeeded 
-                ? resultFactory.FromStatus(ResultStatus.Unauthorized)
+                ? resultFactory.Failure(CommonError.Unauthorized)
                 : resultFactory.Success("Logged in");
         }
         catch (Exception ex)
@@ -75,9 +76,16 @@ public class AuthService(
 
             if (!result.Succeeded)
             {
-                StringBuilder stringBuilder = new(string.Empty);
-                result.Errors.Select(item => item.Description).ToList().ForEach(description => stringBuilder.AppendLine(description));
-                return resultFactory.Failure(Error.CreateError(baseCode: "SignupFailed", message: stringBuilder.ToString()));
+                bool duplicateEmail = result.Errors.Any(e => e.Code == Constants.IdentityDuplicateEmailCode);
+                bool duplicateUserName = result.Errors.Any(e => e.Code == Constants.IdentityDuplicateUserNameCode);
+
+                Error error = duplicateEmail ? AuthError.EmailAlreadyExists 
+                    : duplicateUserName ? AuthError.UserNameAlreadyExists 
+                    : AuthError.RegistrationFailed;
+
+                ResultStatus errorStatus = duplicateEmail ? ResultStatus.EmailAlreadyExists : ResultStatus.Failure;
+
+                return resultFactory.Failure(error: error, status: errorStatus);
             }
             
             await signInManager.SignInAsync(user, isPersistent: true, authenticationMethod: null);
@@ -109,6 +117,5 @@ public class AuthService(
             logger.LogError(ex, "ValidateUserByUserName failed");
             return resultFactory.Exception(ex, "An error occurred during user validation.");
         }
-
     }
 }

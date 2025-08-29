@@ -16,8 +16,8 @@ public static class RateLimiterServiceCollectionExtensions
 
         services.AddRateLimiter(options =>
         {
-            var serviceProvider = services.BuildServiceProvider();
-            var rateLimiterConfig = serviceProvider.GetRequiredService<IOptions<RateLimiterConfig>>().Value;
+            ServiceProvider serviceProvider = services.BuildServiceProvider();
+            RateLimiterConfig rateLimiterConfig = serviceProvider.GetRequiredService<IOptions<RateLimiterConfig>>().Value;
 
             options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
 
