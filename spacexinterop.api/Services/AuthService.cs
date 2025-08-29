@@ -90,12 +90,12 @@ public class AuthService(
             
             await signInManager.SignInAsync(user, isPersistent: true, authenticationMethod: null);
 
-            return resultFactory.Success("Signup successful");
+            return resultFactory.Success("Register successful");
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Signup failed");
-            return resultFactory.Exception(ex, "An error occurred during signup.");
+            logger.LogError(ex, "Register failed");
+            return resultFactory.Exception(ex, "An error occurred during registration.");
         }
     }
 

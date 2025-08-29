@@ -49,6 +49,7 @@ export class AuthService {
                     resolve(result);
                 });
             } catch (error) {
+                this.errorSnackbarService.displayError("An unknown error occurred during login.");
                 if (!environment.production) console.error('Login failed:', error);
                 reject(error);
             }
@@ -67,6 +68,7 @@ export class AuthService {
                     resolve(result);
                 });
             } catch (error) {
+                this.errorSnackbarService.displayError("An unknown error occurred during registration.");
                 if (!environment.production) console.error('Login failed:', error);
                 reject(error);
             }
@@ -103,7 +105,7 @@ export class AuthService {
                     resolve(result.value);
                 });
             } catch {
-                this.isAuthenticatedSubject.next(false);
+                this.errorSnackbarService.displayError("An unknown error occurred during session check.");
                 resolve(null);
             }
         });
