@@ -10,8 +10,9 @@ import { IScrollLockConfig } from '../../../shared/interfaces/services/scroll-lo
 import { ScrollLockService } from '../../../shared/services/core/ui/scroll-lock.service';
 import { INavLink } from '../../../shared/interfaces/ui/inav-link.interface';
 import { AuthService } from '../../../shared/services/client/auth.service';
-import * as classNames from "../../../shared/constants/class-names.constants"
 import { Subject, takeUntil } from 'rxjs';
+import * as classNames from "../../../shared/constants/class-names.constants"
+import { ErrorSnackbarService } from '../../../shared/services/core/ui/error-snackbar.service';
 
 @Component({
   selector: 'navigation',
@@ -52,7 +53,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
   constructor(
     private scrollLockService: ScrollLockService,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private errorSnackbarService: ErrorSnackbarService
   ) {
     this.isAuthenticated = this.authService.isAuthenticated;
   }
@@ -77,8 +79,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
     this.authService.logout().then((result) => {
       if(result.isSuccess) {
         this.router.navigate(['/login']);
-      } else {
-        // TODO: Handle logout failure
       }
     });
   }
