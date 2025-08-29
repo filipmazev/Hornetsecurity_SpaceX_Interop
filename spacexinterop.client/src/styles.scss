@@ -455,8 +455,9 @@ mat-dialog-container {
 }
 
 .mat-mdc-menu-panel {
-  background-color: var(--menu_bg) !important;
-  color: var(--menu_item_text) !important
+  background-color: var(--bg_translucent_contrast) !important;
+  color: var(--menu_item_text) !important;
+  backdrop-filter: blur(15px);
 }
 
 .settings-menu-item.mat-mdc-menu-item {
