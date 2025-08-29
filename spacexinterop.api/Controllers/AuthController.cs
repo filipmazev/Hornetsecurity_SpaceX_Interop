@@ -1,10 +1,10 @@
 ﻿using spacexinterop.api._Common.Utility.Factories.Interfaces;
 using spacexinterop.api._Common.Domain.Data.Result;
+using spacexinterop.api._Common.Domain.Data.Errors;
 using spacexinterop.api.Services.Interfaces;
 using spacexinterop.api.Data.Response;
 using spacexinterop.api.Data.Request;
 using Microsoft.AspNetCore.Mvc;
-using spacexinterop.api._Common.Domain.Data.Errors;
 
 namespace spacexinterop.api.Controllers;
 

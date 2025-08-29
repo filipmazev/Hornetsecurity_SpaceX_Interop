@@ -5,14 +5,14 @@ export class Result<T = any> {
     status: ResultStatus;
     isSuccess: boolean;
     isFailure: boolean;
-    error: Error;
+    error?: Error | null;
     value: T | null;
 
     constructor(
         status: ResultStatus,
         isSuccess: boolean,
         isFailure: boolean,
-        error: Error,
+        error: Error | undefined | null,
         value: T | null
     ) {
         this.status = status;

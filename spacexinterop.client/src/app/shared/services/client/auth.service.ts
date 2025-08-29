@@ -6,6 +6,7 @@ import { Observable, Subject } from "rxjs";
 import { LoginRequest } from "../../classes/models/requests/LoginRequest.model";
 import { Result } from "../../classes/models/responses/Result.model";
 import { CheckSessionResponse } from "../../classes/models/responses/CheckSessionResponse.model";
+import { ErrorSnackbarService } from "../core/ui/error-snackbar.service";
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +18,10 @@ export class AuthService {
     private _isAuthenticated: boolean = false;
     public get isAuthenticated(): boolean { return this._isAuthenticated; }
 
-    constructor(private httpService: HttpService) {
+    constructor(
+        private httpService: HttpService,
+        private errorSnackbarService: ErrorSnackbarService
+    ) {
         this.createSubscriptions();
         this.whoAmI();
     }
@@ -40,7 +44,7 @@ export class AuthService {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {
-                        // TODO: Handle failure
+                        this.errorSnackbarService.displayError(result.error?.messages.join(", ") ?? "An unknown error occurred during login.");
                     }
                     resolve(result);
                 });
@@ -58,7 +62,7 @@ export class AuthService {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {
-                        // TODO: Handle failure
+                        this.errorSnackbarService.displayError(result.error?.messages.join(", ") ?? "An unknown error occurred during registration.");
                     }
                     resolve(result);
                 });
@@ -76,7 +80,7 @@ export class AuthService {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(false);
                     } else {
-                        // TODO: Handle failure
+                        this.errorSnackbarService.displayError(result.error?.messages.join(", ") ?? "An unknown error occurred during logout.");
                     }
                     resolve(result);
                 });

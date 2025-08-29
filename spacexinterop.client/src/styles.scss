@@ -32,6 +32,8 @@
     --button_confirm: #4caf5075;
     --button_warn: #e6394675;
 
+    --snackbar_warn: #490006;
+
     --scroll_bg: #f5f5f5;
     --scroll_thumb: linear-gradient(278deg, #cccccc -10.44%, #aaaaaa 100%);
     --scroll_thumb_highlighted: linear-gradient(278deg, #aaaaaa -10.44%, #888888 100%);
@@ -65,6 +67,8 @@
   --button_primary: #005285;
   --button_confirm: #4caf5070;
   --button_warn: #e6394660;
+
+  --snackbar_warn: #37070b;
 
   --scroll_bg: #1a1a1d;
   --scroll_thumb: linear-gradient(278deg, #2a2a2d -10.44%, #3b3b3e 100%);
@@ -487,4 +491,12 @@ mat-dialog-container {
   background-color: var(--secondary) !important;
 }
 
+.mat-mdc-snackbar-surface {
+  background-color: var(--snackbar_warn) !important;
+  color: var(--text_warn) !important;
+}
+
+.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled).mat-unthemed{
+  color: var(--text_warn) !important;
+}
 //#endregion

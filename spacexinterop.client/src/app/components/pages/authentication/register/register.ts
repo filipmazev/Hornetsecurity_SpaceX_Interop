@@ -9,9 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { GenericButton } from '../../../core/generic-button/generic-button';
 import { MatCardModule } from '@angular/material/card';
 import { RegisterRequest } from '../../../../shared/classes/models/requests/RegisterRequest';
-import * as commonConst from '../../../../shared/constants/common.constants';
 import { ResultStatus } from '../../../../shared/enums/api/result-status.enum';
 import { NgClass } from '@angular/common';
+import * as commonConst from '../../../../shared/constants/common.constants';
 
 @Component({
   selector: 'app-register',
@@ -82,7 +82,7 @@ export class Register {
         this.invalidRegisterMessages = null;
         this.router.navigate(['/']);
       } else {
-        this.invalidRegisterMessages = result.error.messages;
+        this.invalidRegisterMessages = result.error?.messages ?? [];
         this.offerLogInInstead = result.status === ResultStatus.EmailAlreadyExists;
       }
     });
