@@ -305,8 +305,6 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
-/SITFApp/sitfapp.client/node_modules
-/SITFApp/sitfapp.client/package-lock.json
 
 # Visual Studio 6 build log
 *.plg
@@ -425,38 +423,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-/SITFApp/SITFApp.Server/startlog.txt
 
-#DB Publish profiles
-/Databases/SITFDb/PublishProfiles/SITFDb_Local_DEV1.publish.xml
-/Databases/SITFDb/PublishProfiles/SITFDb_Local_DEV2.publish.xml
-/Databases/SITFDb/PublishProfiles/SITFDb_Local_DEV3.publish.xml
-/Databases/SITFDb/PublishProfiles/SITFDb_Local_DEV4.publish.xml
-/Databases/SITFDb/PublishProfiles/SITFDb_Local_DEV5.publish.xml
-
-#appsettings
-/SITFApp.Server/appsettings.dev1.json
-/SITFApp.Server/appsettings.dev2.json
-/SITFApp.Server/appsettings.dev3.json
-/SITFApp.Server/appsettings.dev4.json
-/SITFApp.Server/appsettings.dev5.json
-/SITFApp/SITFApp.Server/appsettings.dev1.json
-/SITFApp/SITFApp.Server/appsettings.dev2.json
-/SITFApp/SITFApp.Server/appsettings.dev3.json
-/SITFApp/SITFApp.Server/appsettings.dev4.json
-/SITFApp/SITFApp.Server/appsettings.dev5.json
-/SITFDb/PublishProfiles/SITFDb_Local_DEV1.publish.xml
-/SITFDb/PublishProfiles/SITFDb_Local_DEV2.publish.xml
-/SITFDb/PublishProfiles/SITFDb_Local_DEV3.publish.xml
-/SITFDb/PublishProfiles/SITFDb_Local_DEV4.publish.xml
-/SITFDb/PublishProfiles/SITFDb_Local_DEV5.publish.xml
-/SIFT.FileService/Storage/ReportExports
-/SIFT.FileService/fsstartlog.txt
-SITF.Playwright/app.d.ts
-SITF.Playwright/app.js
-SITF.Playwright/app.d.ts.map
-SITF.Playwright/app.js.map
-SITF.Playwright/tsconfig.tsbuildinfo
 SpaceXInteropDb/SpaceXInteropDb.dbmdl
 /spacexinterop.api/obj/Debug
 /spacexinterop.api/.vs
