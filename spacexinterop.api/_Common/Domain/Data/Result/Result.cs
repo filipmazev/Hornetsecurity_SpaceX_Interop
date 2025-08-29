@@ -32,23 +32,17 @@ public class Result
 
 public class Result<TValue> : Result
 {
-    private readonly TValue? _value;
-
     internal Result(TValue? value, ResultStatus status, Error? error = null)
         : base(status, error)
     {
-        _value = value;
+        Value = value;
     }
 
     internal Result(TValue? value, ResultStatus status, List<Error>? errors = null)
         : base(status, errors)
     {
-        _value = value;
+        Value = value;
     }
 
-    public TValue? Value => _value;
+    public TValue? Value { get; }
 }
-
-public record ResultJsonDto<T>(bool isSuccess, bool isFailure, T? value, ErrorJsonDto error);
-
-public record ErrorJsonDto(string code, string message);

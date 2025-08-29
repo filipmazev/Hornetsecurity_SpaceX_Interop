@@ -15,7 +15,6 @@ public enum ResultStatus : byte
     NotFound,
     ValidationFailed,
     Exception,
-    InvalidType,
     InvalidRequest,
     #endregion
 

@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using spacexinterop.api.Data.Models;
 using spacexinterop.api._Common;
-using spacexinterop.api.Core;
 using spacexinterop.api.Data;
 using Scalar.AspNetCore;
 
@@ -143,9 +142,9 @@ if (app.Environment.IsDevelopment())
 
     app.MapScalarApiReference(options =>
     {
-        options.WithTitle("Hornetsecurity | SpaceX Interop API Documentation");
+        options.WithTitle("Hornet Security | SpaceX Interop API Documentation");
         options.WithTheme(ScalarTheme.BluePlanet);
-        options.WithSidebar(true);
+        options.WithSidebar();
     });
 
     app.ApplyMigrations();

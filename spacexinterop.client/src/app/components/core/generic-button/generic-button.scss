@@ -7,6 +7,8 @@
   transition: all 0.2s ease-in-out; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
+  cursor: pointer;
+
   &.icon-button {
     border-radius: 9999px; 
     padding: 0.35rem; 
@@ -58,4 +60,8 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
   }
+}
+
+p {
+  margin: .35rem;
 }

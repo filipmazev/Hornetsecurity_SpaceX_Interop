@@ -34,13 +34,22 @@ export class App implements OnInit, OnDestroy {
   }
 
   private createSubscriptions(): void {
-    this.authService.getIsAuthenticated$().pipe(takeUntil(this.unsubscribe$)).subscribe(result => {
-      this.hasReceivedAuthStatus = true;
-      if (!result) {
-        this.router.navigate(['/login']);
-      } else {
-        this.router.navigate(['/']);
-      }
-    });
+    this.authService.getIsAuthenticated$()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(result => {
+        this.hasReceivedAuthStatus = true;
+        
+        const currentUrl = this.router.url;
+
+        if (currentUrl.startsWith('/register') || currentUrl.startsWith('/login')){
+          if(result) this.router.navigate(['/']);
+          else return;
+        }
+
+        if (!result) {
+          this.router.navigate(['/login']);
+        }
+      });
   }
+
 }

@@ -4,28 +4,21 @@ using System.Text;
 
 namespace spacexinterop.api.Infrastructure;
 
-public class LookupProtector : ILookupProtector
+public class LookupProtector(ILookupProtectorKeyRing keyRing) : ILookupProtector
 {
-    private readonly byte[] InitalizationVector = { 208, 148, 29, 187, 168, 51, 181, 178, 137, 83, 40, 13, 28, 177, 131, 248 };
-
-    private readonly ILookupProtectorKeyRing _keyRing;
-
-    public LookupProtector(ILookupProtectorKeyRing keyRing)
-    {
-        _keyRing = keyRing;
-    }
+    private readonly byte[] _initializationVector = [208, 148, 29, 187, 168, 51, 181, 178, 137, 83, 40, 13, 28, 177, 131, 248];
 
     public string? Protect(string keyId, string? data)
     {
         if (data is null) return null;
 
-        var base64Key = _keyRing[keyId];
+        var base64Key = keyRing[keyId];
         byte[] keyBytes = Convert.FromBase64String(base64Key);
 
         using SymmetricAlgorithm algorithm = Aes.Create();
         
         algorithm.Key = keyBytes;
-        algorithm.IV = InitalizationVector;
+        algorithm.IV = _initializationVector;
 
         using ICryptoTransform encryptor = algorithm.CreateEncryptor(algorithm.Key, algorithm.IV);
         using MemoryStream ms = new();
@@ -42,13 +35,13 @@ public class LookupProtector : ILookupProtector
     {
         if (data is null) return null;
 
-        string keyBase64 = _keyRing[keyId];
+        string keyBase64 = keyRing[keyId];
         byte[] keyBytes = Convert.FromBase64String(keyBase64);
 
         using SymmetricAlgorithm algorithm = Aes.Create();
         
         algorithm.Key = keyBytes;
-        algorithm.IV = InitalizationVector;
+        algorithm.IV = _initializationVector;
 
         byte[] cipherTextBytes = Convert.FromBase64String(data);
         using MemoryStream ms = new(cipherTextBytes);

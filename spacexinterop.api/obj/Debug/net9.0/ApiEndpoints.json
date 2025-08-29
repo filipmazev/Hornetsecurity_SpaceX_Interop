@@ -27,15 +27,15 @@
   },
   {
     "ContainingType": "spacexinterop.api.Controllers.AuthController",
-    "Method": "Signup",
-    "RelativePath": "api/Auth/signup",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "spacexinterop.api.Data.Request.SignupRequest",
+        "Type": "spacexinterop.api.Data.Request.RegisterRequest",
         "IsRequired": true
       }
     ],

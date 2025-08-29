@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpService } from "../core/http.service";
 import { environment } from "../../../../environments/environment";
-import { SignupRequest } from "../../classes/models/requests/SignupRequest.model";
+import { RegisterRequest } from "../../classes/models/requests/RegisterRequest";
 import { Observable, Subject } from "rxjs";
 import { LoginRequest } from "../../classes/models/requests/LoginRequest.model";
 import { Result } from "../../classes/models/responses/Result.model";
@@ -51,10 +51,10 @@ export class AuthService {
         });
     }
 
-    public async signup(data: SignupRequest): Promise<Result> {
+    public async register(data: RegisterRequest): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
-                await this.httpService.post<Result>(this.baseUrl + 'signup', data).then((result) => {
+                await this.httpService.post<Result>(this.baseUrl + 'register', data).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {

@@ -1,15 +1,20 @@
 import { RouterModule, Routes } from '@angular/router';
-import { Authentication } from './components/pages/authentication/authentication';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { Landing } from './components/pages/landing/landing';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { Login } from './components/pages/authentication/login/login';
+import { Register } from './components/pages/authentication/register/register';
 
 export const routes: Routes = [
     {
         path: 'login',
-        component: Authentication
+        component: Login
+    },
+    {
+        path: 'register',
+        component: Register
     },
     {
         path: '',
@@ -20,7 +25,7 @@ export const routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forChild(routes),
+        RouterModule.forRoot(routes),
         FormsModule,
         ReactiveFormsModule,
         MatDialogModule,

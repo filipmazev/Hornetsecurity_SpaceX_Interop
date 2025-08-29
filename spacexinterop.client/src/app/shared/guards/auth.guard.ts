@@ -1,5 +1,4 @@
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from "@angular/router";
-import { firstValueFrom, Observable } from "rxjs";
 import { Injectable } from "@angular/core";
 import { AuthService } from "../services/client/auth.service";
 
@@ -16,7 +15,8 @@ export class AuthGuard {
         _next: ActivatedRouteSnapshot,
         _state: RouterStateSnapshot
     ): Promise<boolean> {
-        if(_state.url === "/login") {
+        debugger;
+        if(_state.url === "/login" || _state.url === "/register") {
             return true;
         } else if (this.authService.isAuthenticated) {
             return true;

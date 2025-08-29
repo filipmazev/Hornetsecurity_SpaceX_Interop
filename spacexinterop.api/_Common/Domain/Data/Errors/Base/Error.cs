@@ -23,7 +23,7 @@ public class Error
 
     private static string GenerateUniqueCode(string baseCode)
     {
-        var count = ErrorCodeCounters.AddOrUpdate(baseCode, 1, (key, oldValue) => oldValue + 1);
+        var count = ErrorCodeCounters.AddOrUpdate(baseCode, 1, (_, oldValue) => oldValue + 1);
         return $"{baseCode}_{count:D3}";
     }
 
@@ -34,6 +34,4 @@ public class Error
         Exception = exception;
         HttpStatusCode = httpStatusCode;
     }
-
-    public ErrorJsonDto ToDto() => new(code: Code, message: Message);
 }
