@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiPath: 'https://localhost:8080/',
+    apiPath: 'https://localhost:7200/api/',
     dbVersion: 1,
 };

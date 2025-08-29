@@ -1,0 +1,60 @@
+<nav class="nav-container"
+[class]="classNames.NAV_BAR_IDENTITY_CLASS_NAME"> 
+    <!--#region Site Logo -->
+    <a href="/" class="logo logo-large"> </a>
+    <!--#endregigon Site Logo -->
+
+    @if(isAuthenticated) {
+        <div class="nav-links-container">
+        @for (item of navigationLinks; track item) {
+            <a
+            [routerLink]="item.route" 
+            routerLinkActive="route-active" 
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link">
+                {{ item.label }}
+            </a>
+        }
+        </div>
+
+        <div class="menu" [ngClass]="{ 'open': isOpen, 'closed': !isOpen }">
+            <div class="menu-content">
+                <div class="menu-links-container">
+                    @for (item of navigationLinks; track item) {
+                        <a 
+                        (click)="toggleMenu()"
+                        [routerLink]="item.route" 
+                        routerLinkActive="route-active" 
+                        [routerLinkActiveOptions]="{ exact: true }"
+                        class="nav-link">
+                            {{ item.label }}
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!--#region Mobile Hamburger Menu -->
+        <button
+            type="button"
+            (click)="toggleMenu()"
+            id="hamburger-menu"
+            aria-label="Toggle Menu"
+            class="hamburger-menu"
+            [ngClass]="{'is-open': isOpen}">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button> 
+        <!--#endregion Mobile Hamburger Menu -->
+    }
+
+    <div class="settings-container">
+        <settings> </settings>
+         @if(isAuthenticated) {
+             <button (click)="logout()" mat-icon-button>
+                 <mat-icon class="settings-menu-item"> logout </mat-icon>
+             </button>
+         }
+    </div>
+</nav>

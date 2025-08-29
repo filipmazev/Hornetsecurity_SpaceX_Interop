@@ -1,0 +1,137 @@
+<!-- Site Settings -->
+@if(initialized) {
+    <div class="settings-menu-item ">
+        <!--#region Site Settings Button -->
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="settings_menu">
+            <mat-icon class="settings-menu-item settings-icon">settings</mat-icon>
+        </button>
+        <!--#endregion Site Settings Button -->
+
+        <!--#region Site Settings Menues Container -->
+        <mat-menu #menu="matMenu">
+            <!--#region Site Theme Options -->
+            <button (click)="$event.stopPropagation(); toggleThemeSettingState()"
+                class="settings-menu-item-section-title"
+            >
+                <mat-icon class="settings-menu-item">{{MatIcons.Theme}}</mat-icon>
+                <span class="text-menu-item"> Theme Settings </span>
+            </button>
+
+            <div class="settings-menu-item-group-container">
+                <!--#region Site Theme Toggles -->
+                <button mat-menu-item (click)="$event.stopPropagation()">
+                    <div class="settings-menu-item-content">
+                        <div class="settings-menu-item-content-inner"> 
+                            <mat-icon class="settings-menu-item">{{MatIcons.DarkMode}}</mat-icon>      
+                            <span class="settings-menu-item-text"> Dark Mode </span>
+                        </div>            
+
+                        <mat-slide-toggle 
+                            [aria-label]="'dark-theme'" 
+                            [disabled]="settings.theme.autoDarkMode" 
+                            [(ngModel)]="settings.theme.darkMode.state" 
+                            (change)="toggleDarkMode(); saveThemeSetting();"> 
+                        </mat-slide-toggle>
+                    </div>
+                </button>
+                
+                <button mat-menu-item (click)="$event.stopPropagation()"> 
+                    <div class="settings-menu-item-content">   
+                        <div class="settings-menu-item-content-inner"> 
+                            <mat-icon class="settings-menu-item">{{MatIcons.Auto}}</mat-icon>      
+                            <span class="settings-menu-item-text"> Auto </span>
+                        </div>   
+
+                        <mat-slide-toggle 
+                            [aria-label]="'auto-dark-theme'" 
+                            [(ngModel)]="settings.theme.autoDarkMode" 
+                            (change)="toggledAutoDarkTheme();"> 
+                        </mat-slide-toggle>
+                    </div>
+                </button>
+                <!--#endregion Site Theme Toggles -->
+    
+                <!--#region Dark Theme Options -->
+                 @if(settings.theme.darkMode.theming.length > 1){
+                     <mat-radio-group [(ngModel)]="selectedThemeIndex" (ngModelChange)="onThemeChange($event)">
+                         @for (item of settings.theme.darkMode.theming; track item; let i = $index) {
+                             <div class="settings-menu-item" (click)="$event.stopPropagation();"
+                                 [ngClass]="{'not-selectable': !settings.theme.darkMode.state}" 
+                                 #tooltip="matTooltip"
+                                 [matTooltip]="item.description ?? ''"
+                                 [matTooltipPosition]="'left'"
+                                 [ariaLabel]="'dark_theme_option' + i">
+                                 <button (click)="$event.preventDefault(); $event.stopPropagation();" 
+                                         class="">
+                                     
+                                     @if (item.title) {
+                                         <span class="settings-menu-item-text">{{ item.title }}</span>
+                                     }
+                     
+                                     <mat-radio-button 
+                                         #matRadio 
+                                         [aria-label]="'theme_' + i" 
+                                         [value]="i"
+                                         (click)="$event.stopPropagation(); toggleDarkMode(item)">
+                                     </mat-radio-button>
+                                 </button>
+                             </div>
+                         }
+                     </mat-radio-group>
+                 }
+                <!--#endregion Dark Theme Options -->
+            </div>
+            <!--#endregion Site Theme Options -->
+
+            <!--#region Site Accessibility Options -->
+            @if(settings.accessibility.items.length > 0) {
+                <button (click)="$event.stopPropagation(); toggleAccessibilitySettingState()"
+                    class="settings-menu-item-section-title">
+                    <mat-icon class="settings-menu-item">{{MatIcons.AccessabilitySettings}}</mat-icon>
+                    <span class="text-menu-item"> Accessibility </span>
+                </button>
+
+                <div class="settings-menu-item-group-container">
+                    @for(item of settings.accessibility.items; track item) {
+                        <button mat-menu-item (click)="$event.stopPropagation();" 
+                            class="settings-menu-item"
+                            [ngClass]="{'': item.type === 'toggle'}">
+                            <div class="settings-menu-item-content">
+                                <div class="settings-menu-item-content-inner"> 
+                                    @if(item.matIcons) {
+                                        <mat-icon class="settings-menu-item">{{item.matIcons}}</mat-icon>   
+                                    }
+                                    @if(item.title) {
+                                        <span class="settings-menu-item-text">{{ item.title }}</span>
+                                    }
+                                </div>            
+                                @switch (item.type) {
+                                    @case ('toggle') {
+                                        <mat-slide-toggle [aria-label]="item.ariaLabel ?? ''" [(ngModel)]="item.state" (change)="item.changes ? item.changes($event, item) : null" [checked]="item.state"> </mat-slide-toggle>
+                                    }
+                                    @case ('radio') {
+                                        <mat-radio-button [aria-label]="item.ariaLabel ?? ''" [(ngModel)]="item.state" (change)="item.changes ? item.changes($event, item) : null"  #matRadio [checked]="item.state"> </mat-radio-button>
+                                    }
+                                    @case ('checkbox') {
+                                        <mat-checkbox [aria-label]="item.ariaLabel ?? ''" [(ngModel)]="item.state" (change)="item.changes ? item.changes($event, item) : null" #checkbox [checked]="item.state"> </mat-checkbox>
+                                    }
+                                    @default {
+                                        <mat-slide-toggle [aria-label]="item.ariaLabel ?? ''" [(ngModel)]="item.state" (change)="item.changes ? item.changes($event, item) : null" [checked]="item.state"> </mat-slide-toggle>
+                                    }
+                                }
+                            </div>
+                        </button>
+                    }
+                </div>
+            }
+            <!--#endregion Site Accessibility Options -->
+        </mat-menu>
+        <!--#endregion Site Settings Menues Container -->
+
+    </div>
+} @else {
+    <button mat-icon-button [disabled]="true">
+        <mat-icon class="settings-menu-item">settings</mat-icon>
+    </button>
+}
+<!-- Site Settings -->

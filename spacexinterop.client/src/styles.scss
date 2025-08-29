@@ -1,60 +1,82 @@
+@use "../themes/light-theme.scss" as *;
+@use "../themes/dark-theme.scss" as *;
+@use "@angular/material" as mat;
+
+@include mat.core();
+
 //#region CSS Variables
 @layer base {
     :root {
-        --primary: #ffffff;
-        --secondary: #e4e4e4;
-        --alt: #28292D;
-        --accent: #f7f7f7;
-        --accent_alt: #cccccc;
+        --primary: #ffffff;           
+        --secondary: #f5f5f5;           
+        --alt: #0c0c0c;             
+        --accent: #e3e3e3;              
+        --accent_alt: #005285;          
 
-        --text_primary: #141416;
-        --text_secondary: #28292D;
-        --text_tertiary: #282828;
-        --text_accent: #d8d8d8;
-        --text_accent_alt: #74777c;
-        --menu_item_text: #28292D;
+        --text_primary: #0c0c0c;         
+        --text_secondary: #333333;      
+        --text_tertiary: #555555;       
+        --text_accent: #005285;         
+        --text_accent_alt: #8aaecf;     
+        --menu_item_text: #0c0c0c;
 
-        --text_warn: #ff6f63;
-        --text_confirm: #a5bf04;
+        --text_warn: #e63946;           
+        --text_confirm: #4caf50;         
 
-        --button_primary: #28292D;
-        --button_confirm: #bace3d80;
-        --button_warn: #ff6f6359;
+        --bg_menu_item_hover: #dcdcdc;
 
-        --scroll_bg: #f7f7f7;
-        --scroll_thumb: linear-gradient(278deg, #e6e6e6 -10.44%, #d9d9d9 100%);
-        --scroll_thumb_highlighted: linear-gradient(278deg, #e6e6e6 -10.44%, #d9d9d9 100%);
+        --button_primary: #005285;     
+        --button_confirm: #4caf5075;    
+        --button_warn: #e6394675;       
 
-        --menu_bg: #ffffff;
+        --scroll_bg: #f5f5f5;
+        --scroll_thumb: linear-gradient(278deg, #cccccc -10.44%, #aaaaaa 100%);
+        --scroll_thumb_highlighted: linear-gradient(278deg, #aaaaaa -10.44%, #888888 100%);
+
+        --menu_bg: #e9e9e9;
+
+        --logo: url('./assets/svg/logo_light.svg');
     }
 }
 
 .dark-theme-dark {
-    --primary: #141416;
-    --secondary: #28292D;
-    --alt: #d0d0d0;
-    --accent: #1e1e20;
-    --accent_alt: #2a2a2d;
+    --primary: #0c0c0c;                  
+    --secondary: #1a1a1d;                
+    --alt: #f5f5f5;                      
+    --accent: #161616;                  
+    --accent_alt: #005285;               
 
-    --text_primary: #e7e7e7;
-    --text_secondary: #d0d0d0;
-    --text_tertiary: #989898;
-    --text_accent: #28292D;
-    --text_accent_alt: #606060;
+    --text_primary: #ffffff;             
+    --text_secondary: #d0d0d0;           
+    --text_tertiary: #999999;            
+    --text_accent: #005285;              
+    --text_accent_alt: #5b8db3;          
     --menu_item_text: #d0d0d0;
 
-    --text_warn: #f87a6f;
-    --text_confirm: #d7f41f;
+    --text_warn: #f87171;                
+    --text_confirm: #81c784;             
 
-    --button_primary: #e7e7e7;
-    --button_confirm: #91a70070;
-    --button_warn: #a7352b54;
+    --bg_menu_item_hover: #161616;
+
+    --button_primary: #005285;           
+    --button_confirm: #4caf5070;         
+    --button_warn: #e6394660;           
 
     --scroll_bg: #1a1a1d;
     --scroll_thumb: linear-gradient(278deg, #2a2a2d -10.44%, #3b3b3e 100%);
-    --scroll_thumb_highlighted: linear-gradient(278deg, #2a2a2d -10.44%, #3b3b3e 100%);
+    --scroll_thumb_highlighted: linear-gradient(278deg, #3b3b3e -10.44%, #555555 100%);
 
-    --menu_bg: #141416;
+    --menu_bg: #070707;
+
+    --logo: url('./assets/svg/logo_dark.svg');
+}
+
+body {
+    @include mat.all-component-themes($theme-light);
+}
+
+body.dark-theme-dark {
+    @include mat.all-component-colors($theme-dark);
 }
 //#endregion
 
@@ -250,6 +272,11 @@ body nav {
     height: 5vh;
 }
 
+button {
+    background: none;
+    border: none;
+}
+
 .content_container {
     flex: 1 1 auto;
     overflow-y: auto;
@@ -257,7 +284,7 @@ body nav {
     padding-bottom: 1rem;
 }
 
-// Scrollbar Customization Start
+//#region Scrollbar Customization Start
 ::-webkit-scrollbar {
     width: 7px;
 }
@@ -274,4 +301,270 @@ body nav {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scroll_thumb_highlighted);
 }
+//#endregion
+
+//#region Text
+
+.text-primary {
+    color: var(--text_primary)
+}
+
+.text-secondary {
+    color: var(--text_secondary);
+}
+
+.text-tertiary {
+    color: var(--text_tertiary);
+}
+
+.text-accent {
+  color: var(--text_accent);
+}
+
+.text-accent-alt {
+  color: var(--text_accent_alt);
+}
+
+
+.text-confirm {
+  color: var(--text_confirm);
+}
+
+.text-warn {
+  color: var(--text_warn);
+}
+
+.text-menu-item {
+    color: var(--menu_item_text)
+}
+
+//#endregion
+
+.disabled-input {
+  cursor: pointer;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.page-section {
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+
+    background-color: var(--primary);
+}
+
+//#endregion
+
+//#region Material Customization
+
+@mixin style-theme($theme) {
+  $p: map-get($theme, primary);
+  $a: map-get($theme, accent);
+  $w: map-get($theme, warn);
+  $b: map-get($theme, background);
+  $f: map-get($theme, foreground);
+  $primary: mat-color($p);
+  $accent: mat-color($a);
+  $warn: mat-color($w);
+  $background: mat-color($b, background);
+  $background-card: mat-color($b, card);
+  $foreground: mat-color($f, text);
+  $app-bar: mat-color($b, app-bar);
+  $primary-contrast: mat-color($p, default-contrast);
+  $accent-contrast: mat-color($a, default-contrast);
+  $warn-contrast: mat-color($w, default-contrast);
+
+  .color.primary {
+    color: $primary;
+  }
+
+  .color.accent {
+    color: $accent;
+  }
+
+  .color.warn {
+    color: $warn;
+  }
+
+  .background.primary {
+    background-color: $primary;
+    color: $primary-contrast;
+  }
+
+  .background.accent {
+    background-color: $accent;
+    color: $accent-contrast;
+  }
+
+  .background.warn {
+    background-color: $warn;
+    color: $warn-contrast;
+  }
+
+  .background.card {
+    background-color: $background-card;
+  }
+
+  .background.stacked {
+    background-color: $background;
+  }
+
+  code.snippet,
+  a.link {
+    color: $primary;
+  }
+
+  code.snippet.alt,
+  a.link:visited {
+    color: $accent;
+  }
+
+  sidepanel mat-nav-list.mat-nav-list {
+    padding-top: 0px;
+    background-color: $app-bar;
+  }
+
+  mat-paginator.mat-paginator {
+    background-color: $background;
+  }
+
+  a.mat-list-item.active,
+  a.mat-tab-link.active {
+    color: $primary;
+  }
+
+  text {
+    fill: $foreground;
+  }
+}
+
+html, body, app, .app-frame, .app-body {
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+.app-panel {
+    height: 100%;
+    overflow: auto;
+}
+
+mat-toolbar.mat-toolbar.app-toolbar {
+  padding: 0 8px;
+
+  button.mat-icon-button {
+    margin-right: 8px;
+  }
+}
+
+mat-toolbar.mat-toolbar {
+  span {
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+  button.mat-button {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+a.mat-tab-link {
+  min-width: 80px;
+}
+
+.container {
+  padding: 4px;
+}
+
+.card {
+  margin: 4px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+img.thumbnail {
+  height: 80px;
+}
+
+img.profile-image {
+  height: 200px;
+}
+
+.static-elevation {
+  @include mat.elevation(2);
+}
+
+.elevated {
+  @include mat.elevation-transition;
+  @include mat.elevation(2);
+
+  &:hover {
+    @include mat.elevation(6);
+  }
+}
+
+mat-dialog-container {
+    background-color: transparent !important;
+}
+
+.mat-mdc-dialog-container {
+    border-radius: 1rem !important;
+}
+
+.mdc-dialog__surface {
+    border-radius: 1rem !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 1rem !important;
+    background-color: transparent !important;
+}
+
+.settings-menu-item {
+    cursor: pointer;
+}
+
+.mat-mdc-menu-panel {
+    background-color: var(--menu_bg) !important;
+    color: var(--menu_item_text) !important
+}
+
+.settings-menu-item.mat-mdc-menu-item {
+    color: var(--menu_item_text) !important
+}
+
+.settings-menu-item.mat-icon-no-color {
+    color: var(--menu_item_text) !important
+}
+
+.mat-internal-form-field {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mat-mdc-table {
+    background-color: transparent !important;
+}
+
+.mat-mdc-paginator {
+    background-color: transparent !important;
+}
+
+.mat-mdc-card {
+    background-color: var(--accent) !important;
+}
+
+.mdc-text-field--filled {
+    background-color: var(--secondary) !important;
+}
+
 //#endregion

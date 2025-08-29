@@ -4,13 +4,22 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>912437f6-68ae-4dc9-b291-b633152351f0</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="_Common\" />
-    <Folder Include="Services\" />
+    <Folder Include="Data\DTO\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repositories\Interfaces\" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.8" />
 	<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  <PrivateAssets>all</PrivateAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
+	<PackageReference Include="Scalar.AspNetCore" Version="2.7.2" />
   </ItemGroup>
 
 </Project>

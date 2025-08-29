@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("912437f6-68ae-4dc9-b291-b633152351f0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("spacexinterop.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b594087c4493267237d9fbc98a4304d796c4cb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ead1b819065defaae8033cf94dbd46d1bd8db912")]
 [assembly: System.Reflection.AssemblyProductAttribute("spacexinterop.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("spacexinterop.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

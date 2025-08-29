@@ -60,9 +60,15 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
     <Folder Include="Domain" />
+    <Folder Include="PostDeployment" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Debug.PostDeployment1.sql" />
     <None Include="PublishProfiles\SpaceXInteropDb.Local.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\Identity.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

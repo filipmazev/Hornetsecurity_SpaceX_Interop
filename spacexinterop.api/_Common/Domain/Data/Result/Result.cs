@@ -1,0 +1,54 @@
+﻿using spacexinterop.api._Common.Domain.Data.Errors.Base;
+using spacexinterop.api._Common.Utility.Extensions;
+
+namespace spacexinterop.api._Common.Domain.Data.Result;
+
+public class Result
+{
+    public ResultStatus Status { get; }
+    public bool IsSuccess => Status.IsSuccess();
+    public bool IsFailure => Status.IsFailure();
+
+    public Error? Error { get; }
+    public List<Error>? ErrorsList { get; }
+
+    public Result()
+    {
+
+    }
+
+    public Result(ResultStatus status = ResultStatus.Default, Error? error = null)
+    {
+        Status = status;
+        Error = error;
+    }
+
+    public Result(ResultStatus status = ResultStatus.Default, List<Error>? errorsList = null)
+    {
+        Status = status;
+        ErrorsList = errorsList;
+    }
+}
+
+public class Result<TValue> : Result
+{
+    private readonly TValue? _value;
+
+    internal Result(TValue? value, ResultStatus status, Error? error = null)
+        : base(status, error)
+    {
+        _value = value;
+    }
+
+    internal Result(TValue? value, ResultStatus status, List<Error>? errors = null)
+        : base(status, errors)
+    {
+        _value = value;
+    }
+
+    public TValue? Value => _value;
+}
+
+public record ResultJsonDto<T>(bool isSuccess, bool isFailure, T? value, ErrorJsonDto error);
+
+public record ErrorJsonDto(string code, string message);
