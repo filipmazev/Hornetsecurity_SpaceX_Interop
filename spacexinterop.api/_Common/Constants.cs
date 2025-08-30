@@ -13,11 +13,10 @@ public static class Constants
 
     #region Validatory
 
-    public const int MinUsernameLength = 5;
-    public const int MaxUsernameLength = 20;
-
     public const int MinPasswordLength = 8;
     public const int MaxPasswordLength = 50;
+
+    public const int MaxIdentityStringLength = 200;
 
     #region Regex
 

@@ -43,8 +43,6 @@ export class AuthService {
                 await this.httpService.post<Result>(this.baseUrl + 'Login', request).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
-                    } else {
-                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during login.");
                     }
                     resolve(result);
                 });
@@ -62,8 +60,6 @@ export class AuthService {
                 await this.httpService.post<Result>(this.baseUrl + 'Register', request).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
-                    } else {
-                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during registration.");
                     }
                     resolve(result);
                 });

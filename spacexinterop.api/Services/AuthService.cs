@@ -66,7 +66,9 @@ public class AuthService(
 
         User user = new()
         {
-            UserName = request.Username,
+            UserName = request.Email,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
             Email = request.Email
         };
 

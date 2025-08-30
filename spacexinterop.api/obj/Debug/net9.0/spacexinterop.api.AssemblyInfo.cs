@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("spacexinterop.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deab21e1730839875ac038ed635988f6b379604f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa74402838a6c94feccbe68cf8b9b92fee4fcd66")]
 [assembly: System.Reflection.AssemblyProductAttribute("spacexinterop.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("spacexinterop.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

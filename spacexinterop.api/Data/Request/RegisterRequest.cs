@@ -6,9 +6,10 @@ namespace spacexinterop.api.Data.Request;
 public class RegisterRequest
 {
     [Required]
-    [MinLength(Constants.MinUsernameLength)]
-    [MaxLength(Constants.MaxUsernameLength)]
-    public required string Username { get; set; }
+    public required string FirstName { get; set; }
+
+    [Required]
+    public required string LastName { get; set; }
 
     [Required]
     public required string Email { get; set; }

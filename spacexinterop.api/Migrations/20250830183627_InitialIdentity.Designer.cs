@@ -12,7 +12,7 @@ using spacexinterop.api.Data;
 namespace spacexinterop.api.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20250827184617_InitialIdentity")]
+    [Migration("20250830183627_InitialIdentity")]
     partial class InitialIdentity
     {
         /// <inheritdoc />
@@ -176,6 +176,16 @@ namespace spacexinterop.api.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");

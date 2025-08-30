@@ -20,8 +20,8 @@ export class Landing implements OnInit {
   private getLaunches(): void {
     const request = new SpaceXLaunchesRequest(
       false,
-      SortDirectionEnum.Descending,
-      3,
+      SortDirectionEnum.Ascending,
+      1,
       10,
       true
     );
