@@ -1,14 +1,17 @@
-﻿using spacexinterop.api._Common.Extensions;
-using Microsoft.AspNetCore.HttpOverrides;
-using spacexinterop.api._Common._Configs;
-using spacexinterop.api.Infrastructure;
-using System.Text.Json.Serialization;
+﻿using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using spacexinterop.api.Data.Models;
-using spacexinterop.api._Common;
-using spacexinterop.api.Data;
+using Microsoft.Extensions.Options;
 using Scalar.AspNetCore;
+using spacexinterop.api._Common;
+using spacexinterop.api._Common._Configs;
+using spacexinterop.api._Common.Extensions;
+using spacexinterop.api._Common.Utility.Clients;
+using spacexinterop.api._Common.Utility.Clients.Interfaces;
+using spacexinterop.api.Data;
+using spacexinterop.api.Data.Models;
+using spacexinterop.api.Infrastructure;
+using System.Text.Json.Serialization;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +38,18 @@ if (builder.Environment.IsDevelopment())
 }
 
 builder.Services.Configure<EncryptionKeyConfig>(builder.Configuration.GetSection("EncryptionKeys"));
+
+#region Space X API Interop
+
+builder.Services.Configure<SpaceXApiConfig>(builder.Configuration.GetSection("ExternalApis:SpaceXApi"));
+
+builder.Services.AddHttpClient<ISpaceXClient, SpaceXClient>((sp, client) =>
+{
+    SpaceXApiConfig options = sp.GetRequiredService<IOptions<SpaceXApiConfig>>().Value;
+    client.BaseAddress = new Uri(options.BaseUrl);
+});
+
+#endregion
 
 #endregion
 

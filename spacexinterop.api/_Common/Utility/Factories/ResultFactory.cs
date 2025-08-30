@@ -23,6 +23,11 @@ public class ResultFactory : IResultFactory
         status: ResultStatus.Success,
         error: null);
 
+    public Result<TValue> Success<TValue>(TValue value) => new(
+        value: value,
+        status: ResultStatus.Success,
+        error: null);
+
     public Result Failure(Error error) => new(
         status: ResultStatus.Failure,
         error: error);
@@ -31,19 +36,40 @@ public class ResultFactory : IResultFactory
         error: error,
         status: status);
 
+    public Result<TValue> Failure<TValue>(Error error) => new(
+        value: default,
+        status: ResultStatus.Failure,
+        error: error);
+
+    public Result<TValue> Failure<TValue>(Error error, ResultStatus status) => new(
+        value: default,
+        status: status,
+        error: error);
+
     public Result FromStatus(ResultStatus status) => new(
         status: status,
         error: status.ResolveError());
 
-    public Result<TValue> Success<TValue>(TValue value) => new(
-        value: value,
-        status: ResultStatus.Success,
-        error: null);
+    public Result<TValue> FromStatus<TValue>(ResultStatus status) => new(
+        value: default,
+        status: status,
+        error: status.ResolveError());
 
     public Result Exception(Exception exception, string message, Error? error = null)
     {
         _logger?.LogError(exception, "Exception: {Message}. Error: {Error}", message, error?.Messages ?? ["None"]);
         return new Result(
+            status: ResultStatus.Exception,
+            error: error ?? Error.CreateError(
+                baseCode: "Exception",
+                message: "An exception occurred with message: " + message));
+    }
+
+    public Result<TValue> Exception<TValue>(Exception exception, string message, Error? error = null)
+    {
+        _logger?.LogError(exception, "Exception: {Message}. Error: {Error}", message, error?.Messages ?? ["None"]);
+        return new Result<TValue>(
+            value: default,
             status: ResultStatus.Exception,
             error: error ?? Error.CreateError(
                 baseCode: "Exception",
