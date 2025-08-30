@@ -1,33 +1,40 @@
 ﻿using spacexinterop.api._Common.Utility.Clients.Interfaces;
-using spacexinterop.api.Data.External.Space_X.Launches;
-using spacexinterop.api.Data.Request;
-using spacexinterop.api.Data.Enums;
+using spacexinterop.api.Data.Models.External.Space_X.Core;
+using spacexinterop.api.Data.Response.External.Space_X;
+using spacexinterop.api.Data.Request.External.Space_X;
+using spacexinterop.api.Data.Enums.External.Space_X;
+using spacexinterop.api._Common.Utility.Extensions;
 using System.Text.Json;
+using System.Text;
 
 namespace spacexinterop.api._Common.Utility.Clients;
 
 public class SpaceXClient(HttpClient httpClient) : ISpaceXClient
 {
-    public async Task<List<Launch>> GetLaunches(SpaceXLaunchesRequest request, CancellationToken cancellationToken = default)
+    public async Task<SpaceXPaginatedResponse<TModel>?> GetQueryResponse<TModel>(SpaceXQueryRequest queryRequest,
+        CancellationToken cancellationToken = default)
+        where TModel : BaseJsonModel, new()
     {
-        string launchesRequestType = request.LaunchesRequestType switch
-        {
-            SpaceXLaunchesRequestTypeEnum.Upcoming => "upcoming",
-            SpaceXLaunchesRequestTypeEnum.Past => "past",
-            SpaceXLaunchesRequestTypeEnum.Latest => "latest",
-            _ => throw new ArgumentException("Invalid launches request type.")
-        };
+        string jsonQueryRequest = JsonSerializer.Serialize(queryRequest, new JsonSerializerOptions { WriteIndented = true });
 
-        HttpResponseMessage response = await httpClient.GetAsync($"launches/{launchesRequestType}", cancellationToken);
+        TModel dummy = new();
+
+        HttpResponseMessage response = await httpClient.PostAsync(
+            $"{dummy.JsonPluralName}/{RequestTypeEnum.Query.GetJsonPropertyName()}",
+            new StringContent(jsonQueryRequest, Encoding.UTF8, "application/json"),
+            cancellationToken
+        );
+
         response.EnsureSuccessStatusCode();
 
         string json = await response.Content.ReadAsStringAsync(cancellationToken);
 
-        List<Launch>? launches = JsonSerializer.Deserialize<List<Launch>>(json, new JsonSerializerOptions
+        SpaceXPaginatedResponse<TModel>? paginatedResponse =
+        JsonSerializer.Deserialize<SpaceXPaginatedResponse<TModel>>(json, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         });
 
-        return launches ?? [];
+        return paginatedResponse;
     }
 }

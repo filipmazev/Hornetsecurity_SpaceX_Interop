@@ -1,5 +1,6 @@
 ﻿using spacexinterop.api._Common.Domain.Data.Result;
 using spacexinterop.api.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using spacexinterop.api.Data.Request;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace spacexinterop.api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class SpaceXController(
     ISpaceXService spaceXService)
     : Controller

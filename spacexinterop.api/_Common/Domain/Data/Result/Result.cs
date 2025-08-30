@@ -7,7 +7,6 @@ public class Result
 {
     public ResultStatus Status { get; }
     public bool IsSuccess => Status.IsSuccess();
-    public bool IsFailure => Status.IsFailure();
 
     public Error? Error { get; }
 

@@ -1,4 +1,4 @@
-<section class="page-section" [ngClass]="{'landing-background-image': !isAuthenticated}">
+<section class="page-section" [ngClass]="{'landing-background-image': hasReceivedAuthStatus && !isAuthenticated}">
     @if (hasReceivedAuthStatus) {
         <navigation> </navigation>
         <router-outlet> </router-outlet>

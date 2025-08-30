@@ -13,8 +13,6 @@ public static class ResultStatusExtensions
         return attribute?.IsPositive ?? false;
     }
 
-    public static bool IsFailure(this ResultStatus status) => !status.IsSuccess();
-
     public static Error? ResolveError(this ResultStatus status)
     {
         return status.IsSuccess()

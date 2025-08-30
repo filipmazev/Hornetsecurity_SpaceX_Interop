@@ -1,11 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+using spacexinterop.api._Common.Utility.Converters;
+using System.ComponentModel.DataAnnotations;
+using spacexinterop.api.Data.Enums.External;
 using System.Text.Json.Serialization;
-using spacexinterop.api.Data.Enums;
+using spacexinterop.api.Data.Enums.External.Space_X;
 
-namespace spacexinterop.api.Data.External.Space_X.Launches;
+namespace spacexinterop.api.Data.Models.External.Space_X.Launches;
 
-public class Launch
+public class Launch : BaseJsonModel
 {
+    public override string JsonPluralName => "launches";
+
     [Required]
     [JsonPropertyName("flight_number")]
     public int FlightNumber { get; set; }
@@ -72,7 +77,8 @@ public class Launch
     public List<string> Ships { get; set; } = [];
 
     [JsonPropertyName("capsules")]
-    public List<string> Capsules { get; set; } = [];
+    [JsonConverter(typeof(GuidOrObjectConverter<Capsule>))]
+    public List<GuidOrObject<Capsule>> Capsules { get; set; } = [];
 
     [JsonPropertyName("payloads")]
     public List<string> Payloads { get; set; } = [];

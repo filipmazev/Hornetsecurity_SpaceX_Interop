@@ -7,6 +7,7 @@ import { LoginRequest } from "../../classes/models/requests/LoginRequest.model";
 import { Result } from "../../classes/models/responses/Result.model";
 import { CheckSessionResponse } from "../../classes/models/responses/CheckSessionResponse.model";
 import { ErrorSnackbarService } from "../core/ui/error-snackbar.service";
+import { COMMA_EMPTY_SPACE_JOINER } from "../../constants/common.constants";
 
 @Injectable({
     providedIn: 'root'
@@ -23,7 +24,7 @@ export class AuthService {
         private errorSnackbarService: ErrorSnackbarService
     ) {
         this.createSubscriptions();
-        this.whoAmI();
+        this.checkSession();
     }
 
     private createSubscriptions(){
@@ -36,15 +37,14 @@ export class AuthService {
     }
     //#endregion
 
-    //#region Authentication
-    public async login(data: LoginRequest): Promise<Result> {
+    public async login(request: LoginRequest): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
-                await this.httpService.post<Result>(this.baseUrl + 'Login', data).then((result) => {
+                await this.httpService.post<Result>(this.baseUrl + 'Login', request).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {
-                        this.errorSnackbarService.displayError(result.error?.messages.join(", ") ?? "An unknown error occurred during login.");
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during login.");
                     }
                     resolve(result);
                 });
@@ -56,14 +56,14 @@ export class AuthService {
         });
     }
 
-    public async register(data: RegisterRequest): Promise<Result> {
+    public async register(request: RegisterRequest): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
-                await this.httpService.post<Result>(this.baseUrl + 'Register', data).then((result) => {
+                await this.httpService.post<Result>(this.baseUrl + 'Register', request).then((result) => {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(true);
                     } else {
-                        this.errorSnackbarService.displayError(result.error?.messages.join(", ") ?? "An unknown error occurred during registration.");
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during registration.");
                     }
                     resolve(result);
                 });
@@ -82,18 +82,19 @@ export class AuthService {
                     if(result.isSuccess) {
                         this.isAuthenticatedSubject.next(false);
                     } else {
-                        this.errorSnackbarService.displayError(result.error?.messages.join(", ") ?? "An unknown error occurred during logout.");
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during logout.");
                     }
                     resolve(result);
                 });
             } catch (error) {
+                this.errorSnackbarService.displayError("An unknown error occurred during logout.");
                 if (!environment.production) console.error('Login failed:', error);
                 reject(error);
             }
         });
     }
 
-    public async whoAmI(): Promise<CheckSessionResponse | undefined | null> {
+    public async checkSession(): Promise<CheckSessionResponse | undefined | null> {
         return new Promise<CheckSessionResponse | undefined | null>(async (resolve) => {
             try {
                 await this.httpService.get<Result<CheckSessionResponse>>(this.baseUrl + 'CheckSession').then((result) => {
@@ -104,11 +105,11 @@ export class AuthService {
                     }
                     resolve(result.value);
                 });
-            } catch {
+            } catch (error) {
                 this.errorSnackbarService.displayError("An unknown error occurred during session check.");
+                if (!environment.production) console.error('Session check failed:', error);
                 resolve(null);
             }
         });
     }
-    //#endregion
 }

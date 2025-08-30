@@ -1,17 +1,18 @@
-﻿using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Scalar.AspNetCore;
-using spacexinterop.api._Common;
-using spacexinterop.api._Common._Configs;
-using spacexinterop.api._Common.Extensions;
+﻿using spacexinterop.api._Common.Utility.Clients.Interfaces;
+using spacexinterop.api._Common.Utility.Mapper.Interfaces;
 using spacexinterop.api._Common.Utility.Clients;
-using spacexinterop.api._Common.Utility.Clients.Interfaces;
-using spacexinterop.api.Data;
-using spacexinterop.api.Data.Models;
+using spacexinterop.api._Common.Extensions;
+using Microsoft.AspNetCore.HttpOverrides;
+using spacexinterop.api._Common._Configs;
 using spacexinterop.api.Infrastructure;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using spacexinterop.api.Data.Models;
+using Microsoft.Extensions.Options;
+using spacexinterop.api._Common;
+using spacexinterop.api.Data;
+using Scalar.AspNetCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +26,8 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+        options.JsonSerializerOptions.WriteIndented = true;
     });
 
 builder.Services.AddOpenApi();
@@ -142,6 +144,15 @@ builder.Services.AddConfiguredRateLimiter(builder.Configuration);
 WebApplication app = builder.Build();
 
 #region Configure App
+
+#region Service Scope
+
+using IServiceScope scope = app.Services.CreateScope();
+
+IMappingConfig mappingConfig = app.Services.GetRequiredService<IMappingConfig>();
+mappingConfig.RegisterMappings();
+
+#endregion
 
 if (app.Environment.IsDevelopment())
 {

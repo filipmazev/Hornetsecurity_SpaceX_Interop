@@ -1,6 +1,7 @@
 export const CLASS_NAME_DELIMITER = '-';
 
 export const EMPTY_STRING = '';
+export const COMMA_EMPTY_SPACE_JOINER = ", ";
 
 export const DEFAULT_REQUEST_TIMEOUT_IN_MS = 10000;
 
