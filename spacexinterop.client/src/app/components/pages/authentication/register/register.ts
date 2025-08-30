@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { GenericButton } from '../../../core/generic-button/generic-button';
 import { MatCardModule } from '@angular/material/card';
 import { RegisterRequest } from '../../../../shared/classes/models/requests/RegisterRequest';
-import { ResultStatus } from '../../../../shared/enums/api/result-status.enum';
+import { ResultStatusEnum } from '../../../../shared/enums/api/ResultStatusEnum';
 import { NgClass } from '@angular/common';
 import * as commonConst from '../../../../shared/constants/common.constants';
 
@@ -83,7 +83,7 @@ export class Register {
         this.router.navigate(['/']);
       } else {
         this.invalidRegisterMessages = result.error?.messages ?? [];
-        this.offerLogInInstead = result.status === ResultStatus.EmailAlreadyExists;
+        this.offerLogInInstead = result.status === ResultStatusEnum.EmailAlreadyExists;
       }
     });
   }

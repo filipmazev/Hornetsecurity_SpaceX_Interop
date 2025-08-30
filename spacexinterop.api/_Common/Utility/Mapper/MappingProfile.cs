@@ -20,7 +20,7 @@ public class MappingProfile<TSource, TDestination>
         _mappings.Add((source, destination) =>
         {
             object? value = sourceProperty.GetValue(source);
-            destination?.GetType().GetProperty(destinationProperty.Name)?.SetValue(destination, value);
+            destination.GetType().GetProperty(destinationProperty.Name)?.SetValue(destination, value);
         });
 
         return this;

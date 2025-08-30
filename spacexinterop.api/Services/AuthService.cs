@@ -62,7 +62,7 @@ public class AuthService(
     public async Task<Result> Register(RegisterRequest request)
     {
         if (!validators.IsEmailValid(request.Email))
-            return resultFactory.FromStatus(ResultStatus.ValidationFailed);
+            return resultFactory.FromStatus(ResultStatusEnum.ValidationFailed);
 
         User user = new()
         {
@@ -83,7 +83,7 @@ public class AuthService(
                     : duplicateUserName ? AuthError.UserNameAlreadyExists 
                     : AuthError.RegistrationFailed;
 
-                ResultStatus errorStatus = duplicateEmail ? ResultStatus.EmailAlreadyExists : ResultStatus.Failure;
+                ResultStatusEnum errorStatus = duplicateEmail ? ResultStatusEnum.EmailAlreadyExists : ResultStatusEnum.Failure;
 
                 return resultFactory.Failure(error: error, status: errorStatus);
             }
@@ -104,12 +104,12 @@ public class AuthService(
         try
         {
             if(string.IsNullOrWhiteSpace(userName))
-                return resultFactory.FromStatus(ResultStatus.InvalidRequest);
+                return resultFactory.FromStatus(ResultStatusEnum.InvalidRequest);
 
             User? user = await userManager.FindByNameAsync(userName);
             
             return user is null 
-                ? resultFactory.FromStatus(ResultStatus.NotFound) 
+                ? resultFactory.FromStatus(ResultStatusEnum.NotFound) 
                 : resultFactory.Success();
         }
         catch (Exception ex)

@@ -50,7 +50,10 @@ public class SpaceXPaginatedResponse<TModel>
         return new PaginatedResponse<TAppItem>
         {
             Items = items,
-            TotalItems = TotalDocs
+            TotalItems = TotalDocs,
+            PageIndex = Page,
+            ItemsPerPage = Limit,
+            TotalPages = TotalPages
         };
     }
 
@@ -59,7 +62,10 @@ public class SpaceXPaginatedResponse<TModel>
         return new PaginatedResponse<TModel>
         {
             Items = Docs,
-            TotalItems = TotalDocs
+            TotalItems = TotalDocs,
+            PageIndex = Page,
+            ItemsPerPage = Limit,
+            TotalPages = TotalPages
         };
     }
 }

@@ -7,6 +7,7 @@ public static class Constants
     public const int UserLockoutTimespanInMinutes = 120;
     public const int MaxFailedAccessAttempts = 5;
     public const int SessionDurationInHours = 1;
+    public const int MemoryCacheTimeToLiveInMinutes = 10;
 
     #endregion
 

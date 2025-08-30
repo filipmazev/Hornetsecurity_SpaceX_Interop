@@ -12,7 +12,7 @@ public class SortOption
     [JsonExtensionData]
     public Dictionary<string, object> Fields { get; } = new();
 
-    public SortOption By<TModel>(Expression<Func<TModel, object>> property, SortDirection direction)
+    public SortOption By<TModel>(Expression<Func<TModel, object>> property, SortDirectionEnum direction)
         where TModel : BaseJsonModel
     {
         string name = GetJsonPropertyName(property);

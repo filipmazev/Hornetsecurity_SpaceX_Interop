@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SpaceXService } from '../../../shared/services/client/spacex.service';
 import { SpaceXLaunchesRequest } from '../../../shared/classes/models/requests/SpaceXLaunchesRequest.model';
-import { LaunchesRequestTypeEnum } from '../../../shared/enums/api/launch-request-type.enum';
+import { SortDirectionEnum } from '../../../shared/enums/api/SortDirectionEnum';
 
 @Component({
   selector: 'app-landing',
@@ -19,16 +19,16 @@ export class Landing implements OnInit {
 
   private getLaunches(): void {
     const request = new SpaceXLaunchesRequest(
-      LaunchesRequestTypeEnum.Latest,
-      1,
-      10
+      false,
+      SortDirectionEnum.Descending,
+      3,
+      10,
+      true
     );
 
     this.spaceXService.getLaunches(request).then((result) => {
       if (result.isSuccess) {
-        result.value?.items.forEach(element => {
-          console.log(element.name);
-        });
+        console.log(result.value);
       } else {
         console.error(result.error);
       }

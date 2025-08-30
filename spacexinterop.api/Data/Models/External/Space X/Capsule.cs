@@ -19,7 +19,8 @@ public class Capsule : BaseJsonModel
     public string Type { get; set; } = string.Empty;
 
     [JsonPropertyName("dragon")]
-    public string? Dragon { get; set; }
+    [JsonConverter(typeof(GuidOrObjectConverter<Dragon>))]
+    public GuidOrObject<Dragon>? Dragon { get; set; }
 
     [JsonPropertyName("reuse_count")]
     public int ReuseCount { get; set; } = 0;
@@ -34,6 +35,6 @@ public class Capsule : BaseJsonModel
     public string? LastUpdate { get; set; }
 
     [JsonPropertyName("launches")]
-    [JsonConverter(typeof(GuidOrObjectConverter<Launch>))]
+    [JsonConverter(typeof(GuidOrObjectArrayConverter<Launch>))]
     public List<GuidOrObject<Launch>>? Launches { get; set; }
 }

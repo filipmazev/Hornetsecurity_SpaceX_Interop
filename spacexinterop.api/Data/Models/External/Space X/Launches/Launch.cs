@@ -1,9 +1,9 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Rockets;
+using spacexinterop.api.Data.Models.External.Space_X.Core;
+using spacexinterop.api.Data.Enums.External.Space_X;
 using spacexinterop.api._Common.Utility.Converters;
 using System.ComponentModel.DataAnnotations;
-using spacexinterop.api.Data.Enums.External;
 using System.Text.Json.Serialization;
-using spacexinterop.api.Data.Enums.External.Space_X;
 
 namespace spacexinterop.api.Data.Models.External.Space_X.Launches;
 
@@ -11,27 +11,21 @@ public class Launch : BaseJsonModel
 {
     public override string JsonPluralName => "launches";
 
-    [Required]
     [JsonPropertyName("flight_number")]
     public int FlightNumber { get; set; }
 
-    [Required]
     [JsonPropertyName("name")]
     public string Name { get; set; } = string.Empty;
 
-    [Required]
     [JsonPropertyName("date_utc")]
     public DateTime DateUtc { get; set; }
 
-    [Required]
     [JsonPropertyName("date_unix")]
     public long DateUnix { get; set; }
 
-    [Required]
     [JsonPropertyName("date_local")]
     public DateTime DateLocal { get; set; }
 
-    [Required]
     [JsonPropertyName("date_precision")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public DatePrecisionEnum DatePrecision { get; set; }
@@ -52,7 +46,8 @@ public class Launch : BaseJsonModel
     public int? Window { get; set; }
 
     [JsonPropertyName("rocket")]
-    public string? Rocket { get; set; }
+    [JsonConverter(typeof(GuidOrObjectConverter<Rocket>))]
+    public GuidOrObject<Rocket>? Rocket { get; set; }
 
     [JsonPropertyName("success")]
     public bool? Success { get; set; }
@@ -74,17 +69,20 @@ public class Launch : BaseJsonModel
     public List<CrewMember> Crew { get; set; } = [];
 
     [JsonPropertyName("ships")]
-    public List<string> Ships { get; set; } = [];
+    [JsonConverter(typeof(GuidOrObjectArrayConverter<Ship>))]
+    public List<GuidOrObject<Ship>> Ships { get; set; } = [];
 
     [JsonPropertyName("capsules")]
-    [JsonConverter(typeof(GuidOrObjectConverter<Capsule>))]
+    [JsonConverter(typeof(GuidOrObjectArrayConverter<Capsule>))]
     public List<GuidOrObject<Capsule>> Capsules { get; set; } = [];
 
     [JsonPropertyName("payloads")]
-    public List<string> Payloads { get; set; } = [];
+    [JsonConverter(typeof(GuidOrObjectArrayConverter<Payload>))]
+    public List<GuidOrObject<Payload>> Payloads { get; set; } = [];
 
     [JsonPropertyName("launchpad")]
-    public string? Launchpad { get; set; }
+    [JsonConverter(typeof(GuidOrObjectConverter<Launchpad>))]
+    public GuidOrObject<Launchpad>? Launchpad { get; set; }
 
     [JsonPropertyName("cores")]
     public List<Core> Cores { get; set; } = [];

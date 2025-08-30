@@ -1,4 +1,4 @@
-export enum ResultStatus {
+export enum ResultStatusEnum {
   //#region Basic
   Default = 'Default',
   Success = 'Success',

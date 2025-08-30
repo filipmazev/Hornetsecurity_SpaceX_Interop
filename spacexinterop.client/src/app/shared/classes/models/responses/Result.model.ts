@@ -1,14 +1,14 @@
+import { ResultStatusEnum } from "../../../enums/api/ResultStatusEnum";
 import { Error } from "./Error.model";
-import { ResultStatus } from "../../../enums/api/result-status.enum";
 
 export class Result<T = any> {
-    status: ResultStatus;
+    status: ResultStatusEnum;
     isSuccess: boolean;
     error?: Error | null;
     value: T | null;
 
     constructor(
-        status: ResultStatus,
+        status: ResultStatusEnum,
         isSuccess: boolean,
         error: Error | undefined | null,
         value: T | null

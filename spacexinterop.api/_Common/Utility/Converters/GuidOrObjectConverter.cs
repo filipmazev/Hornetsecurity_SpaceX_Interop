@@ -1,13 +1,13 @@
-﻿using System.Text.Json.Serialization;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+using System.Text.Json.Serialization;
 using System.Text.Json;
-using spacexinterop.api.Data.Models.External.Space_X.Core;
 
 namespace spacexinterop.api._Common.Utility.Converters;
 
-public class GuidOrObjectConverter<TModel> : JsonConverter<List<GuidOrObject<TModel>>>
+public class GuidOrObjectConverter<TModel> : JsonConverter<GuidOrObject<TModel>>
     where TModel : BaseJsonModel
 {
-    public override List<GuidOrObject<TModel>>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override GuidOrObject<TModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         switch (reader.TokenType)
         {
@@ -15,34 +15,14 @@ public class GuidOrObjectConverter<TModel> : JsonConverter<List<GuidOrObject<TMo
             {
                 string? guid = reader.GetString();
                 return guid is not null
-                    ? [new GuidOrObject<TModel> { Guid = guid }]
+                    ? new GuidOrObject<TModel> { Guid = guid }
                     : null;
-            }
-            case JsonTokenType.StartArray:
-            {
-                using JsonDocument doc = JsonDocument.ParseValue(ref reader);
-
-                if (doc.RootElement.ValueKind != JsonValueKind.Array) return null;
-
-                if (doc.RootElement.GetArrayLength() > 0 && doc.RootElement[0].ValueKind == JsonValueKind.String)
-                {
-                    return doc.RootElement.EnumerateArray()
-                        .Select(item => new GuidOrObject<TModel> { Guid = item.GetString() })
-                        .ToList();
-                }
-
-                return doc.RootElement.EnumerateArray()
-                    .Select(item => new GuidOrObject<TModel>
-                    {
-                        Object = JsonSerializer.Deserialize<TModel>(item.GetRawText(), options)
-                    })
-                    .ToList();
             }
             case JsonTokenType.StartObject:
             {
                 TModel? obj = JsonSerializer.Deserialize<TModel>(ref reader, options);
                 return obj is not null
-                    ? [new GuidOrObject<TModel> { Object = obj }]
+                    ? new GuidOrObject<TModel> { Object = obj }
                     : null;
             }
         }
@@ -50,16 +30,13 @@ public class GuidOrObjectConverter<TModel> : JsonConverter<List<GuidOrObject<TMo
         return null;
     }
 
-    public override void Write(Utf8JsonWriter writer, List<GuidOrObject<TModel>> value, JsonSerializerOptions options)
+    public override void Write(Utf8JsonWriter writer, GuidOrObject<TModel> value, JsonSerializerOptions options)
     {
         writer.WriteStartArray();
 
-        foreach (GuidOrObject<TModel> item in value)
-        {
-            if (item.Guid is not null) writer.WriteStringValue(item.Guid);
-            else if (item.Object is not null) JsonSerializer.Serialize(writer, item.Object, options);
-        }
-
-        writer.WriteEndArray();
+        if (value.Guid is not null)
+            writer.WriteStringValue(value.Guid);
+        else if (value.Object is not null)
+            JsonSerializer.Serialize(writer, value.Object, options);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace spacexinterop.api.Data.Enums.External.Space_X;
 
-public enum SortDirection
+public enum SortDirectionEnum
 {
     [JsonPropertyName("asc")]
     Ascending,

@@ -20,37 +20,37 @@ public class ResultFactory : IResultFactory
     }
 
     public Result Success() => new(
-        status: ResultStatus.Success,
+        status: ResultStatusEnum.Success,
         error: null);
 
     public Result<TValue> Success<TValue>(TValue value) => new(
         value: value,
-        status: ResultStatus.Success,
+        status: ResultStatusEnum.Success,
         error: null);
 
     public Result Failure(Error error) => new(
-        status: ResultStatus.Failure,
+        status: ResultStatusEnum.Failure,
         error: error);
 
-    public Result Failure(Error error, ResultStatus status) => new(
+    public Result Failure(Error error, ResultStatusEnum status) => new(
         error: error,
         status: status);
 
     public Result<TValue> Failure<TValue>(Error error) => new(
         value: default,
-        status: ResultStatus.Failure,
+        status: ResultStatusEnum.Failure,
         error: error);
 
-    public Result<TValue> Failure<TValue>(Error error, ResultStatus status) => new(
+    public Result<TValue> Failure<TValue>(Error error, ResultStatusEnum status) => new(
         value: default,
         status: status,
         error: error);
 
-    public Result FromStatus(ResultStatus status) => new(
+    public Result FromStatus(ResultStatusEnum status) => new(
         status: status,
         error: status.ResolveError());
 
-    public Result<TValue> FromStatus<TValue>(ResultStatus status) => new(
+    public Result<TValue> FromStatus<TValue>(ResultStatusEnum status) => new(
         value: default,
         status: status,
         error: status.ResolveError());
@@ -59,7 +59,7 @@ public class ResultFactory : IResultFactory
     {
         _logger?.LogError(exception, "Exception: {Message}. Error: {Error}", message, error?.Messages ?? ["None"]);
         return new Result(
-            status: ResultStatus.Exception,
+            status: ResultStatusEnum.Exception,
             error: error ?? Error.CreateError(
                 baseCode: "Exception",
                 message: "An exception occurred with message: " + message));
@@ -70,7 +70,7 @@ public class ResultFactory : IResultFactory
         _logger?.LogError(exception, "Exception: {Message}. Error: {Error}", message, error?.Messages ?? ["None"]);
         return new Result<TValue>(
             value: default,
-            status: ResultStatus.Exception,
+            status: ResultStatusEnum.Exception,
             error: error ?? Error.CreateError(
                 baseCode: "Exception",
                 message: "An exception occurred with message: " + message));

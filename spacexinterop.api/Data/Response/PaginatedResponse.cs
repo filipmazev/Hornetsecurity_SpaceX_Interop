@@ -5,4 +5,7 @@ public class PaginatedResponse<TAppItem>
 {
     public required List<TAppItem> Items { get; set; } = [];
     public required int TotalItems { get; set; }
+    public required int PageIndex { get; set; }
+    public required int ItemsPerPage { get; set; }
+    public required int TotalPages { get; set; }
 }

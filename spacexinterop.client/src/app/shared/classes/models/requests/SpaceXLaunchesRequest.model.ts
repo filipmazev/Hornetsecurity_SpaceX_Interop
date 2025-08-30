@@ -1,16 +1,23 @@
-import { LaunchesRequestTypeEnum } from "../../../enums/api/launch-request-type.enum";
+import { SortDirectionEnum } from "../../../enums/api/SortDirectionEnum";
 
 export class SpaceXLaunchesRequest {
-    launchesRequestType: LaunchesRequestTypeEnum;
+    upcoming: boolean = false;
+    sortDirection: SortDirectionEnum = SortDirectionEnum.Descending;
     pageIndex: number;
     pageSize: number;
+    includePayloads: boolean ;
 
     constructor(
-        launchesRequestType: LaunchesRequestTypeEnum,
-        pageIndex: number, 
-        pageSize: number) {
-        this.launchesRequestType = launchesRequestType;
+        upcoming: boolean,
+        sortDirection: SortDirectionEnum,
+        pageIndex: number,
+        pageSize: number,
+        includePayloads: boolean
+    ) {
+        this.upcoming = upcoming;
+        this.sortDirection = sortDirection;
         this.pageIndex = pageIndex;
         this.pageSize = pageSize;
+        this.includePayloads = includePayloads;
     }
 }

@@ -8,11 +8,11 @@ public interface IResultFactory
     Result Success();
     Result<TValue> Success<TValue>(TValue value);
     Result Failure(Error error);
-    Result Failure(Error error, ResultStatus status);
+    Result Failure(Error error, ResultStatusEnum status);
     Result<TValue> Failure<TValue>(Error error);
-    Result<TValue> Failure<TValue>(Error error, ResultStatus status);
-    Result FromStatus(ResultStatus status);
-    Result<TValue> FromStatus<TValue>(ResultStatus status);
+    Result<TValue> Failure<TValue>(Error error, ResultStatusEnum status);
+    Result FromStatus(ResultStatusEnum status);
+    Result<TValue> FromStatus<TValue>(ResultStatusEnum status);
     Result Exception(Exception exception, string message, Error? error = null);
     Result<TValue> Exception<TValue>(Exception exception, string message, Error? error = null);
 }
