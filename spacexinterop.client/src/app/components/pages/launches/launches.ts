@@ -20,7 +20,6 @@ import { LaunchDetailsDialog } from './launch-details-dialog/launch-details-dial
 import { Subject, takeUntil } from 'rxjs';
 import { WindowDimensionsService } from '../../../shared/services/core/ui/window-dimension.service';
 import { WindowDimensions } from '../../../shared/interfaces/services/window-dimensions.interface';
-import { GenericButton } from "../../core/generic-button/generic-button";
 
 @Component({
   selector: 'app-launches',
@@ -42,8 +41,7 @@ import { GenericButton } from "../../core/generic-button/generic-button";
     NgClass,
     MatIcon,
     MatMenu,
-    MatMenuTrigger,
-    GenericButton
+    MatMenuTrigger
 ],
   templateUrl: './launches.html',
   styleUrl: './launches.scss'
