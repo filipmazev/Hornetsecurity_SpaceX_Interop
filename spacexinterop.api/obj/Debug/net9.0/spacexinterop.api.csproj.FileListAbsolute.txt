@@ -167,4 +167,6 @@ C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bi
 C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bin\Debug\net9.0\Scalar.AspNetCore.dll
-C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bin\Debug\net9.0\appsettings.Production.json
+C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bin\Debug\net9.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\spacexinterop.api\bin\Debug\net9.0\Azure.Security.KeyVault.Secrets.dll

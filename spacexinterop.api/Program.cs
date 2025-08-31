@@ -1,18 +1,21 @@
-﻿using spacexinterop.api._Common.Utility.Clients.Interfaces;
-using spacexinterop.api._Common.Utility.Mapper.Interfaces;
-using spacexinterop.api._Common.Utility.Clients;
-using spacexinterop.api._Common.Extensions;
+﻿using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 using Microsoft.AspNetCore.HttpOverrides;
-using spacexinterop.api._Common._Configs;
-using spacexinterop.api.Infrastructure;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using spacexinterop.api.Data.Models;
 using Microsoft.Extensions.Options;
-using spacexinterop.api._Common;
-using spacexinterop.api.Data;
 using Scalar.AspNetCore;
+using spacexinterop.api._Common;
+using spacexinterop.api._Common._Configs;
+using spacexinterop.api._Common.Extensions;
+using spacexinterop.api._Common.Utility.Clients;
+using spacexinterop.api._Common.Utility.Clients.Interfaces;
+using spacexinterop.api._Common.Utility.Mapper.Interfaces;
+using spacexinterop.api.Data;
+using spacexinterop.api.Data.Models;
+using spacexinterop.api.Infrastructure;
+using System.Text.Json.Serialization;
+using Azure;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +40,23 @@ builder.Services.AddDependencies();
 if (builder.Environment.IsDevelopment())
 {
     builder.Configuration.AddUserSecrets<Program>();
+}
+else
+if (builder.Environment.IsProduction())
+{
+    string keyVaultUrl = builder.Configuration.GetSection("AzureKeyVault:VaultUri").Value!;
+
+    if (!string.IsNullOrEmpty(keyVaultUrl))
+    {
+        SecretClient client = new(new Uri(keyVaultUrl), new DefaultAzureCredential());
+
+        Pageable<SecretProperties> secrets = client.GetPropertiesOfSecrets();
+        foreach (SecretProperties secret in secrets)
+        {
+            Response<KeyVaultSecret>? secretValue = client.GetSecret(secret.Name);
+            builder.Configuration[secret.Name] = secretValue.Value.Value;
+        }
+    }
 }
 
 builder.Services.AddMemoryCache();
@@ -172,7 +192,6 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler();
     app.UseHsts();
 }
 

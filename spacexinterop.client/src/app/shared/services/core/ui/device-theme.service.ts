@@ -31,6 +31,10 @@ export class DeviceThemeService implements OnDestroy {
     return this.deviceThemeSubject !== undefined ? this.deviceThemeSubject.value : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }
 
+  public setDeviceTheme(theme: DeviceTheme): void {
+    this.deviceThemeSubject.next(theme);
+  }
+
   ngOnDestroy() {
     if(this.mediaQueryListener) {
         this.mediaQueryList.removeEventListener('change', this.mediaQueryListener);

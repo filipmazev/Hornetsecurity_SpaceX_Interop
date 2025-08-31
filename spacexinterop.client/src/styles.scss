@@ -51,9 +51,11 @@
     --status-text-failed: #ab313b;
     --status-text-unknown: #656f88;
 
-    --bg_primary: #f8f8f8;
+    --bg_primary: #f7f7f7;
+    --bg_secondary: #ffffff;
 
     --logo: url('./assets/svg/logo_light.svg');
+    --lading_image: url('./assets/images/landing_image_1.jpg');
   }
 }
 
@@ -100,9 +102,11 @@
   --status-text-failed: #e57373;
   --status-text-unknown: #8a94b0;
 
-  --bg_primary: #111111;
+  --bg_primary: #0a0a0a;
+  --bg_secondary: #111111;
 
   --logo: url('./assets/svg/logo_dark.svg');
+  --lading_image: url('./assets/images/landing_image_2.jpg');
 }
 
 body {
@@ -279,21 +283,21 @@ a {
   height: 100dvh;
   height: 100vh;
 
-  background-color: var(--bg_translucent_contrast_secondary);
+  background-color: var(--bg_primary);
 
   overflow-y: auto;
   overflow-x: clip;
 }
 
 .landing-background-image {
-  background-image: url('./assets/images/landing_image_1.jpg');
+  background-image: var(--lading_image);
   background-size: cover;
   background-position: center;
 
   position: relative;
 
   @include respond-down(md) {
-    background-position: 35% center;
+    background-position: 45% center;
   }
 }
 
@@ -306,7 +310,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: var(--bg_translucent_contrast);
-  opacity: 0.25;
+  opacity: 0.3;
 }
 
 .overflow-hidden {
@@ -371,8 +375,7 @@ mat-icon {
 
 .modal-container {
   padding: 1.5rem;
-  background-color: var(--bg_primary);
-  backdrop-filter: blur(15px);
+  background-color: var(--bg_secondary);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -477,44 +480,6 @@ mat-icon {
   to {
     -webkit-transform: translate3d(1000px, 0px, 0px);
   }
-}
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.stars {
-  background: black url('./assets/images/stars.png') repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: -2;
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  background: transparent url('./assets/images/twinkling.png') repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-
-  -moz-animation: move-background 70s linear infinite;
-  -ms-animation: move-background 70s linear infinite;
-  -o-animation: move-background 70s linear infinite;
-  -webkit-animation: move-background 70s linear infinite;
-  animation: move-background 70s linear infinite;
-
 }
 
 //#endregion
@@ -698,7 +663,7 @@ mat-dialog-container {
 .mat-mdc-menu-panel {
   background-color: var(--bg_translucent_contrast) !important;
   color: var(--menu_item_text) !important;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(35px);
 }
 
 .settings-menu-item.mat-mdc-menu-item {
@@ -726,7 +691,7 @@ mat-dialog-container {
 
 .mat-mdc-card {
   background: var(--bg_translucent_contrast) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(35px);
 }
 
 .mdc-text-field--filled {
@@ -810,8 +775,7 @@ caption {
   max-width: 100%;
   box-sizing: border-box;
   z-index: 0;
-  background-color: var(--bg_primary);
-  backdrop-filter: blur(30px);
+  background-color: var(--bg_secondary);
   padding: 1rem 2rem;
   border-radius: 1rem;
   max-height: 100%;
@@ -844,6 +808,23 @@ mat-spinner {
 
 mat-paginator {
   width: 100%;
+}
+
+.mat-paginator {
+    .mat-paginator-container {
+        justify-content: center;
+    }
+
+    .mat-paginator-range-label {
+        order: 2;
+    }
+
+    .mat-paginator-navigation-previous {
+        order: 1;
+    }
+    .mat-paginator-navigation-next {
+        order: 3;
+    }
 }
 
 //#endregion

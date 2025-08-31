@@ -5,6 +5,4 @@ public class GuidOrObject<TModel>
 {
     public string? Guid { get; set; }
     public TModel? Object { get; set; }
-
-    public bool IsGuid => Guid != null;
 }

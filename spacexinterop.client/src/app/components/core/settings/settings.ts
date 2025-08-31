@@ -164,6 +164,8 @@ export class Settings implements OnDestroy, AfterViewInit {
       ? setting.className
       : this.settings.theme.darkMode.theming.find(theme => theme.selected)?.className;
 
+    this.deviceThemeService.setDeviceTheme(this.settings.theme.darkMode.state ? 'dark' : 'light');
+
     if (selectedTheme) {
       document.body.classList.toggle(selectedTheme, state ?? this.settings.theme.darkMode.state);
       this.settings.theme.darkMode.theming.filter(theme => theme.className !== selectedTheme)?.forEach(theme => {

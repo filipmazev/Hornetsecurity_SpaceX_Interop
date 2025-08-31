@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiPath: 'https://localhost:7200/api/',
+    apiPath: 'https://spacexinterop-api.azurewebsites.net/api/',
     dbVersion: 1,
 };
