@@ -5,9 +5,8 @@ namespace spacexinterop.api._Common.Domain.Data.Result;
 
 public class Result
 {
-    public ResultStatus Status { get; }
+    public ResultStatusEnum Status { get; }
     public bool IsSuccess => Status.IsSuccess();
-    public bool IsFailure => Status.IsFailure();
 
     public Error? Error { get; }
 
@@ -16,7 +15,7 @@ public class Result
 
     }
 
-    public Result(ResultStatus status = ResultStatus.Default, Error? error = null)
+    public Result(ResultStatusEnum status = ResultStatusEnum.Default, Error? error = null)
     {
         Status = status;
         Error = error;
@@ -25,7 +24,7 @@ public class Result
 
 public class Result<TValue> : Result
 {
-    internal Result(TValue? value, ResultStatus status, Error? error = null)
+    internal Result(TValue? value, ResultStatusEnum status, Error? error = null)
         : base(status, error)
     {
         Value = value;

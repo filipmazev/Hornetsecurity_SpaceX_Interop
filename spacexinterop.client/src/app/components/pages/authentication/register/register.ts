@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { GenericButton } from '../../../core/generic-button/generic-button';
 import { MatCardModule } from '@angular/material/card';
 import { RegisterRequest } from '../../../../shared/classes/models/requests/RegisterRequest';
-import { ResultStatus } from '../../../../shared/enums/api/result-status.enum';
+import { ResultStatusEnum } from '../../../../shared/enums/api/ResultStatusEnum';
 import { NgClass } from '@angular/common';
 import * as commonConst from '../../../../shared/constants/common.constants';
 
@@ -34,7 +34,8 @@ export class Register {
   private unsubscribe$: Subject<void> = new Subject<void>();
   
   protected readonly registerForm: FormGroup = new FormGroup({
-    username: new FormControl<string>(commonConst.EMPTY_STRING, [Validators.required, Validators.minLength(commonConst.MIN_USERNAME_LENGTH), Validators.maxLength(commonConst.MAX_USERNAME_LENGTH)]),
+    firstName: new FormControl<string>(commonConst.EMPTY_STRING, [Validators.required, Validators.maxLength(commonConst.MAX_IDENTITY_STRING_LENGTH)]),
+    lastName: new FormControl<string>(commonConst.EMPTY_STRING, [Validators.required, Validators.maxLength(commonConst.MAX_IDENTITY_STRING_LENGTH)]),
     email: new FormControl<string>(commonConst.EMPTY_STRING, [Validators.required, Validators.email]),
     password: new FormControl<string>(commonConst.EMPTY_STRING, [Validators.required, Validators.minLength(commonConst.MIN_PASSWORD_LENGTH), Validators.maxLength(commonConst.MAX_PASSWORD_LENGTH), Validators.pattern(PASSWORD_REGEX)]),
     confirmPassword: new FormControl<string | undefined>(undefined),
@@ -68,10 +69,9 @@ export class Register {
       return;
     }
 
-    this.offerLogInInstead = false;
-
     const request: RegisterRequest = {
-      username: this.registerForm.get('username')?.value,
+      firstName: this.registerForm.get('firstName')?.value,
+      lastName: this.registerForm.get('lastName')?.value,
       email: this.registerForm.get('email')?.value,
       password: this.registerForm.get('password')?.value,
       confirmPassword: this.registerForm.get('confirmPassword')?.value,
@@ -79,11 +79,12 @@ export class Register {
 
     await this.authService.register(request).then((result) => {
       if(result.isSuccess) {
+        this.offerLogInInstead = false;
         this.invalidRegisterMessages = null;
         this.router.navigate(['/']);
       } else {
         this.invalidRegisterMessages = result.error?.messages ?? [];
-        this.offerLogInInstead = result.status === ResultStatus.EmailAlreadyExists;
+        this.offerLogInInstead = result.status === ResultStatusEnum.EmailAlreadyExists;
       }
     });
   }

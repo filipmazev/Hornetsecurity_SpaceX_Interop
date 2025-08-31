@@ -2,7 +2,7 @@
 
 namespace spacexinterop.api._Common.Domain.Data.Result;
 
-public enum ResultStatus : byte
+public enum ResultStatusEnum : byte
 {
     #region Basic
     Default,

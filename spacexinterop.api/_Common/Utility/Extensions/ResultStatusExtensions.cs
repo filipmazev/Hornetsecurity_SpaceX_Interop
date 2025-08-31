@@ -7,15 +7,13 @@ namespace spacexinterop.api._Common.Utility.Extensions;
 
 public static class ResultStatusExtensions
 {
-    public static bool IsSuccess(this ResultStatus status)
+    public static bool IsSuccess(this ResultStatusEnum status)
     {
         ResultStatusConnotationAttribute? attribute = status.GetAttribute<ResultStatusConnotationAttribute>();
         return attribute?.IsPositive ?? false;
     }
 
-    public static bool IsFailure(this ResultStatus status) => !status.IsSuccess();
-
-    public static Error? ResolveError(this ResultStatus status)
+    public static Error? ResolveError(this ResultStatusEnum status)
     {
         return status.IsSuccess()
             ? null

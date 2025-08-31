@@ -1,4 +1,7 @@
-﻿using spacexinterop.api._Common.Extensions;
+﻿using spacexinterop.api._Common.Utility.Clients.Interfaces;
+using spacexinterop.api._Common.Utility.Mapper.Interfaces;
+using spacexinterop.api._Common.Utility.Clients;
+using spacexinterop.api._Common.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using spacexinterop.api._Common._Configs;
 using spacexinterop.api.Infrastructure;
@@ -6,6 +9,7 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using spacexinterop.api.Data.Models;
+using Microsoft.Extensions.Options;
 using spacexinterop.api._Common;
 using spacexinterop.api.Data;
 using Scalar.AspNetCore;
@@ -22,7 +26,8 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+        options.JsonSerializerOptions.WriteIndented = true;
     });
 
 builder.Services.AddOpenApi();
@@ -34,7 +39,21 @@ if (builder.Environment.IsDevelopment())
     builder.Configuration.AddUserSecrets<Program>();
 }
 
+builder.Services.AddMemoryCache();
+
 builder.Services.Configure<EncryptionKeyConfig>(builder.Configuration.GetSection("EncryptionKeys"));
+
+#region Space X API Interop
+
+builder.Services.Configure<SpaceXApiConfig>(builder.Configuration.GetSection("ExternalApis:SpaceXApi"));
+
+builder.Services.AddHttpClient<ISpaceXClient, SpaceXClient>((sp, client) =>
+{
+    SpaceXApiConfig options = sp.GetRequiredService<IOptions<SpaceXApiConfig>>().Value;
+    client.BaseAddress = new Uri(options.BaseUrl);
+});
+
+#endregion
 
 #endregion
 
@@ -127,6 +146,15 @@ builder.Services.AddConfiguredRateLimiter(builder.Configuration);
 WebApplication app = builder.Build();
 
 #region Configure App
+
+#region Service Scope
+
+using IServiceScope scope = app.Services.CreateScope();
+
+IMappingConfig mappingConfig = app.Services.GetRequiredService<IMappingConfig>();
+mappingConfig.RegisterMappings();
+
+#endregion
 
 if (app.Environment.IsDevelopment())
 {

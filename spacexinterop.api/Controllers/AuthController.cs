@@ -21,19 +21,12 @@ public class AuthController(
         if (!(User.Identity?.IsAuthenticated ?? false)) 
             return Ok(resultFactory.Failure(CommonError.Unauthorized));
 
-        Result validationResult = await authService.ValidateUserByUserName(User.Identity.Name);
+        Result<UserResponse?> result = await authService.ResolveUserByUserName(User.Identity.Name);
 
-        if (!validationResult.IsSuccess)
+        if (!result.IsSuccess || result.Value is null)
             return Ok(resultFactory.Failure(CommonError.Unauthorized));
 
-        CheckSessionResponse response = new()
-        {
-            UserName = User.Identity.Name,
-            Email = User.Claims.FirstOrDefault(c => c.Type == "email")?.Value
-        };
-
-        return Ok(resultFactory.Success(response));
-
+        return Ok(resultFactory.Success(result.Value));
     }
 
     [HttpPost(nameof(Login))]

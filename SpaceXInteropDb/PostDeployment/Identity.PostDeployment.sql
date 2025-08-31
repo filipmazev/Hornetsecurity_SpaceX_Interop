@@ -22,8 +22,10 @@ CREATE TABLE [AspNetUsers] (
     [Email] nvarchar(256) NULL,
     [PhoneNumber] nvarchar(max) NULL,
     [UserName] nvarchar(256) NULL,
-    [NormalizedEmail] nvarchar(256) NULL,
+    [FirstName] nvarchar(200) NOT NULL,
+    [LastName] nvarchar(200) NOT NULL,
     [NormalizedUserName] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
     [EmailConfirmed] bit NOT NULL,
     [PasswordHash] nvarchar(max) NULL,
     [SecurityStamp] nvarchar(max) NULL,
@@ -95,8 +97,7 @@ CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
 CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20250827184617_InitialIdentity', N'9.0.8');
+VALUES (N'20250830183627_InitialIdentity', N'9.0.8');
 
 COMMIT;
 GO
-

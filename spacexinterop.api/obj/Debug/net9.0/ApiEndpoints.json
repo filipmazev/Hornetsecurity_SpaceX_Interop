@@ -50,5 +50,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "spacexinterop.api.Controllers.SpaceXController",
+    "Method": "GetLaunches",
+    "RelativePath": "api/SpaceX/GetLaunches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "spacexinterop.api.Data.Request.SpaceXLaunchesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

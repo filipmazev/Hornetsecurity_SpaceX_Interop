@@ -4,11 +4,13 @@ import { NavigationComponent } from './components/core/navigation/navigation';
 import { AuthService } from './shared/services/client/auth.service';
 import { Subject, takeUntil } from 'rxjs';
 import { NgClass } from '@angular/common';
+import { Spinner } from './components/core/spinner/spinner';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
+    Spinner,
     NavigationComponent,
     NgClass
 ],
@@ -37,12 +39,12 @@ export class App implements OnInit, OnDestroy {
   }
 
   private createSubscriptions(): void {
-    this.authService.getIsAuthenticated$()
+    this.authService.currentUser$()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(result => {
         this.hasReceivedAuthStatus = true;
-        this.isAuthenticated = result;
-        
+        this.isAuthenticated = !!result;
+
         const currentUrl = this.router.url;
 
         if (currentUrl.startsWith('/register') || currentUrl.startsWith('/login')){

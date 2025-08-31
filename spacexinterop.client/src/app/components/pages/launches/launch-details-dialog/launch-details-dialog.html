@@ -1,0 +1,53 @@
+<div class="modal-container launch-details-container">
+    <div class="launch-details-header">
+        <div class="launch-details-header-text">
+            <div class="launch-name"> {{ data.name }} </div>
+            <div> {{ launchDate }} </div>
+            <div> {{ status }} </div>
+        </div>
+
+        <img [src]="data.missionPatchImage ?? './assets/images/no_patch_default.png'" alt="Mission Patch"
+            class="mission-patch-image" />
+
+    </div>
+
+    @if(data.details) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Details: </div>
+            <div>{{ data.details }}</div>
+        </div>
+    }
+
+    @if(!data.success && data.failureReasons.length > 0) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Failiure Reason(s): </div>
+            <div class="error-messages">
+                @for(reason of data.failureReasons; track reason) {
+                    <div>{{ reason }}</div>
+                }
+            </div>
+        </div>
+    }
+
+    @if(data.payloads.length > 0) {
+        <div class="aunch-details-section-container">
+            <div class="launch-details-section-header"> Payloads: </div>
+            <div class="payloads-container">
+                @for(payload of data.payloads; track payload) {
+                    <div class="payload-card">
+                        <div class="payload-card-header">
+                            <div> {{ payload.name }} </div>
+                            <div> | </div>
+                            <div class="payload-type"> {{ payload.type }} </div>
+                        </div>
+    
+                        <div class="payload-details">
+                            <div> Customers: {{ payload.customers.join(', ') }} </div>
+                            <div> Manufacturers: {{ payload.manufacturers.join(', ') }} </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>

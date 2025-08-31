@@ -7,16 +7,16 @@ public static class Constants
     public const int UserLockoutTimespanInMinutes = 120;
     public const int MaxFailedAccessAttempts = 5;
     public const int SessionDurationInHours = 1;
+    public const int MemoryCacheTimeToLiveInMinutes = 10;
 
     #endregion
 
     #region Validatory
 
-    public const int MinUsernameLength = 5;
-    public const int MaxUsernameLength = 20;
-
     public const int MinPasswordLength = 8;
     public const int MaxPasswordLength = 50;
+
+    public const int MaxIdentityStringLength = 200;
 
     #region Regex
 

@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\request\\spacexlaunchesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\request\\spacexlaunchesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\services\\spacexservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:services\\spacexservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\repositories\\spacexlaunchesrepository.queryoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:repositories\\spacexlaunchesrepository.queryoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\request\\external\\space x\\spacexqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\request\\external\\space x\\spacexqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\repositories\\interfaces\\ispacexlaunchesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:repositories\\interfaces\\ispacexlaunchesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\repositories\\spacexlaunchesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:repositories\\spacexlaunchesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\response\\paginatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\response\\paginatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,150 +43,218 @@
       "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\errors\\base\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\errors\\base\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\errors\\autherror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\errors\\autherror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\errors\\commonerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\errors\\commonerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\factories\\resultfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\factories\\resultfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\factories\\interfaces\\iresultfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\factories\\interfaces\\iresultfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\result\\resultstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\result\\resultstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\factories\\resultfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\factories\\resultfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\enums\\external\\space x\\launchesrequesttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\enums\\external\\space x\\launchesrequesttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\spacexinterop.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:spacexinterop.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\clients\\spacexclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\clients\\spacexclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\request\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\request\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\response\\checksessionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\response\\checksessionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\_configs\\ratelimiterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\_configs\\ratelimiterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\_configs\\encryptionkeyconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\_configs\\encryptionkeyconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\controllers\\spacexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:controllers\\spacexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\maincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\maincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\infrastructure\\lookupprotector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:infrastructure\\lookupprotector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\infrastructure\\lookupprotectorkeyring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:infrastructure\\lookupprotectorkeyring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\identityscript.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:identityscript.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\infrastructure\\servicebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:infrastructure\\servicebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C56FEB2-5F95-4657-97BD-47C3330B1607}|..\\SpaceXInteropDb\\SpaceXInteropDb.sqlproj|C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\SpaceXInteropDb\\PostDeployment\\Identity.PostDeployment.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\request\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\request\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\validators\\ivalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\validators\\ivalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\converters\\guidorobjectconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\converters\\guidorobjectconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\validators\\validators.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\validators\\validators.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\response\\external\\space x\\spacexpaginatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\response\\external\\space x\\spacexpaginatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\validators\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\validators\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\mapper\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\mapper\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\response\\payloadresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\response\\payloadresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\enums\\external\\space x\\sortdirectionenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\enums\\external\\space x\\sortdirectionenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\payload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\payload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\response\\launchresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\response\\launchresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launches\\launch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launches\\launch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filip\\AppData\\Local\\SourceServer\\243f94af85ef7c0ef1da0708ddf7a822e3623a6962a426aa58534218982e535f\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\result\\resultstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\result\\resultstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\domain\\data\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\domain\\data\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\extensions\\resultstatusextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\extensions\\resultstatusextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launches\\links.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launches\\links.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\extensions\\ratelimiterservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\extensions\\ratelimiterservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\capsule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\capsule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\infrastructure\\interfaces\\ilookupprotectorkeyring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:infrastructure\\interfaces\\ilookupprotectorkeyring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\dragon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\dragon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\ship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\attributes\\resultstatusconnotationattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\attributes\\resultstatusconnotationattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launchpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launchpad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\infrastructure\\interfaces\\ilookupprotector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:infrastructure\\interfaces\\ilookupprotector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\utility\\converters\\guidorobjectarrayconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\utility\\converters\\guidorobjectarrayconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\migrations\\maincontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:migrations\\maincontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launches\\failure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launches\\failure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\extensions\\migrationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\extensions\\migrationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launches\\reddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launches\\reddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C56FEB2-5F95-4657-97BD-47C3330B1607}|..\\SpaceXInteropDb\\SpaceXInteropDb.sqlproj|C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\SpaceXInteropDb\\PostDeployment\\Identity.PostDeployment.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launches\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launches\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filip\\AppData\\Local\\SourceServer\\70362ef034f695ed4353caa624af7210adf9d3a193e3071d9e0ee754561aa5eb\\IUserEmailStore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\launches\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\launches\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\enums\\external\\space x\\launchpadstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\enums\\external\\space x\\launchpadstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\_common\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:_common\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\enums\\external\\space x\\requesttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\enums\\external\\space x\\requesttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\spacexinterop.api.csproj.Backup (1).tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:spacexinterop.api.csproj.Backup (1).tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\core\\guidorobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\core\\guidorobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\thrust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\thrust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\rocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\rocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\isp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\isp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\landinglegs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\landinglegs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\compositefairing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\compositefairing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\payloads.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\payloads.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\secondstage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\secondstage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\stage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\stage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\payloadweight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\payloadweight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\mass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\mass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\rockets\\dimension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\rockets\\dimension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\models\\external\\space x\\core\\basejsonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\models\\external\\space x\\core\\basejsonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|c:\\users\\filip\\documents\\code\\hornetsecurity_spacex_interop\\spacexinterop.api\\data\\enums\\external\\space x\\dateprecisionenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2841215-DD04-4472-8E62-10464C5E1581}|spacexinterop.api.csproj|solutionrelative:data\\enums\\external\\space x\\dateprecisionenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -167,215 +263,248 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 310,
           "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EncryptionKeyConfig.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\_Configs\\EncryptionKeyConfig.cs",
-              "RelativeDocumentMoniker": "_Common\\_Configs\\EncryptionKeyConfig.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\_Configs\\EncryptionKeyConfig.cs",
-              "RelativeToolTip": "_Common\\_Configs\\EncryptionKeyConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:51:56.449Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Data\\Request\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\RegisterRequest.cs",
-              "RelativeToolTip": "Data\\Request\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T21:25:28.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "spacexinterop.api.csproj",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\spacexinterop.api.csproj",
-              "RelativeDocumentMoniker": "spacexinterop.api.csproj",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\spacexinterop.api.csproj",
-              "RelativeToolTip": "spacexinterop.api.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T00:15:29.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAApwHgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T21:56:17.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IResultFactory.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
-              "RelativeDocumentMoniker": "_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
-              "RelativeToolTip": "_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:22:14.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ResultStatus.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\ResultStatus.cs",
-              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Result\\ResultStatus.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\ResultStatus.cs",
-              "RelativeToolTip": "_Common\\Domain\\Data\\Result\\ResultStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:05:54.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\Result.cs",
-              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Result\\Result.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\Result.cs",
-              "RelativeToolTip": "_Common\\Domain\\Data\\Result\\Result.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAkwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:05:52.836Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CheckSessionResponse.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\CheckSessionResponse.cs",
-              "RelativeDocumentMoniker": "Data\\Response\\CheckSessionResponse.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\CheckSessionResponse.cs",
-              "RelativeToolTip": "Data\\Response\\CheckSessionResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T00:16:10.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Constants.cs",
-              "RelativeDocumentMoniker": "_Common\\Constants.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Constants.cs",
-              "RelativeToolTip": "_Common\\Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:01:41.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAkwBIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:30:09.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Error.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Errors\\Base\\Error.cs",
-              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Errors\\Base\\Error.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Errors\\Base\\Error.cs",
-              "RelativeToolTip": "_Common\\Domain\\Data\\Errors\\Base\\Error.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:07:22.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\Interfaces\\IAuthService.cs*",
-              "RelativeToolTip": "Services\\Interfaces\\IAuthService.cs*",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:24:44.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CommonErrors.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Errors\\CommonErrors.cs",
-              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Errors\\CommonErrors.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Errors\\CommonErrors.cs",
-              "RelativeToolTip": "_Common\\Domain\\Data\\Errors\\CommonErrors.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:08:04.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthError.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Errors\\AuthError.cs",
-              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Errors\\AuthError.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Errors\\AuthError.cs",
-              "RelativeToolTip": "_Common\\Domain\\Data\\Errors\\AuthError.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T19:38:02.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "ResultFactory.cs",
               "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Factories\\ResultFactory.cs",
               "RelativeDocumentMoniker": "_Common\\Utility\\Factories\\ResultFactory.cs",
               "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Factories\\ResultFactory.cs",
               "RelativeToolTip": "_Common\\Utility\\Factories\\ResultFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:20:27.283Z"
+              "WhenOpened": "2025-08-30T15:00:38.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaginatedResponse.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\PaginatedResponse.cs",
+              "RelativeDocumentMoniker": "Data\\Response\\PaginatedResponse.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\PaginatedResponse.cs",
+              "RelativeToolTip": "Data\\Response\\PaginatedResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:20:27.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpaceXLaunchesRepository.QueryOptions.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Repositories\\SpaceXLaunchesRepository.QueryOptions.cs",
+              "RelativeDocumentMoniker": "Repositories\\SpaceXLaunchesRepository.QueryOptions.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Repositories\\SpaceXLaunchesRepository.QueryOptions.cs",
+              "RelativeToolTip": "Repositories\\SpaceXLaunchesRepository.QueryOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:40:32.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SpaceXLaunchesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Repositories\\SpaceXLaunchesRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\SpaceXLaunchesRepository.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Repositories\\SpaceXLaunchesRepository.cs",
+              "RelativeToolTip": "Repositories\\SpaceXLaunchesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:06:06.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpaceXService.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\SpaceXService.cs",
+              "RelativeDocumentMoniker": "Services\\SpaceXService.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\SpaceXService.cs",
+              "RelativeToolTip": "Services\\SpaceXService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBwAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:02:39.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SpaceXController.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Controllers\\SpaceXController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SpaceXController.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Controllers\\SpaceXController.cs",
+              "RelativeToolTip": "Controllers\\SpaceXController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:02:36.745Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "Data\\Request\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\LoginRequest.cs",
-              "RelativeToolTip": "Data\\Request\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Title": "SpaceXClient.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Clients\\SpaceXClient.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Clients\\SpaceXClient.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Clients\\SpaceXClient.cs",
+              "RelativeToolTip": "_Common\\Utility\\Clients\\SpaceXClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T21:58:49.974Z"
+              "WhenOpened": "2025-08-30T14:08:22.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Ship.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Ship.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Ship.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Ship.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Ship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:34:57.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SpaceXQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\External\\Space X\\SpaceXQueryRequest.cs",
+              "RelativeDocumentMoniker": "Data\\Request\\External\\Space X\\SpaceXQueryRequest.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\External\\Space X\\SpaceXQueryRequest.cs",
+              "RelativeToolTip": "Data\\Request\\External\\Space X\\SpaceXQueryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:05:48.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpaceXLaunchesRequest.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\SpaceXLaunchesRequest.cs",
+              "RelativeDocumentMoniker": "Data\\Request\\SpaceXLaunchesRequest.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\SpaceXLaunchesRequest.cs",
+              "RelativeToolTip": "Data\\Request\\SpaceXLaunchesRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:27:51.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISpaceXLaunchesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Repositories\\Interfaces\\ISpaceXLaunchesRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ISpaceXLaunchesRepository.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Repositories\\Interfaces\\ISpaceXLaunchesRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ISpaceXLaunchesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:06:06.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T18:31:56.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:00:41.89Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "IdentityScript.sql",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\IdentityScript.sql",
+              "RelativeDocumentMoniker": "IdentityScript.sql",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\IdentityScript.sql",
+              "RelativeToolTip": "IdentityScript.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-08-30T18:37:27.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "MainContext.cs",
               "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\MainContext.cs",
               "RelativeDocumentMoniker": "Data\\MainContext.cs",
               "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\MainContext.cs",
               "RelativeToolTip": "Data\\MainContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:04:06.794Z"
+              "WhenOpened": "2025-08-30T18:36:16.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IResultFactory.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
+              "RelativeToolTip": "_Common\\Utility\\Factories\\Interfaces\\IResultFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T19:38:56.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T19:39:22.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserResponse.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\UserResponse.cs",
+              "RelativeDocumentMoniker": "Data\\Response\\UserResponse.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\UserResponse.cs",
+              "RelativeToolTip": "Data\\Response\\UserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T19:39:48.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SpaceXPaginatedResponse.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\External\\Space X\\SpaceXPaginatedResponse.cs",
+              "RelativeDocumentMoniker": "Data\\Response\\External\\Space X\\SpaceXPaginatedResponse.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\External\\Space X\\SpaceXPaginatedResponse.cs",
+              "RelativeToolTip": "Data\\Response\\External\\Space X\\SpaceXPaginatedResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:05:51.864Z"
             },
             {
               "$type": "Document",
@@ -385,273 +514,538 @@
               "RelativeDocumentMoniker": "Data\\Models\\User.cs",
               "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\User.cs",
               "RelativeToolTip": "Data\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:22:27.512Z"
+              "WhenOpened": "2025-08-30T18:30:29.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RateLimiterConfig.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\_Configs\\RateLimiterConfig.cs",
-              "RelativeDocumentMoniker": "_Common\\_Configs\\RateLimiterConfig.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\_Configs\\RateLimiterConfig.cs",
-              "RelativeToolTip": "_Common\\_Configs\\RateLimiterConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "LaunchesRequestTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\LaunchesRequestTypeEnum.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\External\\Space X\\LaunchesRequestTypeEnum.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\LaunchesRequestTypeEnum.cs",
+              "RelativeToolTip": "Data\\Enums\\External\\Space X\\LaunchesRequestTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:52:38.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LookupProtector.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\LookupProtector.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\LookupProtector.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\LookupProtector.cs",
-              "RelativeToolTip": "Infrastructure\\LookupProtector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:10:01.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LookupProtectorKeyRing.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\LookupProtectorKeyRing.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\LookupProtectorKeyRing.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\LookupProtectorKeyRing.cs",
-              "RelativeToolTip": "Infrastructure\\LookupProtectorKeyRing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:52:54.437Z"
+              "WhenOpened": "2025-08-30T14:27:48.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "ServiceBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\ServiceBuilder.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ServiceBuilder.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\ServiceBuilder.cs",
-              "RelativeToolTip": "Infrastructure\\ServiceBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Data\\Request\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\LoginRequest.cs",
+              "RelativeToolTip": "Data\\Request\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:10:04.226Z"
+              "WhenOpened": "2025-08-30T18:31:45.36Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwJQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:31:30.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "RateLimiterServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Extensions\\RateLimiterServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "_Common\\Extensions\\RateLimiterServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Extensions\\RateLimiterServiceCollectionExtensions.cs",
-              "RelativeToolTip": "_Common\\Extensions\\RateLimiterServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:54:05.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-26T21:02:23.445Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ILookupProtectorKeyRing.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\Interfaces\\ILookupProtectorKeyRing.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\ILookupProtectorKeyRing.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\Interfaces\\ILookupProtectorKeyRing.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\ILookupProtectorKeyRing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T18:54:58.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-26T21:17:00.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Validators.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Validators\\Validators.cs",
-              "RelativeDocumentMoniker": "_Common\\Utility\\Validators\\Validators.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Validators\\Validators.cs",
-              "RelativeToolTip": "_Common\\Utility\\Validators\\Validators.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T07:24:24.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IValidators.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Validators\\IValidators.cs",
-              "RelativeDocumentMoniker": "_Common\\Utility\\Validators\\IValidators.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Validators\\IValidators.cs",
-              "RelativeToolTip": "_Common\\Utility\\Validators\\IValidators.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T07:24:48.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Validators.Auth.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Validators\\Validators.Auth.cs",
-              "RelativeDocumentMoniker": "_Common\\Utility\\Validators\\Validators.Auth.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Validators\\Validators.Auth.cs",
-              "RelativeToolTip": "_Common\\Utility\\Validators\\Validators.Auth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T07:25:10.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ResultStatusExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
-              "RelativeDocumentMoniker": "_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
-              "RelativeToolTip": "_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:18:06.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ResultStatusConnotationAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Attributes\\ResultStatusConnotationAttribute.cs",
-              "RelativeDocumentMoniker": "_Common\\Utility\\Attributes\\ResultStatusConnotationAttribute.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Attributes\\ResultStatusConnotationAttribute.cs",
-              "RelativeToolTip": "_Common\\Utility\\Attributes\\ResultStatusConnotationAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T22:17:16.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ILookupProtector.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\Interfaces\\ILookupProtector.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\ILookupProtector.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Infrastructure\\Interfaces\\ILookupProtector.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\ILookupProtector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T18:54:56.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "MigrationExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Extensions\\MigrationExtensions.cs",
-              "RelativeDocumentMoniker": "_Common\\Extensions\\MigrationExtensions.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Extensions\\MigrationExtensions.cs",
-              "RelativeToolTip": "_Common\\Extensions\\MigrationExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:10:54.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MainContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Migrations\\MainContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\MainContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Migrations\\MainContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\MainContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T21:25:10.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "spacexinterop.api.csproj.Backup (1).tmp",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\spacexinterop.api.csproj.Backup (1).tmp",
-              "RelativeDocumentMoniker": "spacexinterop.api.csproj.Backup (1).tmp",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\spacexinterop.api.csproj.Backup (1).tmp",
-              "RelativeToolTip": "spacexinterop.api.csproj.Backup (1).tmp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-26T20:56:29.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 19,
               "Title": "Identity.PostDeployment.sql",
               "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\SpaceXInteropDb\\PostDeployment\\Identity.PostDeployment.sql",
               "RelativeDocumentMoniker": "..\\SpaceXInteropDb\\PostDeployment\\Identity.PostDeployment.sql",
               "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\SpaceXInteropDb\\PostDeployment\\Identity.PostDeployment.sql",
               "RelativeToolTip": "..\\SpaceXInteropDb\\PostDeployment\\Identity.PostDeployment.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-08-26T21:41:57.716Z",
+              "WhenOpened": "2025-08-30T18:37:31.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "IUserEmailStore.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\AppData\\Local\\SourceServer\\70362ef034f695ed4353caa624af7210adf9d3a193e3071d9e0ee754561aa5eb\\IUserEmailStore.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\70362ef034f695ed4353caa624af7210adf9d3a193e3071d9e0ee754561aa5eb\\IUserEmailStore.cs",
-              "ToolTip": "C:\\Users\\filip\\AppData\\Local\\SourceServer\\70362ef034f695ed4353caa624af7210adf9d3a193e3071d9e0ee754561aa5eb\\IUserEmailStore.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\70362ef034f695ed4353caa624af7210adf9d3a193e3071d9e0ee754561aa5eb\\IUserEmailStore.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAtwE8AAAAgAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Constants.cs",
+              "RelativeDocumentMoniker": "_Common\\Constants.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Constants.cs",
+              "RelativeToolTip": "_Common\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T23:04:51.891Z"
+              "WhenOpened": "2025-08-30T15:47:41.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SortDirectionEnum.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\SortDirectionEnum.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\External\\Space X\\SortDirectionEnum.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\SortDirectionEnum.cs",
+              "RelativeToolTip": "Data\\Enums\\External\\Space X\\SortDirectionEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:10:58.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MappingConfig.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "RelativeToolTip": "_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:15:15.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:48:17.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Data\\Request\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Request\\RegisterRequest.cs",
+              "RelativeToolTip": "Data\\Request\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T18:29:44.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Launch.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Launch.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launches\\Launch.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Launch.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launches\\Launch.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAtwFAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T11:35:34.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Mapper\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingProfile.cs",
+              "RelativeToolTip": "_Common\\Utility\\Mapper\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:15:58.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GuidOrObjectConverter.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Converters\\GuidOrObjectConverter.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Converters\\GuidOrObjectConverter.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Converters\\GuidOrObjectConverter.cs",
+              "RelativeToolTip": "_Common\\Utility\\Converters\\GuidOrObjectConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:03:58.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PayloadResponse.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\PayloadResponse.cs",
+              "RelativeDocumentMoniker": "Data\\Response\\PayloadResponse.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\PayloadResponse.cs",
+              "RelativeToolTip": "Data\\Response\\PayloadResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:28:43.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LaunchResponse.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\LaunchResponse.cs",
+              "RelativeDocumentMoniker": "Data\\Response\\LaunchResponse.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Response\\LaunchResponse.cs",
+              "RelativeToolTip": "Data\\Response\\LaunchResponse.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:21:15.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Payload.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Payload.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Payload.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Payload.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Payload.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:40:38.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MappingConfig.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\AppData\\Local\\SourceServer\\243f94af85ef7c0ef1da0708ddf7a822e3623a6962a426aa58534218982e535f\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\243f94af85ef7c0ef1da0708ddf7a822e3623a6962a426aa58534218982e535f\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "ToolTip": "C:\\Users\\filip\\AppData\\Local\\SourceServer\\243f94af85ef7c0ef1da0708ddf7a822e3623a6962a426aa58534218982e535f\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\243f94af85ef7c0ef1da0708ddf7a822e3623a6962a426aa58534218982e535f\\spacexinterop.api\\_Common\\Utility\\Mapper\\MappingConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:16:00.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CrewMember.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\CrewMember.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launches\\CrewMember.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\CrewMember.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launches\\CrewMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:28:20.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Reddit.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Reddit.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launches\\Reddit.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Reddit.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launches\\Reddit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:28:24.067Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 38,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "_Common\\Extensions\\ServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "_Common\\Extensions\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Title": "Capsule.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Capsule.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Capsule.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Capsule.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Capsule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:55:16.578Z"
+              "WhenOpened": "2025-08-30T14:03:38.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ResultStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\ResultStatusEnum.cs",
+              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Result\\ResultStatusEnum.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\ResultStatusEnum.cs",
+              "RelativeToolTip": "_Common\\Domain\\Data\\Result\\ResultStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:00:19.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\Result.cs",
+              "RelativeDocumentMoniker": "_Common\\Domain\\Data\\Result\\Result.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Domain\\Data\\Result\\Result.cs",
+              "RelativeToolTip": "_Common\\Domain\\Data\\Result\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:00:35.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ResultStatusExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
+              "RelativeToolTip": "_Common\\Utility\\Extensions\\ResultStatusExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T15:00:37.457Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-26T21:02:18.809Z"
+              "Title": "Links.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Links.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launches\\Links.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Links.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launches\\Links.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:28:03.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Core.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Core.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launches\\Core.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Core.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launches\\Core.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:28:21.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Launchpad.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launchpad.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launchpad.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launchpad.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launchpad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:25:17.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "LaunchpadStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\LaunchpadStatusEnum.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\External\\Space X\\LaunchpadStatusEnum.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\LaunchpadStatusEnum.cs",
+              "RelativeToolTip": "Data\\Enums\\External\\Space X\\LaunchpadStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:26:26.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "GuidOrObjectArrayConverter.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Converters\\GuidOrObjectArrayConverter.cs",
+              "RelativeDocumentMoniker": "_Common\\Utility\\Converters\\GuidOrObjectArrayConverter.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\_Common\\Utility\\Converters\\GuidOrObjectArrayConverter.cs",
+              "RelativeToolTip": "_Common\\Utility\\Converters\\GuidOrObjectArrayConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:01:36.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Dragon.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Dragon.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Dragon.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Dragon.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Dragon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:40:56.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Failure.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Failure.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Launches\\Failure.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Launches\\Failure.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Launches\\Failure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:33:29.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "RequestTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\RequestTypeEnum.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\External\\Space X\\RequestTypeEnum.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\RequestTypeEnum.cs",
+              "RelativeToolTip": "Data\\Enums\\External\\Space X\\RequestTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:26:49.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Thrust.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Thrust.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Thrust.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Thrust.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Thrust.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:11:21.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Engine.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Engine.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Engine.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Engine.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Engine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:45.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "CompositeFairing.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\CompositeFairing.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\CompositeFairing.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\CompositeFairing.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\CompositeFairing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:38.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Rocket.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Rocket.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Rocket.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Rocket.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Rocket.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAvwEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:07:03.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Payloads.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Payloads.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Payloads.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Payloads.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Payloads.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:34.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "SecondStage.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\SecondStage.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\SecondStage.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\SecondStage.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\SecondStage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:30.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Stage.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Stage.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Stage.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Stage.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Stage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:24.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "PayloadWeight.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\PayloadWeight.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\PayloadWeight.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\PayloadWeight.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\PayloadWeight.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:20.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Mass.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Mass.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Mass.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Mass.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Mass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:15.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "LandingLegs.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\LandingLegs.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\LandingLegs.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\LandingLegs.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\LandingLegs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:11:27.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Isp.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Isp.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Isp.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Isp.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Isp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:11:32.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GuidOrObject.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Core\\GuidOrObject.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Core\\GuidOrObject.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Core\\GuidOrObject.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Core\\GuidOrObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:02:29.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Dimension.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Dimension.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Rockets\\Dimension.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Rockets\\Dimension.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Rockets\\Dimension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:10:10.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BaseJsonModel.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Core\\BaseJsonModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\External\\Space X\\Core\\BaseJsonModel.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Models\\External\\Space X\\Core\\BaseJsonModel.cs",
+              "RelativeToolTip": "Data\\Models\\External\\Space X\\Core\\BaseJsonModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:08:06.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "DatePrecisionEnum.cs",
+              "DocumentMoniker": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\DatePrecisionEnum.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\External\\Space X\\DatePrecisionEnum.cs",
+              "ToolTip": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\Data\\Enums\\External\\Space X\\DatePrecisionEnum.cs",
+              "RelativeToolTip": "Data\\Enums\\External\\Space X\\DatePrecisionEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T14:01:16.488Z"
             }
           ]
         }
