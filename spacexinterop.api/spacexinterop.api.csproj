@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Models\External\Space X\Payloads\" />
     <Folder Include="Migrations\" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.8" />
 	<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8" />

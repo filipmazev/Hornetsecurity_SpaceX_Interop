@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { Login } from './components/pages/authentication/login/login';
 import { Register } from './components/pages/authentication/register/register';
+import { Launches } from './components/pages/launches/launches';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,11 @@ export const routes: Routes = [
         path: '',
         canActivate: [AuthGuard],
         component: Landing
+    },
+    {
+        path: 'launches',
+        canActivate: [AuthGuard],
+        component: Launches
     }
 ];
 

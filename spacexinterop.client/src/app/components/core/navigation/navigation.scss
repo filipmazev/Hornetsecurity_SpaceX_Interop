@@ -93,10 +93,6 @@
     transform: translateY(-0.475rem) rotate(-45deg);
 }
 
-.route-active {
-    color: var(--text_primary) !important;
-}
-
 @keyframes menuOpen {
     0% {
         transform: translate(-100vw, 0);
@@ -196,31 +192,3 @@
     }
 }
 
-.nav-link {
-    cursor: pointer;
-    color: var(--text_tertiary);
-    transition: color 0.3s ease-in-out;
-
-    &:hover {
-        color: var(--text_primary);
-    }
-}
-
-.settings-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-    justify-content: flex-end;
-    align-items: center;
-    vertical-align: middle;
-
-    margin-right: 1.25rem;
-
-    @include respond-up(lg) {
-        margin-right: 15rem;
-    }
-
-    @include respond-up(md) {
-        margin-right: 10rem;
-    }
-}

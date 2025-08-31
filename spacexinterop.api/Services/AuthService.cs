@@ -4,9 +4,10 @@ using spacexinterop.api._Common.Domain.Data.Errors;
 using spacexinterop.api._Common.Domain.Data.Result;
 using spacexinterop.api._Common.Utility.Validators;
 using spacexinterop.api.Services.Interfaces;
+using spacexinterop.api.Data.Response;
 using spacexinterop.api.Data.Request;
-using Microsoft.AspNetCore.Identity;
 using spacexinterop.api.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using spacexinterop.api._Common;
 
 namespace spacexinterop.api.Services;
@@ -19,29 +20,33 @@ public class AuthService(
     IResultFactory resultFactory)
     : IAuthService
 {
-    public async Task<Result> Login(LoginRequest request)
+    public async Task<Result<UserResponse?>> Login(LoginRequest request)
     {
         if (!validators.IsEmailValid(request.Email))
-            return resultFactory.Failure(CommonError.Unauthorized);
+            return resultFactory.Failure<UserResponse?>(CommonError.Unauthorized);
 
         try
         {
             User? user = await userManager.FindByEmailAsync(request.Email);
 
             if (user is null)
-                return resultFactory.Failure(CommonError.Unauthorized);
+                return resultFactory.Failure<UserResponse?>(CommonError.Unauthorized);
 
             SignInResult result = await signInManager.PasswordSignInAsync(
                 user, request.Password, request.RememberMe, lockoutOnFailure: true);
 
             return !result.Succeeded 
-                ? resultFactory.Failure(CommonError.Unauthorized)
-                : resultFactory.Success("Logged in");
+                ? resultFactory.Failure<UserResponse?>(CommonError.Unauthorized)
+                : resultFactory.Success<UserResponse?>(new UserResponse
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
+                });
         }
         catch (Exception ex)
         {
             logger.LogError(ex, "Login failed");
-            return resultFactory.Exception(ex, "An error occurred during login.");
+            return resultFactory.Exception<UserResponse?>(ex, "An error occurred during login.");
         }
     }
 
@@ -59,10 +64,10 @@ public class AuthService(
         }
     }
 
-    public async Task<Result> Register(RegisterRequest request)
+    public async Task<Result<UserResponse?>> Register(RegisterRequest request)
     {
         if (!validators.IsEmailValid(request.Email))
-            return resultFactory.FromStatus(ResultStatusEnum.ValidationFailed);
+            return resultFactory.FromStatus<UserResponse?>(ResultStatusEnum.ValidationFailed);
 
         User user = new()
         {
@@ -87,37 +92,45 @@ public class AuthService(
 
                 ResultStatusEnum errorStatus = duplicateEmail ? ResultStatusEnum.EmailAlreadyExists : ResultStatusEnum.Failure;
 
-                return resultFactory.Failure(error: error, status: errorStatus);
+                return resultFactory.Failure<UserResponse?>(error: error, status: errorStatus);
             }
             
             await signInManager.SignInAsync(user, isPersistent: true, authenticationMethod: null);
 
-            return resultFactory.Success("Register successful");
+            return resultFactory.Success<UserResponse?>(new UserResponse
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName
+            });
         }
         catch (Exception ex)
         {
             logger.LogError(ex, "Register failed");
-            return resultFactory.Exception(ex, "An error occurred during registration.");
+            return resultFactory.Exception<UserResponse?>(ex, "An error occurred during registration.");
         }
     }
 
-    public async Task<Result> ValidateUserByUserName(string? userName)
+    public async Task<Result<UserResponse?>> ResolveUserByUserName(string? userName)
     {
         try
         {
             if(string.IsNullOrWhiteSpace(userName))
-                return resultFactory.FromStatus(ResultStatusEnum.InvalidRequest);
+                return resultFactory.FromStatus<UserResponse?>(ResultStatusEnum.InvalidRequest);
 
             User? user = await userManager.FindByNameAsync(userName);
-            
+
             return user is null 
-                ? resultFactory.FromStatus(ResultStatusEnum.NotFound) 
-                : resultFactory.Success();
+                ? resultFactory.FromStatus<UserResponse?>(ResultStatusEnum.NotFound) 
+                : resultFactory.Success<UserResponse?>(new UserResponse
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName
+                });
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "ValidateUserByUserName failed");
-            return resultFactory.Exception(ex, "An error occurred during user validation.");
+            logger.LogError(ex, "ResolveUserByUserName failed");
+            return resultFactory.Exception<UserResponse?>(ex, "An error occurred during user validation.");
         }
     }
 }

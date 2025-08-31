@@ -10,6 +10,11 @@
 }
 
 .landing-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     user-select: none;
 }
 
@@ -19,4 +24,8 @@
     color: var(--text_primary);
 
     text-transform: uppercase;
+}
+
+.landing-title-description {
+    opacity: 0.6;
 }

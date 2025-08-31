@@ -1,0 +1,71 @@
+@use "../../../../../styles/mixins" as *;
+
+.launch-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1.35rem;
+}
+
+.launch-details-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+
+.launch-name {
+    font-family: custom_bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.launch-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-wrap: wrap;
+    word-break: break-all;
+}
+
+.mission-patch-image {
+    width: 5rem;
+    height: auto;
+}
+
+.error-messages {
+    color: var(--text_warn);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.launch-details-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.launch-details-section-header {
+    font-family: custom_bold;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+.payload-card-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.payload-card {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.payloads-container {
+    display: grid;
+    flex-direction: column;
+    gap: 0.5rem;
+}

@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +19,9 @@ import { DbService } from '../../../shared/services/core/db.service';
 import { AccessabilitySettingsBuilderService } from '../../../shared/services/core/ui/accessability-settings-builder.service';
 import { DeviceThemeService } from '../../../shared/services/core/ui/device-theme.service';
 import { DeviceTheme } from '../../../shared/types/device.types';
+import { AuthService } from '../../../shared/services/client/auth.service';
+import { Router } from '@angular/router';
+import { GenericButton } from "../generic-button/generic-button";
 
 @Component({
   selector: 'settings',
@@ -32,11 +35,14 @@ import { DeviceTheme } from '../../../shared/types/device.types';
     MatTooltipModule,
     FormsModule,
     NgClass,
+    GenericButton
   ],
   templateUrl: './settings.html',
   styleUrl: './settings.scss'
 })
 export class Settings implements OnDestroy, AfterViewInit {
+  @Input() currentUserInitials?: string;
+
   protected settings: ISiteSettings = new SiteSettings();
   protected MatIcons = MatIcons;
 
@@ -51,12 +57,14 @@ export class Settings implements OnDestroy, AfterViewInit {
     private cdr: ChangeDetectorRef,
     private accessabilitySettings: AccessabilitySettingsBuilderService,
     private deviceThemeService: DeviceThemeService,
-    private dbService: DbService
+    private dbService: DbService,
+    private authService: AuthService,
+    private router: Router
   ) {
   }
 
   ngAfterViewInit(): void {
-    this.InitializeSettings();
+    this.initializeSettings();
   }
 
   ngOnDestroy() {
@@ -67,21 +75,21 @@ export class Settings implements OnDestroy, AfterViewInit {
     this.autoDarkThemeSubscribe$?.complete();
   }
 
-  private async InitializeSettings(): Promise<void> {
+  private async initializeSettings(): Promise<void> {
     this.settings.accessibility.items = await this.accessabilitySettings.build();
     await this.dbService.fetchData(DbStores.THEME_SETTINGS, DbKeys.theme).then(async (theme: string) => {
       if (theme) {
         this.settings.theme = JSON.parse(theme) as IThemeSettings;
         this.settings.theme.state = false;
 
-        for(let i = 0; i < this.settings.theme.darkMode.theming.length; i++) {
+        for (let i = 0; i < this.settings.theme.darkMode.theming.length; i++) {
           const item = this.settings.theme.darkMode.theming[i];
           if (item.selected) {
             this.selectedThemeIndex = i;
           }
         }
 
-        if(this.settings.theme.autoDarkMode) {
+        if (this.settings.theme.autoDarkMode) {
           this.startAutoDarkThemeSubscription();
         }
 
@@ -90,7 +98,7 @@ export class Settings implements OnDestroy, AfterViewInit {
         this.cdr.detectChanges();
       } else {
         this.selectedThemeIndex = 0;
-        
+
         await this.saveSetting(DbKeys.theme, this.settings.theme);
       }
       this.initialized = true;
@@ -133,7 +141,7 @@ export class Settings implements OnDestroy, AfterViewInit {
     this.autoDarkThemeSubscribe$ = new Subject<void>();
 
     this.deviceThemeService.getDeviceTheme$().pipe(takeUntil(this.autoDarkThemeSubscribe$), takeUntil(this.unsubscribe$)).subscribe(deviceTheme => {
-      if(this.settings.theme.autoDarkMode) {
+      if (this.settings.theme.autoDarkMode) {
         this.settings.theme.deviceTheme = deviceTheme;
         this.handleDeviceThemeChange();
       }
@@ -177,5 +185,13 @@ export class Settings implements OnDestroy, AfterViewInit {
   protected toggleThemeSettingState(): void {
     this.settings.theme.state = !this.settings.theme.state;
     this.settings.accessibility.state = false;
+  }
+
+  protected logout(): void {
+    this.authService.logout().then((result) => {
+      if (result.isSuccess) {
+        this.router.navigate(['/login']);
+      }
+    });
   }
 }

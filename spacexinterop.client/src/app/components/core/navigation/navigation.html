@@ -4,7 +4,7 @@
     <a href="/" class="logo logo-large"> </a>
     <!--#endregigon Site Logo -->
 
-    @if(isAuthenticated) {
+    @if(!!currentUser) {
         <div class="nav-links-container">
         @for (item of navigationLinks; track item) {
             <a
@@ -51,12 +51,5 @@
         <div> </div>
     }
 
-    <div class="settings-container">
-        <settings> </settings>
-         @if(isAuthenticated) {
-             <button (click)="logout()" mat-icon-button>
-                 <mat-icon class="settings-menu-item"> logout </mat-icon>
-             </button>
-         }
-    </div>
+    <settings [currentUserInitials]="currentUserInitials"> </settings>
 </nav>

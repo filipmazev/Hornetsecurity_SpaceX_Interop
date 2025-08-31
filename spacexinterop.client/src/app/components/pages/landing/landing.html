@@ -1,10 +1,16 @@
-<section class="landing-section">
+<section class="landing-section fade-in-anim">
     <div class="landing-title-container">
-        <div class="landing-title">
-            Welcome to SpaceX Interop
+        <div>
+            <div class="landing-title">
+               {{ currentUser?.firstName + ', ' }}  Welcome to SpaceX Interop
+            </div>
+            <div class="landing-title-description">
+                Brought to you by Hornetsecurity
+            </div>
         </div>
-        <div class="landing-title-description">
-            Brought to you by Hornetsecurity
-        </div>
+
+        <generic-button (onClick)="navigateToLaunches()" [style]="'default'" [text]="'View Launches'">
+
+        </generic-button>
     </div>
 </section>

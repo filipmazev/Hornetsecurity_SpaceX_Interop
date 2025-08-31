@@ -25,7 +25,7 @@ public partial class SpaceXLaunchesRepository
                 PopulateOption.With<Launch, GuidOrObject<Launchpad>>(launch => launch.Launchpad!)
                     .Selecting<Launchpad, string?>(launchpad => launchpad.FullName)
             ],
-            Offset = Math.Max(0, pageIndex - 1) * pageSize,
+            Offset = pageIndex * pageSize,
             Page = pageIndex,
             Limit = pageSize,
             Pagination = true

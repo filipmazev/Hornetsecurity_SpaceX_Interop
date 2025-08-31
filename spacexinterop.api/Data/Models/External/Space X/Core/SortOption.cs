@@ -1,9 +1,8 @@
-﻿using spacexinterop.api._Common.Utility.Extensions;
-using spacexinterop.api.Data.Enums.External;
+﻿using spacexinterop.api.Data.Enums.External.Space_X;
+using spacexinterop.api._Common.Utility.Extensions;
 using System.Text.Json.Serialization;
 using System.Linq.Expressions;
 using System.Reflection;
-using spacexinterop.api.Data.Enums.External.Space_X;
 
 namespace spacexinterop.api.Data.Models.External.Space_X.Core;
 

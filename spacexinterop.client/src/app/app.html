@@ -1,4 +1,10 @@
 <section class="page-section" [ngClass]="{'landing-background-image': hasReceivedAuthStatus && !isAuthenticated}">
+    @if(isAuthenticated) {        
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+    }
+    
+    <spinner> </spinner>
     @if (hasReceivedAuthStatus) {
         <navigation> </navigation>
         <router-outlet> </router-outlet>

@@ -30,7 +30,7 @@ public class SpaceXService(
     {
         try
         {
-            string cacheKey = $"{nameof(Launch).ToLower()}s_{request.PageIndex}_{request.PageSize}_{request.SortDirection}_{request.IncludePayloads}";
+            string cacheKey = $"{nameof(Launch).ToLower()}s_{request.Upcoming}_{request.PageIndex}_{request.PageSize}_{request.SortDirection}_{request.IncludePayloads}";
 
             if (memoryCache.TryGetValue(cacheKey, out PaginatedResponse<LaunchResponse>? cachedResult))
             {
