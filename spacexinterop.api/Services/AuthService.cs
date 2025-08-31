@@ -83,16 +83,9 @@ public class AuthService(
 
             if (!result.Succeeded)
             {
-                bool duplicateEmail = result.Errors.Any(e => e.Code == Constants.IdentityDuplicateEmailCode);
-                bool duplicateUserName = result.Errors.Any(e => e.Code == Constants.IdentityDuplicateUserNameCode);
-
-                Error error = duplicateEmail ? AuthError.EmailAlreadyExists 
-                    : duplicateUserName ? AuthError.UserNameAlreadyExists 
-                    : AuthError.RegistrationFailed;
-
-                ResultStatusEnum errorStatus = duplicateEmail ? ResultStatusEnum.EmailAlreadyExists : ResultStatusEnum.Failure;
-
-                return resultFactory.Failure<UserResponse?>(error: error, status: errorStatus);
+                return result.Errors.Any(e => e.Code == Constants.IdentityDuplicateEmailCode) 
+                    ? resultFactory.Failure<UserResponse?>(AuthError.EmailAlreadyExists, ResultStatusEnum.EmailAlreadyExists) 
+                    : resultFactory.Failure<UserResponse?>(AuthError.RegistrationFailed);
             }
             
             await signInManager.SignInAsync(user, isPersistent: true, authenticationMethod: null);

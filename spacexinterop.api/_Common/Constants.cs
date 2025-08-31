@@ -29,7 +29,6 @@ public static class Constants
     #region Error Codes
 
     public const string IdentityDuplicateEmailCode = "DuplicateEmail";
-    public const string IdentityDuplicateUserNameCode = "DuplicateUserName";
 
     #endregion
 }
