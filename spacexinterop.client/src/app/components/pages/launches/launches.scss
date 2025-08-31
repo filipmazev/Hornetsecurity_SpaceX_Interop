@@ -128,12 +128,15 @@
 
 .launches-cards-wrapper {
     max-height: 60vh;
+    max-height: 60dvh;
     overflow-y: auto;
     margin-bottom: 1rem;
     width: 100%;
     padding: 1.5rem;
 
     @include respond-down(sm) {
+        max-height: 47vh;
+        max-height: 47dvh;
         padding: 1rem;
     }
 }
