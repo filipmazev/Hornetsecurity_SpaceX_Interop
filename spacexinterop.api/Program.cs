@@ -1,21 +1,19 @@
-﻿using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
-using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Scalar.AspNetCore;
-using spacexinterop.api._Common;
-using spacexinterop.api._Common._Configs;
-using spacexinterop.api._Common.Extensions;
-using spacexinterop.api._Common.Utility.Clients;
-using spacexinterop.api._Common.Utility.Clients.Interfaces;
+﻿using spacexinterop.api._Common.Utility.Clients.Interfaces;
 using spacexinterop.api._Common.Utility.Mapper.Interfaces;
-using spacexinterop.api.Data;
-using spacexinterop.api.Data.Models;
+using spacexinterop.api._Common.Utility.Clients;
+using spacexinterop.api._Common.Extensions;
+using Microsoft.AspNetCore.HttpOverrides;
+using spacexinterop.api._Common._Configs;
 using spacexinterop.api.Infrastructure;
 using System.Text.Json.Serialization;
-using Azure;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using spacexinterop.api.Data.Models;
+using Microsoft.Extensions.Options;
+using spacexinterop.api._Common;
+using spacexinterop.api.Data;
+using Scalar.AspNetCore;
+using Azure.Identity;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -45,18 +43,11 @@ else
 if (builder.Environment.IsProduction())
 {
     string keyVaultUrl = builder.Configuration.GetSection("AzureKeyVault:VaultUri").Value!;
-
-    if (!string.IsNullOrEmpty(keyVaultUrl))
-    {
-        SecretClient client = new(new Uri(keyVaultUrl), new DefaultAzureCredential());
-
-        Pageable<SecretProperties> secrets = client.GetPropertiesOfSecrets();
-        foreach (SecretProperties secret in secrets)
-        {
-            Response<KeyVaultSecret>? secretValue = client.GetSecret(secret.Name);
-            builder.Configuration[secret.Name] = secretValue.Value.Value;
-        }
-    }
+    
+    builder.Configuration.AddAzureKeyVault(
+        new Uri(keyVaultUrl),
+        new DefaultAzureCredential()
+    );
 }
 
 builder.Services.AddMemoryCache();
@@ -146,10 +137,20 @@ builder.Services
         options.ExpireTimeSpan = TimeSpan.FromHours(Constants.SessionDurationInHours);  // Session duration
         options.SlidingExpiration = true;                                               // Extend session on activity
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-
-        options.Cookie.SameSite = builder.Environment.IsDevelopment() ? SameSiteMode.None : SameSiteMode.Strict;
+        options.Cookie.SameSite = SameSiteMode.None;
 
         options.Cookie.Path = "/";
+
+        options.Events.OnRedirectToLogin = ctx =>
+        {
+            if (ctx.Request.Path.StartsWithSegments("/api"))
+            {
+                ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                return Task.CompletedTask;
+            }
+            ctx.Response.Redirect(ctx.RedirectUri);
+            return Task.CompletedTask;
+        };
     });
 
 #endregion

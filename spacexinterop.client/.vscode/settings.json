@@ -1,4 +1,3 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/1bbcb413-ed2e-41cd-8780-c90672f95955/resourceGroups/spacexinterop_group/providers/Microsoft.Web/sites/spacexinterop",
-    "appService.deploySubpath": "dist\\spacexinterop.client\\browser"
+    "appService.defaultWebAppToDeploy": "None"
 }

@@ -54,8 +54,8 @@
     --bg_primary: #f7f7f7;
     --bg_secondary: #ffffff;
 
-    --logo: url('./assets/svg/logo_light.svg');
-    --lading_image: url('./assets/images/landing_image_1.jpg');
+    --logo: url('/assets/svg/logo_light.svg');
+    --lading_image: url('/assets/images/landing_image_1.jpg');
   }
 }
 
@@ -105,8 +105,8 @@
   --bg_primary: #0a0a0a;
   --bg_secondary: #111111;
 
-  --logo: url('./assets/svg/logo_dark.svg');
-  --lading_image: url('./assets/images/landing_image_2.jpg');
+  --logo: url('/assets/svg/logo_dark.svg');
+  --lading_image: url('/assets/images/landing_image_2.jpg');
 }
 
 body {
@@ -122,8 +122,8 @@ body.dark-theme-dark {
 //#region Fonts
 @font-face {
   font-family: custom_bold;
-  src: url('./assets/fonts/woff2/SpaceGrotesk-Bold.woff2') format('woff2'),
-    url('./assets/fonts/woff/SpaceGrotesk-Bold.woff') format('woff');
+  src: url('/assets/fonts/woff2/SpaceGrotesk-Bold.woff2') format('woff2'),
+    url('/assets/fonts/woff/SpaceGrotesk-Bold.woff') format('woff');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -131,8 +131,8 @@ body.dark-theme-dark {
 
 @font-face {
   font-family: custom_semibold;
-  src: url('./assets/fonts/woff2/SpaceGrotesk-SemiBold.woff2') format('woff2'),
-    url('./assets/fonts/woff/SpaceGrotesk-SemiBold.woff') format('woff');
+  src: url('/assets/fonts/woff2/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+    url('/assets/fonts/woff/SpaceGrotesk-SemiBold.woff') format('woff');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -140,8 +140,8 @@ body.dark-theme-dark {
 
 @font-face {
   font-family: custom_medium;
-  src: url('./assets/fonts/woff2/SpaceGrotesk-Medium.woff2') format('woff2'),
-    url('./assets/fonts/woff/SpaceGrotesk-Medium.woff') format('woff');
+  src: url('/assets/fonts/woff2/SpaceGrotesk-Medium.woff2') format('woff2'),
+    url('/assets/fonts/woff/SpaceGrotesk-Medium.woff') format('woff');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -149,8 +149,8 @@ body.dark-theme-dark {
 
 @font-face {
   font-family: custom_regular;
-  src: url('./assets/fonts/woff2/SpaceGrotesk-Regular.woff2') format('woff2'),
-    url('./assets/fonts/woff/SpaceGrotesk-Regular.woff') format('woff');
+  src: url('/assets/fonts/woff2/SpaceGrotesk-Regular.woff2') format('woff2'),
+    url('/assets/fonts/woff/SpaceGrotesk-Regular.woff') format('woff');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -158,8 +158,8 @@ body.dark-theme-dark {
 
 @font-face {
   font-family: custom_light;
-  src: url('./assets/fonts/woff2/SpaceGrotesk-Light.woff2') format('woff2'),
-    url('./assets/fonts/woff/SpaceGrotesk-Light.woff') format('woff');
+  src: url('/assets/fonts/woff2/SpaceGrotesk-Light.woff2') format('woff2'),
+    url('/assets/fonts/woff/SpaceGrotesk-Light.woff') format('woff');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -411,6 +411,35 @@ mat-icon {
   }
 }
 
+
+.landing-bg-stars {
+    background: black url('/assets/images/stars.png') repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: -2;
+}
+
+.landing-bg-twinkling-effect {
+    width: 10000px;
+    height: 100%;
+    background: transparent url('/assets/images/twinkling.png') repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    -moz-animation: move-background 70s linear infinite;
+    -ms-animation: move-background 70s linear infinite;
+    -o-animation: move-background 70s linear infinite;
+    -webkit-animation: move-background 70s linear infinite;
+    animation: move-background 70s linear infinite;
+}
 //#endregion
 
 //#region Animations
