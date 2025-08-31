@@ -2,7 +2,7 @@
     <div class="launches-header">
         <div class="nav-link" (click)="showUpcomingOnly = false; pageIndex.set(0); paginator.firstPage(); fetchData();"
             [ngClass]="{'route-active': !showUpcomingOnly}"> Past </div>
-        <div class="nav-link" (click)="showUpcomingOnly = true; pageIndex.set(0); paginator.firstPage();;;; fetchData();"
+        <div class="nav-link" (click)="showUpcomingOnly = true; pageIndex.set(0); paginator.firstPage(); fetchData();"
             [ngClass]="{'route-active': showUpcomingOnly}"> Upcoming </div>
     </div>
 
@@ -22,13 +22,14 @@
     </div>
 
     <div class="table-container">
+        @if(windowDimensions.width >= windowDimensions.threshold_xl) {
         <div class="table-body-wrapper">
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
                 <ng-container [matColumnDef]="displayedColumns[0]">
                     <th mat-header-cell *matHeaderCellDef class="custom-header"> Patch </th>
                     <td mat-cell *matCellDef="let item">
                         <img [src]="item.missionPatchImage ?? './assets/images/no_patch_default.png'"
-                            alt="Mission Patch" class="mission-patch-image" />
+                            alt="{{ item.name }} - Mission Patch" class="mission-patch-image" />
                     </td>
                 </ng-container>
 
@@ -106,11 +107,10 @@
                     <th mat-header-cell *matHeaderCellDef class="custom-header"> Actions </th>
                     <td mat-cell *matCellDef="let item; let i = index">
                         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="More actions"
-                            class="clickable-item"
-                            #menuTrigger="matMenuTrigger"
-                            (menuOpened)="menuOpenState[i] = true"
+                            class="clickable-item" #menuTrigger="matMenuTrigger" (menuOpened)="menuOpenState[i] = true"
                             (menuClosed)="menuOpenState[i] = false">
-                            <mat-icon [style.transform]="menuOpenState[i] ? 'rotate(-90deg)' : 'rotate(0deg)'" class="animated-icon">
+                            <mat-icon [style.transform]="menuOpenState[i] ? 'rotate(-90deg)' : 'rotate(0deg)'"
+                                class="animated-icon">
                                 {{ MatIcons.MoreActions }}
                             </mat-icon>
                         </button>
@@ -136,7 +136,61 @@
                 </tr>
             </table>
         </div>
-
+        } @else {
+        <div class="launches-cards-wrapper">
+            @for (item of filteredData; track item; let i = $index) {
+            <div class="launches-card-container">
+                <div class="launches-card-header">
+                    <div class="launches-card-title-container">
+                        <div class="launches-card-title">{{ item.name }}</div>
+                        @if(item.upcoming) {
+                        <span class="status upcoming"> Upcoming </span>
+                        } @else if (item.success === true) {
+                        <span class="status success"> Success </span>
+                        } @else if (item.success === false) {
+                        <span class="status failed"> Failed </span>
+                        } @else {
+                        <span class="status unknown"> Unknown </span>
+                        }
+                    </div>
+                    <img [src]="item.missionPatchImage ?? './assets/images/no_patch_default.png'"
+                        alt="{{ item.name }} - Mission Patch" class="launches-card-patch" />
+                </div>
+                <div class="launches-card-body">
+                    <p>Rocket: {{ item.rocketName }}</p>
+                    <p>Launchpad Name: {{ item.launchpadName }}</p>
+                    <p>Launch Date (UTC): {{ item.launchDateUtc }}</p>
+                    <p>Payloads: {{ item.payloads }}</p>
+                </div>
+                <div class="launches-card-footer">
+                    <div class="launches-links">
+                        @if(item.webcastUrl) {
+                        <div class="launches-link">
+                            <img src="./assets/svg/youtube_icon.svg" alt="YouTube Icon" />
+                            <a [href]="item.webcastUrl" target="_blank"> YouTube </a>
+                        </div>
+                        }
+                        @if(item.wikipediaUrl) {
+                        <div class="launches-link">
+                            <img src="./assets/svg/wikipedia_icon.svg" alt="Wikipedia Icon" />
+                            <a [href]="item.wikipediaUrl" target="_blank"> Wikipedia </a>
+                        </div>
+                        }
+                        @if(item.articleUrl) {
+                        <div class="launches-link">
+                            <mat-icon> {{ MatIcons.Link }} </mat-icon>
+                            <a [href]="item.articleUrl" target="_blank"> Article </a>
+                        </div>
+                        }
+                    </div>
+                    <button class="launches-card-view-details-button" mat-button (click)="viewDetails(i)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+        }
         <mat-paginator (page)="changePage($event)" [pageIndex]="pageIndex" [pageSize]="pageSize"
             [pageSizeOptions]="pageSizeOptions" showFirstLastButtons> </mat-paginator>
     </div>

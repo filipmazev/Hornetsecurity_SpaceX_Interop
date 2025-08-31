@@ -1,5 +1,5 @@
 import { MatCellDef, MatColumnDef, MatHeaderCellDef, MatHeaderRowDef, MatNoDataRow, MatRowDef, MatTableModule } from '@angular/material/table';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BaseMatTableComponent } from '../../../shared/classes/ui/base-mat-table-component';
 import { LaunchRow } from '../../../shared/classes/ui/view/launch-row';
 import { SpinnerService } from '../../../shared/services/core/ui/spinner.service';
@@ -17,6 +17,10 @@ import { MatIcon } from '@angular/material/icon';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 import { MatDialog } from '@angular/material/dialog';
 import { LaunchDetailsDialog } from './launch-details-dialog/launch-details-dialog';
+import { Subject, takeUntil } from 'rxjs';
+import { WindowDimensionsService } from '../../../shared/services/core/ui/window-dimension.service';
+import { WindowDimensions } from '../../../shared/interfaces/services/window-dimensions.interface';
+import { GenericButton } from "../../core/generic-button/generic-button";
 
 @Component({
   selector: 'app-launches',
@@ -38,12 +42,13 @@ import { LaunchDetailsDialog } from './launch-details-dialog/launch-details-dial
     NgClass,
     MatIcon,
     MatMenu,
-    MatMenuTrigger
+    MatMenuTrigger,
+    GenericButton
 ],
   templateUrl: './launches.html',
   styleUrl: './launches.scss'
 })
-export class Launches extends BaseMatTableComponent<LaunchRow> {
+export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit {
   protected displayedColumns: string[] = ['icon', 'name', 'rocketName', 'launchpadName', 'launchDateUtc', 'payloads', 'links', 'status', 'actions'];
 
   protected SortDirectionEnum = SortDirectionEnum;
@@ -53,13 +58,29 @@ export class Launches extends BaseMatTableComponent<LaunchRow> {
   protected includePayloads: boolean = true;
 
   private data: LaunchResponse[] = [];
+  protected filteredData: LaunchRow[] = [];
+
+  protected windowDimensions: WindowDimensions = {} as WindowDimensions;
+
+  private unsubscribe$ = new Subject<void>();
 
   constructor(
     private spaceXService: SpaceXService,
+    private windowDimensionsService: WindowDimensionsService,
     private dialog: MatDialog,
     spinnerService: SpinnerService
   ) {
     super(spinnerService);
+  }
+
+  public ngOnInit(): void {
+    this.createSubscriptions();
+  }
+
+  private createSubscriptions(): void {
+      this.windowDimensionsService.getWindowDimensions$().pipe(takeUntil(this.unsubscribe$)).subscribe(dimensions => {
+        this.windowDimensions = dimensions;
+      });
   }
 
   protected override async dataFetchingMethod(): Promise<{ data: LaunchRow[]; totalRows?: number; }> {
@@ -75,8 +96,10 @@ export class Launches extends BaseMatTableComponent<LaunchRow> {
       await this.spaceXService.getLaunches(request).then((result) => {
         if (result.isSuccess && result.value?.items) {
           this.data = result.value.items;
+          const rows = this.resolveRowsFromData(result.value?.items);
+          this.filteredData = rows;
           resolve({
-            data: this.resolveRowsFromData(result.value?.items),
+            data: rows,
             totalRows: result.value.totalItems
           });
         } else {
@@ -121,6 +144,8 @@ export class Launches extends BaseMatTableComponent<LaunchRow> {
     this.dataSource.filterPredicate = (data: LaunchRow, filter: string) =>
     data.name.toLowerCase().includes(filter);
     this.dataSource.filter = filterValue;
+
+    this.filteredData = this.dataSource.filteredData;
   }
 
   protected viewDetails(index: number) {

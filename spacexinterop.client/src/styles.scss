@@ -401,6 +401,11 @@ mat-icon {
   @include respond-down(md) {
     width: unset;
   }
+
+  @include respond-down(sm) {
+    min-width: 65vw;
+    min-width: 65dvw;
+  }
 }
 
 //#endregion
