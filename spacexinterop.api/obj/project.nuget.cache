@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g02B6dCLlb8=",
+  "dgSpecHash": "I2pdc63IXGU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\filip\\Documents\\Code\\Hornetsecurity_SpaceX_Interop\\spacexinterop.api\\spacexinterop.api.csproj",
+  "projectFilePath": "C:\\Users\\filip\\Documents\\Code\\SpaceX Interop\\spacexinterop.api\\spacexinterop.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\filip\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\filip\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.4.0\\azure.extensions.aspnetcore.configuration.secrets.1.4.0.nupkg.sha512",
