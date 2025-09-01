@@ -22,7 +22,7 @@ public class AuthService(
     public async Task<Result<UserResponse?>> Login(LoginRequest request)
     {
         if (!validators.IsEmailValid(request.Email))
-            return resultFactory.Failure<UserResponse?>(CommonError.Unauthorized);
+            return resultFactory.Failure<UserResponse?>(CommonError.Unauthorized, ResultStatusEnum.Unauthorized);
 
         try
         {
