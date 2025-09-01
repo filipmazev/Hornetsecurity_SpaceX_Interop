@@ -19,12 +19,12 @@ public class AuthController(
     public async Task<IActionResult> CheckSession()
     {
         if (!(User.Identity?.IsAuthenticated ?? false)) 
-            return Ok(resultFactory.Failure(CommonError.Unauthorized));
+            return Ok(resultFactory.Failure(CommonError.Unauthorized, ResultStatusEnum.Unauthorized));
 
         Result<UserResponse?> result = await authService.ResolveUserByUserName(User.Identity.Name);
 
         if (!result.IsSuccess || result.Value is null)
-            return Ok(resultFactory.Failure(CommonError.Unauthorized));
+            return Ok(resultFactory.Failure(CommonError.Unauthorized, ResultStatusEnum.Unauthorized));
 
         return Ok(resultFactory.Success(result.Value));
     }

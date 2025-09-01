@@ -7,6 +7,7 @@ import { ErrorSnackbarService } from "../core/ui/error-snackbar.service";
 import { environment } from "../../../../environments/environment";
 import { COMMA_EMPTY_SPACE_JOINER } from "../../constants/common.constants";
 import { SpaceXLaunchesRequest } from "../../classes/models/requests/SpaceXLaunchesRequest.model";
+import { SpinnerService } from "../core/ui/spinner.service";
 
 @Injectable({
     providedIn: 'root'
@@ -16,19 +17,25 @@ export class SpaceXService {
 
     constructor(
         private httpService: HttpService,
+        private spinnerService: SpinnerService,
         private errorSnackbarService: ErrorSnackbarService) {
     }
 
     public async getLaunches(request: SpaceXLaunchesRequest): Promise<Result<PaginatedResponse<LaunchResponse>>> {
         return new Promise<Result<PaginatedResponse<LaunchResponse>>>(async (resolve, reject) => {
             try {
+                this.spinnerService.showSpinner();
+
                 await this.httpService.post<Result<PaginatedResponse<LaunchResponse>>>(this.baseUrl + 'GetLaunches', request).then((result) => {
                     if (!result.isSuccess) {
                         this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred while fetching launches.");
                     }
                     resolve(result);
+                }).finally(() => {
+                    this.spinnerService.hideSpinner();
                 });
             } catch (error) {
+                this.spinnerService.hideSpinner();
                 this.errorSnackbarService.displayError("An unknown error occurred while fetching launches.");
                 if (!environment.production) console.error('Fetch launches failed:', error);
                 reject(error);

@@ -19,6 +19,7 @@ public enum ResultStatusEnum : byte
     #endregion
 
     #region Auth
+    Unauthorized,
     EmailAlreadyExists
     #endregion
 }

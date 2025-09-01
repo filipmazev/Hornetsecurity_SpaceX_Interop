@@ -8,6 +8,8 @@ import { Result } from "../../classes/models/responses/Result.model";
 import { UserResponse } from "../../classes/models/responses/UserResponse.model";
 import { ErrorSnackbarService } from "../core/ui/error-snackbar.service";
 import { COMMA_EMPTY_SPACE_JOINER } from "../../constants/common.constants";
+import { SpinnerService } from "../core/ui/spinner.service";
+import { ResultStatusEnum } from "../../enums/api/ResultStatusEnum";
 
 @Injectable({
     providedIn: 'root'
@@ -21,6 +23,7 @@ export class AuthService {
 
     constructor(
         private httpService: HttpService,
+        private spinnerService: SpinnerService,
         private errorSnackbarService: ErrorSnackbarService
     ) {
         this.createSubscriptions();
@@ -40,13 +43,20 @@ export class AuthService {
     public async login(request: LoginRequest): Promise<Result<UserResponse | undefined>> {
         return new Promise<Result<UserResponse | undefined>>(async (resolve, reject) => {
             try {
+                this.spinnerService.showSpinner();
+
                 await this.httpService.post<Result<UserResponse | undefined>>(this.baseUrl + 'Login', request).then((result) => {
                     if(result.isSuccess) {
                         this.currentUserSubject.next(result.value ?? undefined);
+                    } else if(result.status !== ResultStatusEnum.Unauthorized) {
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during login.");
                     }
                     resolve(result);
+                }).finally(() => {
+                    this.spinnerService.hideSpinner();
                 });
             } catch (error) {
+                this.spinnerService.hideSpinner();
                 this.errorSnackbarService.displayError("An unknown error occurred during login.");
                 if (!environment.production) console.error('Login failed:', error);
                 reject(error);
@@ -57,13 +67,20 @@ export class AuthService {
     public async register(request: RegisterRequest): Promise<Result<UserResponse | undefined>> {
         return new Promise<Result<UserResponse | undefined>>(async (resolve, reject) => {
             try {
+                this.spinnerService.showSpinner();
+
                 await this.httpService.post<Result<UserResponse | undefined>>(this.baseUrl + 'Register', request).then((result) => {
                     if(result.isSuccess) {
                         this.currentUserSubject.next(result.value ?? undefined);
+                    } else if(result.status !== ResultStatusEnum.EmailAlreadyExists) {
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during registration.");
                     }
                     resolve(result);
+                }).finally(() => {
+                    this.spinnerService.hideSpinner();
                 });
             } catch (error) {
+                this.spinnerService.hideSpinner();
                 this.errorSnackbarService.displayError("An unknown error occurred during registration.");
                 if (!environment.production) console.error('Login failed:', error);
                 reject(error);
@@ -74,6 +91,8 @@ export class AuthService {
     public logout(): Promise<Result> {
         return new Promise<Result>(async (resolve, reject) => {
             try {
+                this.spinnerService.showSpinner();
+
                 await this.httpService.post<Result>(this.baseUrl + 'Logout').then((result) => {
                     if(result.isSuccess) {
                         this.currentUserSubject.next(undefined);
@@ -81,8 +100,11 @@ export class AuthService {
                         this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during logout.");
                     }
                     resolve(result);
+                }).finally(() => {
+                    this.spinnerService.hideSpinner();
                 });
             } catch (error) {
+                this.spinnerService.hideSpinner();
                 this.errorSnackbarService.displayError("An unknown error occurred during logout.");
                 if (!environment.production) console.error('Login failed:', error);
                 reject(error);
@@ -96,9 +118,13 @@ export class AuthService {
                 await this.httpService.get<Result<UserResponse | undefined>>(this.baseUrl + 'CheckSession').then((result) => {
                     if(result.isSuccess && result.value) {
                         this.currentUserSubject.next(result.value);
-                    } else {
-                        this.currentUserSubject.next(undefined);
+                        resolve(result.value ?? undefined);
+                        return;
+                    } else if(result.status !== ResultStatusEnum.Unauthorized) {
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred during session check.");
                     }
+
+                    this.currentUserSubject.next(undefined);
                     resolve(result.value ?? undefined);
                 });
             } catch (error) {

@@ -1,5 +1,4 @@
 ﻿using spacexinterop.api._Common.Utility.Factories.Interfaces;
-using spacexinterop.api._Common.Domain.Data.Errors.Base;
 using spacexinterop.api._Common.Domain.Data.Errors;
 using spacexinterop.api._Common.Domain.Data.Result;
 using spacexinterop.api._Common.Utility.Validators;
@@ -36,7 +35,7 @@ public class AuthService(
                 user, request.Password, request.RememberMe, lockoutOnFailure: true);
 
             return !result.Succeeded 
-                ? resultFactory.Failure<UserResponse?>(CommonError.Unauthorized)
+                ? resultFactory.Failure<UserResponse?>(CommonError.Unauthorized, ResultStatusEnum.Unauthorized)
                 : resultFactory.Success<UserResponse?>(new UserResponse
                 {
                     FirstName = user.FirstName,

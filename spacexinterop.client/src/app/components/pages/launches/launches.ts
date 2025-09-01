@@ -2,7 +2,6 @@ import { MatCellDef, MatColumnDef, MatHeaderCellDef, MatHeaderRowDef, MatNoDataR
 import { Component, OnInit } from '@angular/core';
 import { BaseMatTableComponent } from '../../../shared/classes/ui/base-mat-table-component';
 import { LaunchRow } from '../../../shared/classes/ui/view/launch-row';
-import { SpinnerService } from '../../../shared/services/core/ui/spinner.service';
 import { SpaceXService } from '../../../shared/services/client/spacex.service';
 import { SpaceXLaunchesRequest } from '../../../shared/classes/models/requests/SpaceXLaunchesRequest.model';
 import { SortDirectionEnum } from '../../../shared/enums/api/SortDirectionEnum';
@@ -65,10 +64,9 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
   constructor(
     private spaceXService: SpaceXService,
     private windowDimensionsService: WindowDimensionsService,
-    private dialog: MatDialog,
-    spinnerService: SpinnerService
+    private dialog: MatDialog
   ) {
-    super(spinnerService);
+    super();
   }
 
   public ngOnInit(): void {

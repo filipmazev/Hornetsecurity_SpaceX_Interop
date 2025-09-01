@@ -10,6 +10,7 @@ export enum ResultStatusEnum {
   //#endregion
 
   //#region Auth
+  Unauthorized = 'Unauthorized',
   EmailAlreadyExists = 'EmailAlreadyExists',
   //#endregion
 }

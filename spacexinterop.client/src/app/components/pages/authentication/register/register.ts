@@ -82,9 +82,9 @@ export class Register {
         this.offerLogInInstead = false;
         this.invalidRegisterMessages = null;
         this.router.navigate(['/']);
-      } else {
+      } else if(result.status === ResultStatusEnum.EmailAlreadyExists) {
         this.invalidRegisterMessages = result.error?.messages ?? [];
-        this.offerLogInInstead = result.status === ResultStatusEnum.EmailAlreadyExists;
+        this.offerLogInInstead = true;
       }
     });
   }

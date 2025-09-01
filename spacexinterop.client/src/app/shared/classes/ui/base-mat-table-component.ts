@@ -15,19 +15,7 @@ export abstract class BaseMatTableComponent<TData extends object = any> implemen
     protected pageSize: WritableSignal<number> = signal(this.pageSizeOptions[1]);
     protected totalRows: WritableSignal<number> = signal(0);
 
-    protected _isFetching: boolean = false;
-    protected get isFetching(): boolean {
-        return this._isFetching;
-    }
-
-    private set isFetching(value: boolean) {
-        this._isFetching = value;
-        if(value) {
-            this.spinnerService.showSpinner();
-        } else {
-            this.spinnerService.hideSpinner();
-        }
-    }
+    protected isFetching: boolean = false;
 
     protected menuOpenState: boolean[] = []; 
     
@@ -39,9 +27,6 @@ export abstract class BaseMatTableComponent<TData extends object = any> implemen
     protected MatIcons = MatIcons;
 
     @ViewChild(MatPaginator) paginator!: MatPaginator;
-
-    constructor(protected spinnerService: SpinnerService) {
-    }
 
     public ngAfterViewInit(): void {
         this.paginator.pageSize = this.pageSize();
