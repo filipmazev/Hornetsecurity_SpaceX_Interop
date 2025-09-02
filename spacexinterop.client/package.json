@@ -1,10 +1,10 @@
 {
   "name": "spacexinterop.client",
-  "version": "0.0.0",
+  "version": "0.2.0-beta",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --ssl --ssl-cert \"%APPDATA%\\ASP.NET\\https\\%npm_package_name%.pem\" --ssl-key \"%APPDATA%\\ASP.NET\\https\\%npm_package_name%.key\" --host=localhost",
-    "prestart": "node aspnetcore-https.js",
+    "prestart": "node aspnetcore-https.js && ts-node scripts/version.ts",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -33,6 +33,7 @@
     "@angular/router": "^20.2.0",
     "@angular/service-worker": "^20.2.0",
     "rxjs": "~7.8.0",
+    "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.0"
   },

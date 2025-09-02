@@ -16,9 +16,10 @@ import { MatIcon } from '@angular/material/icon';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 import { MatDialog } from '@angular/material/dialog';
 import { LaunchDetailsDialog } from './launch-details-dialog/launch-details-dialog';
-import { Subject, takeUntil } from 'rxjs';
+import { debounceTime, distinctUntilChanged, Subject, takeUntil } from 'rxjs';
 import { WindowDimensionsService } from '../../../shared/services/core/ui/window-dimension.service';
 import { WindowDimensions } from '../../../shared/interfaces/services/window-dimensions.interface';
+import { BASE_DEBOUNCE_TIME_IN_MS } from '../../../shared/constants/common.constants';
 
 @Component({
   selector: 'app-launches',
@@ -41,7 +42,7 @@ import { WindowDimensions } from '../../../shared/interfaces/services/window-dim
     MatIcon,
     MatMenu,
     MatMenuTrigger
-],
+  ],
   templateUrl: './launches.html',
   styleUrl: './launches.scss'
 })
@@ -49,6 +50,7 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
   protected displayedColumns: string[] = ['icon', 'name', 'rocketName', 'launchpadName', 'launchDateUtc', 'payloads', 'links', 'status', 'actions'];
 
   protected SortDirectionEnum = SortDirectionEnum;
+  protected searchText?: string;
 
   protected showUpcomingOnly: boolean = false;
   protected sortOrder: SortDirectionEnum = SortDirectionEnum.Descending;
@@ -60,6 +62,7 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
   protected windowDimensions: WindowDimensions = {} as WindowDimensions;
 
   private unsubscribe$ = new Subject<void>();
+  private searchTextChanged$ = new Subject<string>();
 
   constructor(
     private spaceXService: SpaceXService,
@@ -73,15 +76,35 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
     this.createSubscriptions();
   }
 
+  public ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+
+    this.searchTextChanged$.complete();
+    this.searchTextChanged$.unsubscribe();
+  }
+
   private createSubscriptions(): void {
-      this.windowDimensionsService.getWindowDimensions$().pipe(takeUntil(this.unsubscribe$)).subscribe(dimensions => {
-        this.windowDimensions = dimensions;
+    this.windowDimensionsService.getWindowDimensions$().pipe(takeUntil(this.unsubscribe$)).subscribe(dimensions => {
+      this.windowDimensions = dimensions;
+    });
+
+    this.searchTextChanged$
+      .pipe(
+        debounceTime(BASE_DEBOUNCE_TIME_IN_MS),        
+        distinctUntilChanged(),    
+        takeUntil(this.unsubscribe$)
+      )
+      .subscribe(value => {
+        this.searchText = value;
+        this.fetchData(); 
       });
   }
 
   protected override async dataFetchingMethod(): Promise<{ data: LaunchRow[]; totalRows?: number; }> {
     return new Promise(async (resolve, reject) => {
       const request: SpaceXLaunchesRequest = {
+        searchText: this.searchText,
         upcoming: this.showUpcomingOnly,
         sortDirection: this.sortOrder,
         pageIndex: this.pageIndex(),
@@ -135,20 +158,16 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
 
   //#region UI Methods
 
-  protected applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
-    this.dataSource.filterPredicate = (data: LaunchRow, filter: string) =>
-    data.name.toLowerCase().includes(filter);
-    this.dataSource.filter = filterValue;
-
-    this.filteredData = this.dataSource.filteredData;
-  }
-
   protected viewDetails(index: number) {
     const selectedLaunch = this.data[index];
     this.dialog.open(LaunchDetailsDialog, {
       data: selectedLaunch
     });
+  }
+
+  protected applyFilter(event: Event) {
+    const value = (event.target as HTMLInputElement).value.trim();
+    this.searchTextChanged$.next(value);
   }
 
   //#endregion

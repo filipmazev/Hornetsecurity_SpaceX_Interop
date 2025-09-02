@@ -6,6 +6,8 @@ namespace spacexinterop.api.Data.Request;
 
 public class SpaceXLaunchesRequest
 {
+    public string? SearchText { get; set; }
+
     [Required]
     public required bool Upcoming { get; set; }
 

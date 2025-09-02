@@ -7,7 +7,7 @@ public interface ISpaceXLaunchesRepository
 {
     #region Query Options
 
-    QueryOptions CompleteLaunchesPaginated(int pageSize, int pageIndex, SortDirectionEnum sortDirection = SortDirectionEnum.Descending, bool includePayloads = true);
+    QueryOptions CompleteLaunchesPaginated(int pageSize, int pageIndex, SortDirectionEnum sortDirection = SortDirectionEnum.Descending, bool disableSort = false, bool includePayloads = true);
 
     #endregion
 }

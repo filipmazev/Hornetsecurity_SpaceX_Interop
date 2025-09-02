@@ -1,10 +1,11 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal, Version } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/core/navigation/navigation';
 import { AuthService } from './shared/services/client/auth.service';
 import { Subject, takeUntil } from 'rxjs';
 import { NgClass } from '@angular/common';
 import { Spinner } from './components/core/spinner/spinner';
+import { appVersion } from '../environments/version';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,8 @@ import { Spinner } from './components/core/spinner/spinner';
 })
 export class App implements OnInit, OnDestroy {
   protected readonly title = signal('spacexinterop.client');
+
+  protected appVersion = appVersion;
 
   protected hasReceivedAuthStatus: boolean = false;
   protected isAuthenticated: boolean = false;

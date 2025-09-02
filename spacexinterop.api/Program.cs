@@ -43,7 +43,7 @@ else
 if (builder.Environment.IsProduction())
 {
     string keyVaultUrl = builder.Configuration.GetSection("AzureKeyVault:VaultUri").Value!;
-    
+
     builder.Configuration.AddAzureKeyVault(
         new Uri(keyVaultUrl),
         new DefaultAzureCredential()

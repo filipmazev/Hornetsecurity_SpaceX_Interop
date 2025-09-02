@@ -20,3 +20,5 @@ export const TABLE_PAGE_SIZE_OPTION_4 = 50;
 
 export const EMPTY_TABLE_STRING = "No rows";
 export const EMPTY_TABLE_FIELD_STRING = "/";
+
+export const BASE_DEBOUNCE_TIME_IN_MS = 300;

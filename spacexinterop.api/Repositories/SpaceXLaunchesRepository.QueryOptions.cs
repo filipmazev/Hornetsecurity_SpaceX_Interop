@@ -12,11 +12,12 @@ public partial class SpaceXLaunchesRepository
         int pageSize, 
         int pageIndex, 
         SortDirectionEnum sortDirection = SortDirectionEnum.Descending,
+        bool disableSort = false,
         bool includePayloads = true)
     {
         QueryOptions queryOptions = new()
         {
-            Sort = new SortOption().By<Launch>(launch => launch.DateUtc, sortDirection),
+            Sort = !disableSort ? new SortOption().By<Launch>(launch => launch.DateUtc, sortDirection) : null,
             Populate =
             [
                 PopulateOption.With<Launch, GuidOrObject<Rocket>>(launch => launch.Rocket!)
