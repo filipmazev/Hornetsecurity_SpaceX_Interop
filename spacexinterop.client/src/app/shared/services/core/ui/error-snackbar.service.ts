@@ -12,7 +12,7 @@ export class ErrorSnackbarService {
 
     displayError(errorMessage: string, durationInSeconds: number = ERROR_SNACKBAR_DURATION_IN_SECONDS) {
         this._snackBar.open(errorMessage, 'Close', {
-            duration: durationInSeconds * 100000,
+            duration: durationInSeconds * 1000,
             verticalPosition: 'top',
             horizontalPosition: 'end'
         });
