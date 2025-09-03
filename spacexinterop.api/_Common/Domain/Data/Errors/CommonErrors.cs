@@ -4,5 +4,6 @@ namespace spacexinterop.api._Common.Domain.Data.Errors;
 
 public static class CommonError
 {
+    public static Error SomethingWentWrong => Error.CreateError("unauthorized", "Error, something went wrong");
     public static Error Unauthorized => Error.CreateError("unauthorized", "Error, unauthorized");
 }

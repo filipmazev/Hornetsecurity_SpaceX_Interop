@@ -42,5 +42,53 @@ public class MappingConfig(IMapper mapper) : IMappingConfig
                 }).ToList());
 
         mapper.AddProfile(launchToLaunchResponse);
+        
+        MappingProfile<Launch, LatestLaunchResponse> launchToLatestLaunchResponse =
+            new MappingProfile<Launch, LatestLaunchResponse>()
+                .ForProperty(src => src.Name, dest => dest.Name)
+                .ForProperty(src => src.FlightNumber, dest => dest.FlightNumber)
+
+                .ForProperty(src => src.StaticFireDateUtc, dest => dest.StaticFireDateUtc)
+                .ForProperty(src => src.DateUtc, dest => dest.LaunchDateUtc)
+                .ForProperty(src => src.DatePrecision, dest => dest.DatePrecision)
+
+                .ForProperty(src => src.Details, dest => dest.Details)
+                .ForProperty(src => src.Upcoming, dest => dest.Upcoming)
+                .ForProperty(src => src.Success, dest => dest.Success)
+                
+                .ForProperty(src => src.Failures, dest => dest.FailureReasons, 
+                    src => src.Select(item => item.Reason ?? string.Empty).ToList())
+
+                .ForProperty(src => src.Cores, dest => dest.Cores, src => src
+                    .Select(item => new CoreResponse
+                    {
+                        Flight = item.FlightNumber,
+                        GridFins = item.Gridfins,
+                        Legs = item.Legs,
+                        Reused = item.Reused,
+                        LandingAttempt = item.LandingAttempt,
+                        LandingSuccess = item.LandingSuccess,
+                        LandingType = item.LandingType
+                    }).ToList())
+                
+                .ForProperty(src => src.Links, dest => dest.Reddit, src => new RedditResponse
+                {
+                    CampaignUrl = src?.Reddit?.Campaign,
+                    LaunchUrl = src?.Reddit?.Launch,
+                    MediaUrl = src?.Reddit?.Media,
+                    RecoveryUrl = src?.Reddit?.Recovery
+                })
+                
+                .ForProperty(src => src.Links, dest => dest.FlickerImagesOriginal, src => src?.Flickr?.Original)
+                
+                .ForProperty(src => src.Links, dest => dest.MissionPatchImageSmall, src => src?.Patch?.Small)
+                .ForProperty(src => src.Links, dest => dest.MissionPatchImageOriginal, src => src?.Patch?.Large)
+                
+                .ForProperty(src => src.Links, dest => dest.PressKitUrl, src => src?.Presskit)
+                .ForProperty(src => src.Links, dest => dest.WebcastUrl, src => src?.Webcast)
+                .ForProperty(src => src.Links, dest => dest.WikipediaUrl, src => src?.Wikipedia)
+                .ForProperty(src => src.Links, dest => dest.ArticleUrl, src => src?.Article);
+
+        mapper.AddProfile(launchToLatestLaunchResponse);
     }
 }

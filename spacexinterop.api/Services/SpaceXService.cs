@@ -27,7 +27,7 @@ public class SpaceXService(
     IMemoryCache memoryCache
     ) : ISpaceXService
 {
-    public async Task<Result<PaginatedResponse<LaunchResponse>?>> GetLaunches(SpaceXLaunchesRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result<PaginatedResponse<LaunchResponse>?>> GetLaunches(SpaceXLaunchesRequest request)
     {
         try
         {
@@ -54,7 +54,7 @@ public class SpaceXService(
                 queryRequest.Query.TryAdd(textSearchQuery.JsonQueryFieldName, textSearchQuery.ToJsonDictionary());
             }
 
-            SpaceXPaginatedResponse<Launch>? response = await client.GetQueryResponse<Launch>(queryRequest, cancellationToken);
+            SpaceXPaginatedResponse<Launch>? response = await client.GetQueryResponse<Launch>(queryRequest);
             PaginatedResponse<LaunchResponse>? result = response?.ToPaginatedResponse<LaunchResponse>(mapper);
 
             if(result is not null) memoryCache.Set(cacheKey, result, TimeSpan.FromMinutes(Constants.MemoryCacheTimeToLiveInMinutes));
@@ -64,36 +64,30 @@ public class SpaceXService(
         catch (Exception ex)
         {
             logger.LogError(ex, "Failed to fetch upcoming launches from SpaceX API.");
-            return resultFactory.Failure<PaginatedResponse<LaunchResponse>?>(CommonError.Unauthorized);
+            return resultFactory.Failure<PaginatedResponse<LaunchResponse>?>(CommonError.SomethingWentWrong);
         }
     }
     
-    public async Task<Result<LaunchResponse?>> GetLatestLaunch(CancellationToken cancellationToken = default)
+    public async Task<Result<LatestLaunchResponse?>> GetLatestLaunch()
     {
         try
         {
             string cacheKey = nameof(Launch).ToLower() + "_latest";
 
-            if (memoryCache.TryGetValue(cacheKey, out LaunchResponse? cachedResult)) 
+            if (memoryCache.TryGetValue(cacheKey, out LatestLaunchResponse? cachedResult)) 
                 return resultFactory.Success(cachedResult);
 
-            SpaceXQueryRequest queryRequest = new()
-            {
-                Query = new Dictionary<string, object> { [LaunchesRequestTypeEnum.Upcoming.GetJsonPropertyName()] = false },
-                Options = spaceXLaunchesRepository.CompleteLaunch()
-            };
+            Launch dummy = new();
+
+            Launch? response = await client.GetLaunchResponseByLaunchRequestType(LaunchesRequestTypeEnum.Latest);
+            LatestLaunchResponse? result = response is null ? null : mapper.Map<Launch, LatestLaunchResponse>(response);
             
-            SpaceXPaginatedResponse<Launch>? response = await client.GetQueryResponse<Launch>(queryRequest, cancellationToken);
-            PaginatedResponse<LaunchResponse>? result = response?.ToPaginatedResponse<LaunchResponse>(mapper);
-
-            if(result is not null) memoryCache.Set(cacheKey, result, TimeSpan.FromMinutes(Constants.MemoryCacheTimeToLiveInMinutes));
-
-            return resultFactory.Success(result?.Items.FirstOrDefault());
+            return resultFactory.Success(result);
         }
         catch (Exception ex)
         {
             logger.LogError(ex, "Failed to fetch latest launch from SpaceX API.");
-            return resultFactory.Failure<LaunchResponse?>(CommonError.Unauthorized);
+            return resultFactory.Failure<LatestLaunchResponse?>(CommonError.SomethingWentWrong);
         }
     }
 }

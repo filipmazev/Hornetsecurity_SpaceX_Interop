@@ -5,14 +5,12 @@
     }
 
     <div class="landing-title-container">
-        <div>
-            <div class="landing-title">
-               {{ currentUser?.firstName + ', ' }}  Welcome to SpaceX Interop
-            </div>
+        <div class="landing-title">
+           {{ currentUser?.firstName + ', ' }}  Welcome to SpaceX Interop
         </div>
-
-        <generic-button (onClick)="navigateToLaunches()" [style]="'default'" [text]="'View Launches'">
-
+        
+        <generic-button (onClick)="navigateToLaunches()" [style]="'default'" [text]="'View All Launches'">
+            
         </generic-button>
     </div>
 </section>

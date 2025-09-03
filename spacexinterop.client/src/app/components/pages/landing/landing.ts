@@ -11,7 +11,7 @@ import { DeviceTheme } from '../../../shared/types/device.types';
   selector: 'app-landing',
   imports: [
     GenericButton
-  ],
+],
   templateUrl: './landing.html',
   styleUrl: './landing.scss'
 })
