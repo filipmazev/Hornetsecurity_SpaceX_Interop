@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\filip\\Documents\\Code\\SpaceX Interop\\spacexinterop.api\\spacexinterop.api.csproj": {}
+    "/Users/filipmazev/Documents/Code/main/SpaceX_Interop/spacexinterop.api/spacexinterop.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\filip\\Documents\\Code\\SpaceX Interop\\spacexinterop.api\\spacexinterop.api.csproj": {
+    "/Users/filipmazev/Documents/Code/main/SpaceX_Interop/spacexinterop.api/spacexinterop.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\filip\\Documents\\Code\\SpaceX Interop\\spacexinterop.api\\spacexinterop.api.csproj",
+        "projectUniqueName": "/Users/filipmazev/Documents/Code/main/SpaceX_Interop/spacexinterop.api/spacexinterop.api.csproj",
         "projectName": "spacexinterop.api",
-        "projectPath": "C:\\Users\\filip\\Documents\\Code\\SpaceX Interop\\spacexinterop.api\\spacexinterop.api.csproj",
-        "packagesPath": "C:\\Users\\filip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\filip\\Documents\\Code\\SpaceX Interop\\spacexinterop.api\\obj\\",
+        "projectPath": "/Users/filipmazev/Documents/Code/main/SpaceX_Interop/spacexinterop.api/spacexinterop.api.csproj",
+        "packagesPath": "/Users/filipmazev/.nuget/packages/",
+        "outputPath": "/Users/filipmazev/Documents/Code/main/SpaceX_Interop/spacexinterop.api/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\filip\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/filipmazev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -91,6 +84,10 @@
               "target": "Package",
               "version": "[9.0.3, )"
             },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Scalar.AspNetCore": {
               "target": "Package",
               "version": "[2.7.2, )"
@@ -115,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,5 @@
 ﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+using spacexinterop.api._Common.Utility.Converters;
 using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External.Space_X.Launches;
@@ -8,7 +9,7 @@ public class Core : BaseJsonModel
     public override string JsonPluralName => "cores";    
     
     [JsonPropertyName("core")]
-    [JsonConverter(typeof(GuidOrObject<Core>))]
+    [JsonConverter(typeof(GuidOrObjectConverter<Core>))]
     public GuidOrObject<Core>? CoreItem { get; set; }
 
     [JsonPropertyName("flight")]
@@ -33,6 +34,6 @@ public class Core : BaseJsonModel
     public string? LandingType { get; set; }
 
     [JsonPropertyName("landpad")]
-    [JsonConverter(typeof(GuidOrObject<Landpad>))]
+    [JsonConverter(typeof(GuidOrObjectConverter<Landpad>))]
     public GuidOrObject<Landpad>? Landpad { get; set; }
 }
