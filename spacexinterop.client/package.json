@@ -3,8 +3,14 @@
   "version": "0.2.0-beta",
   "scripts": {
     "ng": "ng",
+<<<<<<< Updated upstream
     "start": "ng serve --ssl --ssl-cert \"%APPDATA%\\ASP.NET\\https\\%npm_package_name%.pem\" --ssl-key \"%APPDATA%\\ASP.NET\\https\\%npm_package_name%.key\" --host=localhost",
     "prestart": "node aspnetcore-https.js && ts-node scripts/version.ts",
+=======
+    "start": "node -e \"process.env.SSL_CERT_FILE=require('path').join(process.env.HOME || '', '.aspnet', 'https', process.env.npm_package_name+'.pem'); process.env.SSL_KEY_FILE=require('path').join(process.env.HOME || '', '.aspnet', 'https', process.env.npm_package_name+'.key');\" && ng serve --ssl --ssl-cert $SSL_CERT_FILE --ssl-key $SSL_KEY_FILE --host=localhost",
+  
+    "prestart": "node aspnetcore-https.js",
+>>>>>>> Stashed changes
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

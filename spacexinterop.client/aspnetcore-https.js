@@ -1,22 +1,27 @@
 const fs = require("fs");
-const spawn = require("child_process").spawn;
+const { spawn } = require("child_process");
 const path = require("path");
 
-const baseFolder = process.env.APPDATA !== undefined && process.env.APPDATA !== ""
-    ? `${process.env.APPDATA}/ASP.NET/https`
-    : `${process.env.HOME}/.aspnet/https`;
+const baseFolder =
+    process.env.APPDATA && process.env.APPDATA !== ""
+        ? path.join(process.env.APPDATA, "ASP.NET", "https") 
+        : path.join(process.env.HOME || "", ".aspnet", "https"); 
 
-if(!fs.existsSync(baseFolder)) {
+console.log(`Using certificate folder: ${baseFolder}`);
+
+if (!fs.existsSync(baseFolder)) {
     fs.mkdirSync(baseFolder, { recursive: true });
 }
 
 const certificateArg = process.argv
-    .map(arg => arg.match(/--name=(?<value>.+)/i))
+    .map((arg) => arg.match(/--name=(?<value>.+)/i))
     .filter(Boolean)[0];
 
-const certificateName = certificateArg ? certificateArg.groups.value : process.env.npm_package_name;
+const certificateName = certificateArg
+    ? certificateArg.groups.value
+    : process.env.npm_package_name;
 
-if(!certificateName) {
+if (!certificateName) {
     console.error("No certificate name specified.");
     process.exit(-1);
 }
@@ -24,8 +29,8 @@ if(!certificateName) {
 const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
 const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
 
-if(!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
-    spawn(
+if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
+    const child = spawn(
         "dotnet",
         [
             "dev-certs",
@@ -34,8 +39,10 @@ if(!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
             certFilePath,
             "--format",
             "Pem",
-            "--no-password"
+            "--no-password",
         ],
         { stdio: "inherit" }
-    ).on("exit", (code) => process.exit(code));
+    );
+
+    child.on("exit", (code) => process.exit(code));
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using spacexinterop.api._Common._Configs;
 using spacexinterop.api.Infrastructure;
 using System.Text.Json.Serialization;
+using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using spacexinterop.api.Data.Models;
@@ -70,10 +71,20 @@ builder.Services.AddHttpClient<ISpaceXClient, SpaceXClient>((sp, client) =>
 
 #region Database Context Setup
 
-builder.Services
-    .AddDbContext<MainContext>(options => options
-        .UseSqlServer(builder.Configuration.GetConnectionString("MainConnection"))
-        .LogTo(Console.WriteLine));
+if (builder.Environment.IsDevelopment() 
+    && (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)))
+{
+    builder.Services
+        .AddDbContext<MainContext>(options => options
+            .UseNpgsql(builder.Configuration.GetConnectionString("PGSQLConnection"))
+            .LogTo(Console.WriteLine));  
+}
+else
+{
+    builder.Services.AddDbContext<MainContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("MainConnection"))
+            .LogTo(Console.WriteLine));
+}
 
 #endregion
 

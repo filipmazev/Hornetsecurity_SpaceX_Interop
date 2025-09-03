@@ -433,3 +433,5 @@ SpaceXInteropDb/SpaceXInteropDb.dbmdl
 /spacexinterop.api/.vs
 /spacexinterop.api/obj/Debug
 /spacexinterop.api/bin
+/spacexinterop.api/bin
+/spacexinterop.api/obj
