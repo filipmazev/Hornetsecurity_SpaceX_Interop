@@ -94,7 +94,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowedOrigins", policy =>
     {
         string[]? allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
-        if (allowedOrigins is not null && allowedOrigins.Any())
+        if (allowedOrigins is not null && allowedOrigins.Length != 0)
         {
             policy.WithOrigins(allowedOrigins)
                 .AllowAnyHeader()
