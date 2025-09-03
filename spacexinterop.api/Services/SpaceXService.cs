@@ -67,4 +67,33 @@ public class SpaceXService(
             return resultFactory.Failure<PaginatedResponse<LaunchResponse>?>(CommonError.Unauthorized);
         }
     }
+    
+    public async Task<Result<LaunchResponse?>> GetLatestLaunch(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            string cacheKey = nameof(Launch).ToLower() + "_latest";
+
+            if (memoryCache.TryGetValue(cacheKey, out LaunchResponse? cachedResult)) 
+                return resultFactory.Success(cachedResult);
+
+            SpaceXQueryRequest queryRequest = new()
+            {
+                Query = new Dictionary<string, object> { [LaunchesRequestTypeEnum.Upcoming.GetJsonPropertyName()] = false },
+                Options = spaceXLaunchesRepository.CompleteLaunch()
+            };
+            
+            SpaceXPaginatedResponse<Launch>? response = await client.GetQueryResponse<Launch>(queryRequest, cancellationToken);
+            PaginatedResponse<LaunchResponse>? result = response?.ToPaginatedResponse<LaunchResponse>(mapper);
+
+            if(result is not null) memoryCache.Set(cacheKey, result, TimeSpan.FromMinutes(Constants.MemoryCacheTimeToLiveInMinutes));
+
+            return resultFactory.Success(result?.Items.FirstOrDefault());
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Failed to fetch latest launch from SpaceX API.");
+            return resultFactory.Failure<LaunchResponse?>(CommonError.Unauthorized);
+        }
+    }
 }
