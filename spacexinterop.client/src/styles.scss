@@ -54,6 +54,8 @@
     --bg_primary: #f7f7f7;
     --bg_secondary: #ffffff;
 
+    --botom-gradient: linear-gradient(to top, rgba(39, 39, 39, 0.5) 0%, rgba(255, 255, 255, 0) 35%);
+
     --logo: url('/assets/svg/logo_light.svg');
     --lading_image: url('/assets/images/landing_image_1.jpg');
   }
@@ -104,6 +106,8 @@
 
   --bg_primary: #0a0a0a;
   --bg_secondary: #111111;
+
+  --botom-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 35%);
 
   --logo: url('/assets/svg/logo_dark.svg');
   --lading_image: url('/assets/images/landing_image_2.jpg');

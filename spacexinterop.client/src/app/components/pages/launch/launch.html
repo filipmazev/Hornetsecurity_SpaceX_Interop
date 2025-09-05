@@ -16,26 +16,65 @@
         @if(data.links) {
         <div class="launch-details-section-container">
             <div class="launch-details-section-header"> Links: </div>
-            <div class="launches-links">
-                @if(data.links.webcastUrl) {
-                <div class="launches-link">
-                    <img src="/assets/svg/youtube_icon.svg" alt="YouTube Icon" />
-                    <a [href]="data.links.webcastUrl" target="_blank"> YouTube </a>
+            <div class="launch-links-container">
+                <div class="launches-links"> 
+                    @if(data.links.webcastUrl) {
+                    <div class="launches-link">
+                        <img src="/assets/svg/youtube_icon.svg" alt="YouTube Icon" />
+                        <a [href]="data.links.webcastUrl" target="_blank"> YouTube </a>
+                    </div>
+                    }
+                    @if(data.links.wikipediaUrl) {
+                    <div class="launches-link">
+                        <img src="/assets/svg/wikipedia_icon.svg" alt="Wikipedia Icon" />
+                        <a [href]="data.links.wikipediaUrl" target="_blank"> Wikipedia </a>
+                    </div>
+                    }
+                    @if(data.links.articleUrl) {
+                    <div class="launches-link">
+                        <mat-icon> {{ MatIcons.Link }} </mat-icon>
+                        <a [href]="data.links.articleUrl" target="_blank"> Article </a>
+                    </div>
+                    }
                 </div>
-                }
-                @if(data.links.wikipediaUrl) {
-                <div class="launches-link">
-                    <img src="/assets/svg/wikipedia_icon.svg" alt="Wikipedia Icon" />
-                    <a [href]="data.links.wikipediaUrl" target="_blank"> Wikipedia </a>
-                </div>
-                }
-                @if(data.links.articleUrl) {
-                <div class="launches-link">
-                    <mat-icon> {{ MatIcons.Link }} </mat-icon>
-                    <a [href]="data.links.articleUrl" target="_blank"> Article </a>
-                </div>
+
+                @if(data.links.reddit && (data.links.reddit.campaignUrl || data.links.reddit.launchUrl || data.links.reddit.mediaUrl || data.links.reddit.recoveryUrl)) {
+                    <div class="reddit-links-container launches-links">
+    
+                        <div class="reddit-links-header launches-link">
+                            <img src="/assets/svg/reddit_icon.svg" alt="Reddit Icon" />
+                            <div> Reddit Links: </div>
+                        </div>
+    
+                        <div class="reddit-launches-links">
+                            @if(data.links.reddit.campaignUrl) {
+                                <div class="launches-link">
+                                    <a [href]="data.links.reddit.campaignUrl" target="_blank"> Campaign </a>
+                                </div>
+                            }
+    
+                            @if(data.links.reddit.launchUrl) {
+                                <div class="launches-link">
+                                    <a [href]="data.links.reddit.launchUrl" target="_blank"> Launch </a>
+                                </div>
+                            }
+    
+                            @if(data.links.reddit.mediaUrl) {
+                                <div class="launches-link">
+                                    <a [href]="data.links.reddit.mediaUrl" target="_blank"> Media </a>
+                                </div>
+                            }
+    
+                            @if(data.links.reddit.recoveryUrl) {
+                                <div class="launches-link">
+                                    <a [href]="data.links.reddit.recoveryUrl" target="_blank"> Recovery </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
                 }
             </div>
+
         </div>
         }
 
@@ -149,7 +188,7 @@
 
         @if(data.ships.length > 0) {
         <div class="launch-details-section-container">
-            <div class="launch-details-section-header"> Ships: </div>
+            <div class="launch-details-section-header"> Ships Involved: </div>
             <div>
                 {{ allShips }}
             </div>
