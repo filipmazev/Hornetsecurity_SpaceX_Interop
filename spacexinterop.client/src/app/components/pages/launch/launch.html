@@ -1,0 +1,174 @@
+@if(data) {
+<section class="fade-in-anim general-section">
+    <div class="launch-details-container">
+        <div class="launch-details-header">
+            <div class="launch-details-header-text">
+                <div class="launch-name"> {{ data.name }} </div>
+                <div> {{ launchDate }} </div>
+                <div> {{ status }} </div>
+            </div>
+
+            <img [src]="data.links?.missionPatchImageSmall  ?? './assets/images/no_patch_default.png'"
+                alt="Mission Patch" class="mission-patch-image" />
+
+        </div>
+
+        @if(data.links) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Links: </div>
+            <div class="launches-links">
+                @if(data.links.webcastUrl) {
+                <div class="launches-link">
+                    <img src="/assets/svg/youtube_icon.svg" alt="YouTube Icon" />
+                    <a [href]="data.links.webcastUrl" target="_blank"> YouTube </a>
+                </div>
+                }
+                @if(data.links.wikipediaUrl) {
+                <div class="launches-link">
+                    <img src="/assets/svg/wikipedia_icon.svg" alt="Wikipedia Icon" />
+                    <a [href]="data.links.wikipediaUrl" target="_blank"> Wikipedia </a>
+                </div>
+                }
+                @if(data.links.articleUrl) {
+                <div class="launches-link">
+                    <mat-icon> {{ MatIcons.Link }} </mat-icon>
+                    <a [href]="data.links.articleUrl" target="_blank"> Article </a>
+                </div>
+                }
+            </div>
+        </div>
+        }
+
+        @if(data.details) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Details: </div>
+            <div>{{ data.details }}</div>
+        </div>
+        }
+
+        @if(!data.success && data.failureReasons.length > 0) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Failiure Reason(s): </div>
+            <div class="error-messages">
+                @for(reason of data.failureReasons; track reason) {
+                <div>{{ reason }}</div>
+                }
+            </div>
+        </div>
+        }
+
+        @if(data.payloads.length > 0) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Payloads: </div>
+            <div class="payloads-container">
+                @for(payload of data.payloads; track payload) {
+                <div class="launch-details-section-card">
+                    <div class="launch-details-section-card-header">
+                        <div> {{ payload.name }} </div>
+                        <div> | </div>
+                        <div class="payload-type"> {{ payload.type }} </div>
+                    </div>
+
+                    <div class="payload-details">
+                        <div> Customers: {{ payload.customers.join(', ') }} </div>
+                        <div> Manufacturers: {{ payload.manufacturers.join(', ') }} </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        }
+
+        @if(data.cores.length > 0) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Cores: </div>
+            <div class="cores-container">
+                @for(core of data.cores; track core) {
+                <div class="launch-details-section-card">
+                    @if(core.core) {
+                        <div class="launch-details-section-card-header">
+                            <div> {{ core.core.serial }} </div>
+                            <div class="payload-type"> {{ core.core.block ? 'Block ' + core.core.block : 'Unknown Block' }} </div>
+                            <div> Flight {{ core.flight }} </div>
+                            <div> | </div>
+                            <div> {{ core.core.status }} </div>
+                        </div>
+
+                        <div [ngClass]="{'error-messages': !core.landingSuccess}"> Last Update: {{ core.core.lastUpdate }} </div>
+                        @if(core.reused) {
+                            <div> Reuses: {{ core.core.reuseCount }} </div>
+                        }
+                    }
+                    <div class="core-details">
+                        <div> Landing: {{ core.landingType ?? 'N/A' }} - {{ core.landingAttempt ? "Attempted" : "Not Attempted" }} </div>
+                        <div class="core-details-affirmations">
+                            <div class="affirmation-details" [ngClass]="{'positive': core.gridFins, 'negative': !core.gridFins}">
+                                <div> Grid Fins: </div>
+                                @if(core.gridFins) {
+                                    <mat-icon class="icon-true"> {{ MatIcons.CheckCircle }} </mat-icon>
+                                } @else {
+                                    <mat-icon class="icon-false"> {{ MatIcons.Cancel }} </mat-icon>
+                                }
+                            </div>
+
+                            <div class="affirmation-details" [ngClass]="{'positive': core.legs, 'negative': !core.legs}">
+                                <div> Legs: </div>
+                                @if(core.legs) {
+                                    <mat-icon class="icon-true"> {{ MatIcons.CheckCircle }} </mat-icon>
+                                } @else {
+                                    <mat-icon class="icon-false"> {{ MatIcons.Cancel }} </mat-icon>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        }
+
+        @if(data.capsules.length > 0) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Capsules: </div>
+            <div class="capsules-container">
+                @for(capsule of data.capsules; track capsule) {
+                <div class="launch-details-section-card">
+                    <div class="launch-details-section-card-header">
+                        <div> {{ capsule.serial }} </div>
+                        <div> | </div>
+                        <div class="payload-type"> {{ capsule.type }} </div>
+                    </div>
+
+                    <div> Reuses: {{ capsule.reuseCount }} </div>
+                    <div> Water Landings: {{ capsule.waterLandings }} </div>
+                </div>
+                }
+            </div>
+        </div>
+        }
+
+        @if(data.ships.length > 0) {
+        <div class="launch-details-section-container">
+            <div class="launch-details-section-header"> Ships: </div>
+            <div>
+                {{ allShips }}
+            </div>
+            <div class="ships-container">
+                @for(ship of data.ships; track ship) {
+                @if(ship.image) {
+                <div class="ship-card">
+                    <div class="ship-card-header">
+                        <div class="ship-name"> {{ ship.name }} </div>
+                        <div> | </div>
+                        <div class="ship-type"> {{ ship.type }} </div>
+                    </div>
+                    <img [src]="ship.image" alt="Ship Image" class="ship-image" />
+                </div>
+                }
+                }
+            </div>
+        </div>
+        }
+    </div>
+</section>
+}

@@ -1,13 +1,14 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Launches;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Models.External.Space_X.Launches;
 using spacexinterop.api.Data.Models.External.Space_X.Core;
 using spacexinterop.api._Common.Utility.Converters;
 using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External.Space_X;
 
-public class Payload : BaseJsonModel
+public class Payload : BaseJsonModel, IBaseJsonModel
 {
-    public override string JsonPluralName => "payloads";
+    public string JsonPluralName => "payloads";
 
     [JsonPropertyName("name")]
     public string? Name { get; set; }

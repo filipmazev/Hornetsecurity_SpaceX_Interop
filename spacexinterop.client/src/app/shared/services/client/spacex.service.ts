@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { LaunchResponse } from "../../classes/models/responses/LaunchResponse.model";
+import { LaunchRowResponse } from "../../classes/models/responses/LaunchRowResponse.model";
 import { PaginatedResponse } from "../../classes/models/responses/PaginatedResponse.model";
 import { Result } from "../../classes/models/responses/Result.model";
 import { HttpService } from "../core/http.service";
@@ -8,7 +8,7 @@ import { environment } from "../../../../environments/environment";
 import { COMMA_EMPTY_SPACE_JOINER } from "../../constants/common.constants";
 import { SpaceXLaunchesRequest } from "../../classes/models/requests/SpaceXLaunchesRequest.model";
 import { SpinnerService } from "../core/ui/spinner.service";
-import { LatestLaunchResponse } from "../../classes/models/responses/LatestLaunchResponse.mode";
+import { CompleteLaunchResponse } from "../../classes/models/responses/CompleteLaunchResponse.model";
 
 @Injectable({
     providedIn: 'root'
@@ -22,12 +22,12 @@ export class SpaceXService {
         private errorSnackbarService: ErrorSnackbarService) {
     }
 
-    public async getLaunches(request: SpaceXLaunchesRequest): Promise<Result<PaginatedResponse<LaunchResponse> | undefined | null>> {
-        return new Promise<Result<PaginatedResponse<LaunchResponse> | undefined | null>>(async (resolve, reject) => {
+    public async getLaunchRows(request: SpaceXLaunchesRequest): Promise<Result<PaginatedResponse<LaunchRowResponse> | undefined | null>> {
+        return new Promise<Result<PaginatedResponse<LaunchRowResponse> | undefined | null>>(async (resolve, reject) => {
             try {
                 this.spinnerService.showSpinner();
 
-                await this.httpService.post<Result<PaginatedResponse<LaunchResponse>>>(this.baseUrl + 'GetLaunches', request).then((result) => {
+                await this.httpService.post<Result<PaginatedResponse<LaunchRowResponse>>>(this.baseUrl + 'GetLaunchRows', request).then((result) => {
                     if (!result.isSuccess) {
                         this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred while fetching launches.");
                     }
@@ -44,14 +44,14 @@ export class SpaceXService {
         });
     }
 
-    public async getLatestLaunch(): Promise<Result<LatestLaunchResponse | undefined | null>> {
-        return new Promise<Result<LatestLaunchResponse | undefined | null>>(async (resolve, reject) => {
+    public async getCompleteLaunchById(id: string): Promise<Result<CompleteLaunchResponse | undefined | null>> {
+        return new Promise<Result<CompleteLaunchResponse | undefined | null>>(async (resolve, reject) => {
             try {
                 this.spinnerService.showSpinner();
 
-                await this.httpService.get<Result<LatestLaunchResponse | undefined | null>>(this.baseUrl + 'GetLatestLaunch').then((result) => {
+                await this.httpService.get<Result<CompleteLaunchResponse | undefined | null>>(this.baseUrl + 'GetCompleteLaunchById/' + id).then((result) => {
                     if (!result.isSuccess) {
-                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred while fetching the latest launch.");
+                        this.errorSnackbarService.displayError(result.error?.messages.join(COMMA_EMPTY_SPACE_JOINER) ?? "An unknown error occurred while fetching the launch with id: " + id);
                     }
                     resolve(result);
                 }).finally(() => {
@@ -59,8 +59,8 @@ export class SpaceXService {
                 });
             } catch (error) {
                 this.spinnerService.hideSpinner();
-                this.errorSnackbarService.displayError("An unknown error occurred while fetching launches.");
-                if (!environment.production) console.error('Fetch launches failed:', error);
+                this.errorSnackbarService.displayError("An unknown error occurred while fetching the launch with id: " + id);
+                if (!environment.production) console.error('Fetch launch by id failed:', error);
                 reject(error);
             }
         });

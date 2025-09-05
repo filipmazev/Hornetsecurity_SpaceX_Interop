@@ -12,5 +12,7 @@ export enum MatIcons {
     Animations = 'animation',
     Link = 'link',
     Info = 'info',
-    MoreActions = 'more_vert'
+    MoreActions = 'more_vert',
+    CheckCircle = 'check_circle',
+    Cancel = 'cancel'
 }

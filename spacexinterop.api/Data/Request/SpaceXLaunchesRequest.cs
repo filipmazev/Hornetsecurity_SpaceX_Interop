@@ -20,7 +20,4 @@ public class SpaceXLaunchesRequest
 
     [Required]
     public required int PageSize { get; set; }
-
-    [Required]
-    public required bool IncludePayloads { get; set; }
 }

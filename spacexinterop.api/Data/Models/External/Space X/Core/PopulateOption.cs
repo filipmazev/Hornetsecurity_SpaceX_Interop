@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using System.Linq.Expressions;
 using System.Reflection;
+using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
 
 namespace spacexinterop.api.Data.Models.External.Space_X.Core;
 
@@ -16,7 +17,7 @@ public class PopulateOption
     public List<PopulateOption> Nested { get; set; } = [];
 
     public static PopulateOption With<TModel, TProperty>(Expression<Func<TModel, TProperty>> property)
-        where TModel : BaseJsonModel
+        where TModel : BaseJsonModel, IBaseJsonModel
     {
         return new PopulateOption
         {
@@ -25,7 +26,7 @@ public class PopulateOption
     }
 
     public PopulateOption Selecting<TModel, TProperty>(Expression<Func<TModel, TProperty>> property, bool include = true)
-        where TModel : BaseJsonModel
+        where TModel : BaseJsonModel, IBaseJsonModel
     {
         Select ??= new Dictionary<string, object>();
         Select[GetJsonPropertyName(property)] = include ? 1 : 0;
@@ -33,7 +34,7 @@ public class PopulateOption
     }
 
     public PopulateOption PopulateNested<TModel, TNested>(Expression<Func<TModel, TNested>> property, Action<PopulateOption> configure)
-        where TModel : BaseJsonModel
+        where TModel : BaseJsonModel, IBaseJsonModel
     {
         PopulateOption nested = new PopulateOption
         {

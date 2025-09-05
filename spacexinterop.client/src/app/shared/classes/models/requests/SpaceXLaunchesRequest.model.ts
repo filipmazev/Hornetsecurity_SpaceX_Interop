@@ -6,21 +6,18 @@ export class SpaceXLaunchesRequest {
     sortDirection: SortDirectionEnum = SortDirectionEnum.Descending;
     pageIndex: number;
     pageSize: number;
-    includePayloads: boolean ;
 
     constructor(
         searchText: string | undefined,
         upcoming: boolean,
         sortDirection: SortDirectionEnum,
         pageIndex: number,
-        pageSize: number,
-        includePayloads: boolean
+        pageSize: number
     ) {
         this.searchText = searchText;
         this.upcoming = upcoming;
         this.sortDirection = sortDirection;
         this.pageIndex = pageIndex;
         this.pageSize = pageSize;
-        this.includePayloads = includePayloads;
     }
 }

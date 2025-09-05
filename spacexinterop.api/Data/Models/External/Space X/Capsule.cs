@@ -1,13 +1,14 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Launches;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Models.External.Space_X.Launches;
 using spacexinterop.api.Data.Models.External.Space_X.Core;
 using spacexinterop.api._Common.Utility.Converters;
 using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External.Space_X;
 
-public class Capsule : BaseJsonModel
+public class Capsule : BaseJsonModel, IBaseJsonModel
 {
-    public override string JsonPluralName => "capsules";
+    public string JsonPluralName => "capsules";
 
     [JsonPropertyName("serial")]
     public string Serial { get; set; } = string.Empty;

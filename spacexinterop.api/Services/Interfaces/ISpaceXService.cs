@@ -6,6 +6,6 @@ namespace spacexinterop.api.Services.Interfaces;
 
 public interface ISpaceXService
 {
-    Task<Result<PaginatedResponse<LaunchResponse>?>> GetLaunches(SpaceXLaunchesRequest request);
-    Task<Result<LatestLaunchResponse?>> GetLatestLaunch();
+    Task<Result<PaginatedResponse<LaunchRowResponse>?>> GetLaunchRows(SpaceXLaunchesRequest request);
+    Task<Result<CompleteLaunchResponse?>> GetCompleteLaunchById(string id);
 }

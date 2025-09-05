@@ -1,4 +1,5 @@
-﻿using spacexinterop.api.Data.Enums.External.Space_X;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Enums.External.Space_X;
 using spacexinterop.api._Common.Utility.Extensions;
 using System.Text.Json.Serialization;
 using System.Linq.Expressions;
@@ -12,7 +13,7 @@ public class SortOption
     public Dictionary<string, object> Fields { get; } = new();
 
     public SortOption By<TModel>(Expression<Func<TModel, object>> property, SortDirectionEnum direction)
-        where TModel : BaseJsonModel
+        where TModel : BaseJsonModel, IBaseJsonModel
     {
         string name = GetJsonPropertyName(property);
         Fields[name] = direction.GetJsonPropertyName();
@@ -20,7 +21,7 @@ public class SortOption
     }
 
     private static string GetJsonPropertyName<TModel>(Expression<Func<TModel, object>> property)
-        where TModel : BaseJsonModel
+        where TModel : BaseJsonModel, IBaseJsonModel
     {
         MemberExpression? member = property.Body as MemberExpression
                                    ?? ((UnaryExpression)property.Body).Operand as MemberExpression;

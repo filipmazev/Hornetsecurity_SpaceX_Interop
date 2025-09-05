@@ -8,6 +8,8 @@ public static class Constants
     public const int MaxFailedAccessAttempts = 5;
     public const int SessionDurationInHours = 1;
     public const int MemoryCacheTimeToLiveInMinutes = 10;
+    
+    public const string MongoDbIdPropertyName = "_id";
 
     #endregion
 

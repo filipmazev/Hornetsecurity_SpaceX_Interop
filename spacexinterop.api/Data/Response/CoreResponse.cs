@@ -1,12 +1,12 @@
+using spacexinterop.api.Data.Enums.External.Space_X;
+
 namespace spacexinterop.api.Data.Response;
 
 public class CoreResponse
 {
-    public required int? Flight { get; set; }
-    public required bool? GridFins { get; set; }
-    public required bool? Legs { get; set; }
-    public required bool? Reused { get; set; }
-    public required bool? LandingAttempt { get; set; }
-    public required bool? LandingSuccess { get; set; }
-    public required string? LandingType { get; set; }
+    public required string Serial { get; set; }
+    public required int? Block { get; set; }
+    public required CoreStatusEnum Status { get; set; }
+    public required int ReuseCount { get; set; }
+    public required string? LastUpdate { get; set; }
 }

@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authorization;
 using spacexinterop.api.Data.Response;
 using spacexinterop.api.Data.Request;
 using Microsoft.AspNetCore.Mvc;
-using spacexinterop.api.Data.Enums.External.Space_X;
 
 namespace spacexinterop.api.Controllers;
 
@@ -15,17 +14,17 @@ public class SpaceXController(
     ISpaceXService spaceXService)
     : Controller
 {
-    [HttpPost(nameof(GetLaunches))]
-    public async Task<IActionResult> GetLaunches([FromBody] SpaceXLaunchesRequest request)
+    [HttpPost(nameof(GetLaunchRows))]
+    public async Task<IActionResult> GetLaunchRows([FromBody] SpaceXLaunchesRequest request)
     {
-        Result<PaginatedResponse<LaunchResponse>?> result = await spaceXService.GetLaunches(request);
+        Result<PaginatedResponse<LaunchRowResponse>?> result = await spaceXService.GetLaunchRows(request);
         return Ok(result);
     }
 
-    [HttpGet(nameof(GetLatestLaunch))]
-    public async Task<IActionResult> GetLatestLaunch()
+    [HttpGet(nameof(GetCompleteLaunchById) + "/{id}")]
+    public async Task<IActionResult> GetCompleteLaunchById(string id)
     {
-        Result<LatestLaunchResponse?> result = await spaceXService.GetLatestLaunch();
+        Result<CompleteLaunchResponse?> result = await spaceXService.GetCompleteLaunchById(id);
         return Ok(result);
     }
 }

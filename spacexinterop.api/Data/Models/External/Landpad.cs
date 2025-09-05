@@ -1,3 +1,4 @@
+using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
 using spacexinterop.api.Data.Models.External.Space_X.Launches;
 using spacexinterop.api.Data.Models.External.Space_X.Core;
 using spacexinterop.api.Data.Enums.External.Space_X;
@@ -6,9 +7,9 @@ using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External;
 
-public class Landpad : BaseJsonModel
+public class Landpad : BaseJsonModel, IBaseJsonModel
 {
-    public override string JsonPluralName => "landpads";
+    public string JsonPluralName => "landpads";
 
     [JsonPropertyName("name")]
     public string? Name { get; set; }

@@ -1,12 +1,13 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Models.External.Space_X.Core;
 using spacexinterop.api._Common.Utility.Converters;
 using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External.Space_X;
 
-public class Dragon : BaseJsonModel
+public class Dragon : BaseJsonModel, IBaseJsonModel
 {
-    public override string JsonPluralName => "dragons";
+    public string JsonPluralName => "dragons";
 
     [JsonPropertyName("capsule")]
     [JsonConverter(typeof(GuidOrObjectConverter<Capsule>))]

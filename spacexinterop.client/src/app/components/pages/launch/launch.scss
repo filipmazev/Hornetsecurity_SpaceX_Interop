@@ -1,0 +1,152 @@
+@use "../../../../styles/mixins" as *;
+
+
+.launch-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1.35rem;
+    width: 100%;
+}
+
+.launch-details-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+
+.launch-name {
+    font-family: custom_bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.launch-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-wrap: wrap;
+    word-break: break-all;
+}
+
+.mission-patch-image {
+    width: 7rem !important;
+    height: auto;
+}
+
+.error-messages {
+    color: var(--text_warn);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.launch-details-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.launch-details-section-header {
+    font-family: custom_bold;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+.launch-details-section-card-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.launch-details-section-card {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.payloads-container {
+    display: grid;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ships-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.ship-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ship-card-header {
+    font-family: custom_regular;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.ship-image {
+    max-width: 20rem;
+    height: 10rem;
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+
+    padding: 0.5rem;
+}
+
+.core-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.affirmation-details {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    gap: 0.35rem;
+
+    font-size: 0.95rem;
+
+    & mat-icon {
+        font-size: 1rem;
+        height: auto;
+        width: auto;
+    }
+
+    &.positive mat-icon {
+        color: var(--text_primary) !important;
+    }
+
+    &.negative mat-icon {
+        color: var(--text_warn) !important;
+    }
+}
+
+.core-details-affirmations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    vertical-align: middle;
+    gap: 1rem;
+}

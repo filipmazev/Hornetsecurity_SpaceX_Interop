@@ -7,6 +7,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { Login } from './components/pages/authentication/login/login';
 import { Register } from './components/pages/authentication/register/register';
 import { Launches } from './components/pages/launches/launches';
+import { Launch } from './components/pages/launch/launch';
+import { ID_NAVIGATION_PARAM } from './shared/constants/navigatory.constants';
 
 export const routes: Routes = [
     {
@@ -26,6 +28,11 @@ export const routes: Routes = [
         path: 'launches',
         canActivate: [AuthGuard],
         component: Launches
+    },
+    {
+        path: `launch/:${ID_NAVIGATION_PARAM}`,
+        canActivate: [AuthGuard],
+        component: Launch
     }
 ];
 

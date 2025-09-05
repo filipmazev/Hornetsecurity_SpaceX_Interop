@@ -1,22 +1,29 @@
-﻿using spacexinterop.api._Common.Utility.Clients.Interfaces;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api._Common.Utility.Clients.Interfaces;
 using spacexinterop.api.Data.Models.External.Space_X.Core;
 using spacexinterop.api.Data.Response.External.Space_X;
 using spacexinterop.api.Data.Request.External.Space_X;
 using spacexinterop.api.Data.Enums.External.Space_X;
 using spacexinterop.api._Common.Utility.Extensions;
+using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Text;
-using spacexinterop.api.Data.Models.External.Space_X.Launches;
 
 namespace spacexinterop.api._Common.Utility.Clients;
 
 public class SpaceXClient(HttpClient httpClient) : ISpaceXClient
 {
     public async Task<SpaceXPaginatedResponse<TModel>?> GetQueryResponse<TModel>(SpaceXQueryRequest queryRequest)
-        where TModel : BaseJsonModel, new()
+        where TModel : BaseJsonModel, IBaseJsonModel, new()
     {
-        string jsonQueryRequest = JsonSerializer.Serialize(queryRequest, new JsonSerializerOptions { WriteIndented = true });
-
+        string jsonQueryRequest = JsonSerializer.Serialize(
+            queryRequest,
+            new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            });
+        
         TModel dummy = new();
 
         HttpResponseMessage response = await httpClient.PostAsync(
@@ -32,22 +39,6 @@ public class SpaceXClient(HttpClient httpClient) : ISpaceXClient
         {
             PropertyNameCaseInsensitive = true
         });
-
-        return paginatedResponse;
-    }
-    
-    public async Task<Launch?> GetLaunchResponseByLaunchRequestType(LaunchesRequestTypeEnum requestType)
-    {
-        Launch dummy = new();
-
-        HttpResponseMessage response = await httpClient.GetAsync(
-            $"{dummy.JsonPluralName}/{requestType.GetJsonPropertyName()}");
-
-        response.EnsureSuccessStatusCode();
-
-        string json = await response.Content.ReadAsStringAsync();
-
-        Launch? paginatedResponse = JsonSerializer.Deserialize<Launch>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
         return paginatedResponse;
     }

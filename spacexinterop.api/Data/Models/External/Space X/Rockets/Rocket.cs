@@ -1,11 +1,12 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Models.External.Space_X.Core;
 using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External.Space_X.Rockets;
 
-public class Rocket : BaseJsonModel
+public class Rocket : BaseJsonModel, IBaseJsonModel
 {
-    public override string JsonPluralName => "rockets";
+    public string JsonPluralName => "rockets";
 
     [JsonPropertyName("name")]
     public string Name { get; set; } = string.Empty;

@@ -1,4 +1,5 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Rockets;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Models.External.Space_X.Rockets;
 using spacexinterop.api.Data.Models.External.Space_X.Core;
 using spacexinterop.api.Data.Enums.External.Space_X;
 using spacexinterop.api._Common.Utility.Converters;
@@ -7,9 +8,9 @@ using System.Text.Json.Serialization;
 
 namespace spacexinterop.api.Data.Models.External.Space_X.Launches;
 
-public class Launch : BaseJsonModel
+public class Launch : BaseJsonModel, IBaseJsonModel
 {
-    public override string JsonPluralName => "launches";
+    public string JsonPluralName => "launches";
 
     [JsonPropertyName("flight_number")]
     public int FlightNumber { get; set; }
@@ -37,10 +38,10 @@ public class Launch : BaseJsonModel
     public long? StaticFireDateUnix { get; set; }
 
     [JsonPropertyName("tbd")]
-    public bool Tbd { get; set; } = false;
+    public bool Tbd { get; set; }
 
     [JsonPropertyName("net")]
-    public bool Net { get; set; } = false;
+    public bool Net { get; set; }
 
     [JsonPropertyName("window")]
     public int? Window { get; set; }
@@ -66,7 +67,7 @@ public class Launch : BaseJsonModel
     public Fairings? Fairings { get; set; }
 
     [JsonPropertyName("crew")]
-    public List<CrewMember> Crew { get; set; } = [];
+    public List<LaunchCrew> Crew { get; set; } = [];
 
     [JsonPropertyName("ships")]
     [JsonConverter(typeof(GuidOrObjectArrayConverter<Ship>))]
@@ -85,7 +86,7 @@ public class Launch : BaseJsonModel
     public GuidOrObject<Launchpad>? Launchpad { get; set; }
 
     [JsonPropertyName("cores")]
-    public List<Core> Cores { get; set; } = [];
+    public List<LaunchCore> Cores { get; set; } = [];
 
     [JsonPropertyName("links")]
     public Links? Links { get; set; }

@@ -1,27 +1,25 @@
+import { EMPTY_STRING } from "../../../constants/common.constants";
+import { CoreStatusEnum } from "./CoreStatusEnum";
+
+
 export class CoreResponse {
-    flight?: number;
-    gridFins?: boolean;
-    legs?: boolean;
-    reused?: boolean;
-    landingAttempt?: boolean;
-    landingSuccess?: boolean;
-    landingType?: string;
+    serial: string = EMPTY_STRING;
+    block?: number;
+    status!: CoreStatusEnum;
+    reuseCount: number = 0;
+    lastUpdate?: string;
 
     constructor(
-        flight: number | undefined,
-        gridFins: boolean | undefined,
-        legs: boolean | undefined,
-        reused: boolean | undefined,
-        landingAttempt: boolean | undefined,
-        landingSuccess: boolean | undefined,
-        landingType: string | undefined
+        serial: string,
+        block: number | undefined,
+        status: CoreStatusEnum,
+        reuseCount: number,
+        lastUpdate: string | undefined
     ) {
-        this.flight = flight;
-        this.gridFins = gridFins;
-        this.legs = legs;
-        this.reused = reused;
-        this.landingAttempt = landingAttempt;
-        this.landingSuccess = landingSuccess;
-        this.landingType = landingType;
+        this.serial = serial;
+        this.block = block;
+        this.status = status;
+        this.reuseCount = reuseCount;
+        this.lastUpdate = lastUpdate;
     }
 }

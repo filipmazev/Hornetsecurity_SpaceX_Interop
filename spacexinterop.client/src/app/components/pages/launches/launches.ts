@@ -5,7 +5,7 @@ import { LaunchRow } from '../../../shared/classes/ui/view/launch-row';
 import { SpaceXService } from '../../../shared/services/client/spacex.service';
 import { SpaceXLaunchesRequest } from '../../../shared/classes/models/requests/SpaceXLaunchesRequest.model';
 import { SortDirectionEnum } from '../../../shared/enums/api/SortDirectionEnum';
-import { LaunchResponse } from '../../../shared/classes/models/responses/LaunchResponse.model';
+import { LaunchRowResponse } from '../../../shared/classes/models/responses/LaunchRowResponse.model';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
@@ -14,12 +14,11 @@ import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
-import { MatDialog } from '@angular/material/dialog';
-import { LaunchDetailsDialog } from './launch-details-dialog/launch-details-dialog';
 import { debounceTime, distinctUntilChanged, Subject, takeUntil } from 'rxjs';
 import { WindowDimensionsService } from '../../../shared/services/core/ui/window-dimension.service';
 import { WindowDimensions } from '../../../shared/interfaces/services/window-dimensions.interface';
 import { BASE_DEBOUNCE_TIME_IN_MS } from '../../../shared/constants/common.constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-launches',
@@ -47,16 +46,15 @@ import { BASE_DEBOUNCE_TIME_IN_MS } from '../../../shared/constants/common.const
   styleUrl: './launches.scss'
 })
 export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit {
-  protected displayedColumns: string[] = ['icon', 'name', 'rocketName', 'launchpadName', 'launchDateUtc', 'payloads', 'links', 'status', 'actions'];
+  protected displayedColumns: string[] = ['icon', 'name', 'rocketName', 'launchpadName', 'launchDateUtc', 'links', 'status', 'actions'];
 
   protected SortDirectionEnum = SortDirectionEnum;
   protected searchText?: string;
 
   protected showUpcomingOnly: boolean = false;
   protected sortOrder: SortDirectionEnum = SortDirectionEnum.Descending;
-  protected includePayloads: boolean = true;
 
-  private data: LaunchResponse[] = [];
+  private data: LaunchRowResponse[] = [];
   protected filteredData: LaunchRow[] = [];
 
   protected windowDimensions: WindowDimensions = {} as WindowDimensions;
@@ -67,7 +65,7 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
   constructor(
     private spaceXService: SpaceXService,
     private windowDimensionsService: WindowDimensionsService,
-    private dialog: MatDialog
+    private router: Router
   ) {
     super();
   }
@@ -108,11 +106,10 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
         upcoming: this.showUpcomingOnly,
         sortDirection: this.sortOrder,
         pageIndex: this.pageIndex(),
-        pageSize: this.pageSize(),
-        includePayloads: this.includePayloads
+        pageSize: this.pageSize()
       };
 
-      await this.spaceXService.getLaunches(request).then((result) => {
+      await this.spaceXService.getLaunchRows(request).then((result) => {
         if (result.isSuccess && result.value?.items) {
           this.data = result.value.items;
           const rows = this.resolveRowsFromData(result.value?.items);
@@ -130,7 +127,7 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
     });
   }
 
-  private resolveRowsFromData(data: LaunchResponse[]): LaunchRow[] {
+  private resolveRowsFromData(data: LaunchRowResponse[]): LaunchRow[] {
     return data.map(item => {
       const formattedDate = new Date(item.launchDateUtc).toLocaleDateString("en-US", {
         month: "short",
@@ -141,17 +138,16 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
       });
 
       return new LaunchRow(
-        item.missionPatchImage,
+        item.links?.missionPatchImageSmall,
         item.name,
         item.rocketName,
         item.launchpadName,
         formattedDate,
         item.upcoming,
         item.success,
-        item.webcastUrl,
-        item.wikipediaUrl,
-        item.articleUrl,
-        item.payloads.length
+        item.links?.webcastUrl,
+        item.links?.wikipediaUrl,
+        item.links?.articleUrl
       );
     });
   }
@@ -160,9 +156,9 @@ export class Launches extends BaseMatTableComponent<LaunchRow> implements OnInit
 
   protected viewDetails(index: number) {
     const selectedLaunch = this.data[index];
-    this.dialog.open(LaunchDetailsDialog, {
-      data: selectedLaunch
-    });
+    if (!selectedLaunch) return;
+
+    this.router.navigate(['/launch', selectedLaunch.id]);
   }
 
   protected applyFilter(event: Event) {

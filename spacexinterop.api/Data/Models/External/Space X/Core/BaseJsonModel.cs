@@ -1,6 +1,9 @@
-﻿namespace spacexinterop.api.Data.Models.External.Space_X.Core;
+﻿using System.Text.Json.Serialization;
 
-public abstract class BaseJsonModel
+namespace spacexinterop.api.Data.Models.External.Space_X.Core;
+
+public class BaseJsonModel
 {
-    public abstract string JsonPluralName { get; }
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = string.Empty;
 }

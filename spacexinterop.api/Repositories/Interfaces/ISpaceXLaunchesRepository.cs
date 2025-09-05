@@ -1,13 +1,16 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+﻿using spacexinterop.api.Data.Request.External.Space_X;
 using spacexinterop.api.Data.Enums.External.Space_X;
 
 namespace spacexinterop.api.Repositories.Interfaces;
 
 public interface ISpaceXLaunchesRepository
 {
-    #region Query Options
+    SpaceXQueryRequest SimpleLaunchesPaginated(
+        string? searchText,
+        bool upcoming,
+        int pageSize,
+        int pageIndex,
+        SortDirectionEnum? sortDirection = SortDirectionEnum.Descending);
 
-    QueryOptions CompleteLaunchesPaginated(int pageSize, int pageIndex, SortDirectionEnum sortDirection = SortDirectionEnum.Descending, bool disableSort = false, bool includePayloads = true);
-
-    #endregion
+    SpaceXQueryRequest CompleteLaunchById(string id);
 }

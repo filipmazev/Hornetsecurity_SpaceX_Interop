@@ -1,11 +1,12 @@
-﻿using spacexinterop.api.Data.Models.External.Space_X.Core;
+﻿using spacexinterop.api.Data.Models.External.Space_X.Core.Interfaces;
+using spacexinterop.api.Data.Models.External.Space_X.Core;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 
 namespace spacexinterop.api._Common.Utility.Converters;
 
 public class GuidOrObjectArrayConverter<TModel> : JsonConverter<List<GuidOrObject<TModel>>>
-    where TModel : BaseJsonModel
+    where TModel : BaseJsonModel, IBaseJsonModel
 {
     public override List<GuidOrObject<TModel>>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {

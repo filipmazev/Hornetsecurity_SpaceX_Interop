@@ -11,8 +11,6 @@ export class LaunchRow {
     wikipediaUrl?: string;
     articleUrl?: string;
 
-    payloads: number;    
-
     constructor(
         missionPatchImage: string | undefined,
         name: string,
@@ -23,8 +21,7 @@ export class LaunchRow {
         success: boolean | undefined,
         webcastUrl: string | undefined,
         wikipediaUrl: string | undefined,
-        articleUrl: string | undefined,
-        payloads: number
+        articleUrl: string | undefined
     ) {
         this.missionPatchImage = missionPatchImage;
         this.name = name;
@@ -36,6 +33,5 @@ export class LaunchRow {
         this.webcastUrl = webcastUrl;
         this.wikipediaUrl = wikipediaUrl;
         this.articleUrl = articleUrl;
-        this.payloads = payloads;
     }
 }

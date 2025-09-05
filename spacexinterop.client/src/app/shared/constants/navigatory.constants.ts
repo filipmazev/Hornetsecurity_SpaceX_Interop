@@ -1,0 +1,1 @@
+export const ID_NAVIGATION_PARAM = 'id';
