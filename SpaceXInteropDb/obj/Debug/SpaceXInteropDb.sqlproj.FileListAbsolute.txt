@@ -8,3 +8,13 @@ C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\SpaceXInteropDb\obj\
 C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\SpaceXInteropDb\obj\Debug\refactor.xml
 C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\SpaceXInteropDb\obj\Debug\postdeploy.sql
 C:\Users\filip\Documents\Code\Hornetsecurity_SpaceX_Interop\SpaceXInteropDb\obj\Debug\predeploy.sql
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\bin\Debug\SpaceXInteropDb.dacpac
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\bin\Debug\SpaceXInteropDb.dll
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\bin\Debug\SpaceXInteropDb.pdb
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\SpaceXInteropDb.sqlproj.AssemblyReference.cache
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\Model.xml
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\refactor.xml
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\postdeploy.sql
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\predeploy.sql
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\SpaceXInteropDb.dll
+C:\Users\filip\Documents\Code\#MAIN\Web\Full Stack\SpaceX Interop\SpaceXInteropDb\obj\Debug\SpaceXInteropDb.pdb

@@ -97,7 +97,7 @@ CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
 CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20250830183627_InitialIdentity', N'9.0.8');
+VALUES (N'20250905224219_InitialIdentity', N'9.0.8');
 
 COMMIT;
 GO
